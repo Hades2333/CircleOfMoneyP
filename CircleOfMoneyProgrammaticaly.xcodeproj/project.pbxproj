@@ -8,19 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		1402131125DFC24500803C47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1402131025DFC24500803C47 /* AppDelegate.swift */; };
-		1402131525DFC24500803C47 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1402131425DFC24500803C47 /* ViewController.swift */; };
+		1402131525DFC24500803C47 /* FirstScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1402131425DFC24500803C47 /* FirstScreenViewController.swift */; };
 		1402131A25DFC24800803C47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1402131925DFC24800803C47 /* Assets.xcassets */; };
 		1402131D25DFC24800803C47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1402131B25DFC24800803C47 /* LaunchScreen.storyboard */; };
+		141024F025E9003500CA951A /* FirstScreenUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141024EF25E9003500CA951A /* FirstScreenUIView.swift */; };
+		141024FE25E9136600CA951A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1410250025E9136600CA951A /* Localizable.strings */; };
+		1410250325E91B0600CA951A /* ofont.ru_VAG World.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 141024F425E9056100CA951A /* ofont.ru_VAG World.ttf */; };
+		1410250525E91B0A00CA951A /* Varela-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 141024F525E9056100CA951A /* Varela-Regular.ttf */; };
 		1458CCDF25DFC2AD0091C711 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1458CCDE25DFC2AD0091C711 /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1402130D25DFC24500803C47 /* CircleOfMoneyProgrammaticaly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CircleOfMoneyProgrammaticaly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1402131025DFC24500803C47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1402131425DFC24500803C47 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1402131425DFC24500803C47 /* FirstScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreenViewController.swift; sourceTree = "<group>"; };
 		1402131925DFC24800803C47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1402131C25DFC24800803C47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1402131E25DFC24800803C47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		141024EF25E9003500CA951A /* FirstScreenUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreenUIView.swift; sourceTree = "<group>"; };
+		141024F425E9056100CA951A /* ofont.ru_VAG World.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ofont.ru_VAG World.ttf"; sourceTree = "<group>"; };
+		141024F525E9056100CA951A /* Varela-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Varela-Regular.ttf"; sourceTree = "<group>"; };
+		141024F725E912FE00CA951A /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		141024FF25E9136600CA951A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1410250225E9136B00CA951A /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,13 +64,73 @@
 		1402130F25DFC24500803C47 /* CircleOfMoneyProgrammaticaly */ = {
 			isa = PBXGroup;
 			children = (
+				141024F225E9051D00CA951A /* Support */,
+				1410250825E91FA400CA951A /* Registration */,
 				1402131025DFC24500803C47 /* AppDelegate.swift */,
-				1402131425DFC24500803C47 /* ViewController.swift */,
 				1402131925DFC24800803C47 /* Assets.xcassets */,
 				1402131B25DFC24800803C47 /* LaunchScreen.storyboard */,
 				1402131E25DFC24800803C47 /* Info.plist */,
 			);
 			path = CircleOfMoneyProgrammaticaly;
+			sourceTree = "<group>";
+		};
+		140D687D25E780C800C487E2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		140D687F25E7810400C487E2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				141024EF25E9003500CA951A /* FirstScreenUIView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		140D688025E7810D00C487E2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1402131425DFC24500803C47 /* FirstScreenViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		141024F225E9051D00CA951A /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				141024F925E9132200CA951A /* Localization */,
+				141024F325E9052800CA951A /* Fonts */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		141024F325E9052800CA951A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				141024F425E9056100CA951A /* ofont.ru_VAG World.ttf */,
+				141024F525E9056100CA951A /* Varela-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		141024F925E9132200CA951A /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				1410250025E9136600CA951A /* Localizable.strings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		1410250825E91FA400CA951A /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				140D687D25E780C800C487E2 /* Model */,
+				140D687F25E7810400C487E2 /* View */,
+				140D688025E7810D00C487E2 /* Controller */,
+			);
+			path = Registration;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -107,6 +177,7 @@
 			knownRegions = (
 				en,
 				Base,
+				pl,
 			);
 			mainGroup = 1402130425DFC24500803C47;
 			packageReferences = (
@@ -127,7 +198,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				1402131D25DFC24800803C47 /* LaunchScreen.storyboard in Resources */,
+				141024FE25E9136600CA951A /* Localizable.strings in Resources */,
+				1410250325E91B0600CA951A /* ofont.ru_VAG World.ttf in Resources */,
 				1402131A25DFC24800803C47 /* Assets.xcassets in Resources */,
+				1410250525E91B0A00CA951A /* Varela-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,7 +212,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1402131525DFC24500803C47 /* ViewController.swift in Sources */,
+				141024F025E9003500CA951A /* FirstScreenUIView.swift in Sources */,
+				1402131525DFC24500803C47 /* FirstScreenViewController.swift in Sources */,
 				1402131125DFC24500803C47 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -150,8 +225,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				1402131C25DFC24800803C47 /* Base */,
+				141024F725E912FE00CA951A /* pl */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		1410250025E9136600CA951A /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				141024FF25E9136600CA951A /* en */,
+				1410250225E9136B00CA951A /* pl */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -161,6 +246,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -222,6 +308,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

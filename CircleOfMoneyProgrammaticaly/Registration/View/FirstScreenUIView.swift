@@ -9,9 +9,6 @@ import UIKit
 
 class FirstScreenUIView: UIView {
 
-    //MARK: - Variables
-    private var buttonHeight: CGFloat = 50
-
     //MARK: - GUI Variables
     private lazy var logoImage: UIImageView = {
         let view = UIImageView()
@@ -115,31 +112,35 @@ class FirstScreenUIView: UIView {
             make.top.left.right.equalToSuperview().inset(50)
             make.height.equalTo(self.logoImage.snp.width).multipliedBy(169.0 / 243.0)
         }
+
         self.welcomeLabel.snp.makeConstraints { (make) in
             make.top.equalTo(self.logoImage.snp.bottom)
             make.left.right.equalToSuperview().inset(119)
-            //make.height.equalTo(self.logoImage.snp.width).multipliedBy(61.0 / 136.0)
         }
+
         self.textLabel.snp.makeConstraints { (make) in
             make.top.equalTo(self.welcomeLabel.snp.bottom)
             make.left.right.equalToSuperview().inset(103)
-            //make.height.equalTo(self.logoImage.snp.width).multipliedBy(47.0 / 84.0)
         }
+
         self.signUpBranch.snp.makeConstraints { (make) in
             make.top.equalTo(self.textLabel.snp.bottom).offset(10)
             make.left.right.equalToSuperview().inset(105)
             make.height.equalTo(self.logoImage.snp.width).multipliedBy(1.0 / 3.0)
         }
+
         self.signUpButton.snp.makeConstraints { (make) in
             make.top.equalTo(self.signUpBranch.snp.bottom).offset(-10)
             make.left.right.equalToSuperview().inset(87)
             make.height.equalTo(self.logoImage.snp.width).multipliedBy(1.0 / 4.0)
         }
+
         self.choiceLabel.snp.makeConstraints { (make) in
             make.top.equalTo(self.signUpButton.snp.bottom).inset(5)
             make.left.right.equalToSuperview().inset(90)
             make.height.equalTo(self.logoImage.snp.width).multipliedBy(16.0 / 147.0)
         }
+
         self.logInButton.snp.makeConstraints { (make) in
             make.top.equalTo(self.choiceLabel.snp.bottom).offset(-10)
             make.left.right.equalToSuperview().inset(100)
