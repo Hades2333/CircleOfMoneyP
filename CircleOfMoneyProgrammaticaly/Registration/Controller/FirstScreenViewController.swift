@@ -11,11 +11,18 @@ import SnapKit
 class FirstScreenViewController: UIViewController {
 
     //MARK: - GUI Variables
-    private lazy var firstScreenView: FirstScreenUIView = {
-        let view = FirstScreenUIView()
+    private lazy var firstScreenView: FirstScreenView = {
+        let view = FirstScreenView()
+        view.signUpTransition = { [weak self] in
+            self?.transitionToSignUpViewController()
+        }
+        view.logInTransition = { [weak self] in
+            self?.transitionToLogInViewController()
+        }
         return view
     }()
 
+    //MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden = true
@@ -26,6 +33,16 @@ class FirstScreenViewController: UIViewController {
         }
     }
 
+    //MARK: - Navigation
+    private func transitionToSignUpViewController() {
+        let next = SignUpViewController()
+        self.navigationController?.pushViewController(next, animated: true)
+    }
+
+    private func transitionToLogInViewController() {
+        let next = LogInViewController()
+        self.navigationController?.pushViewController(next, animated: true)
+    }
 
 }
 

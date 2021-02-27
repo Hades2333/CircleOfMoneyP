@@ -11,11 +11,18 @@
 		1402131525DFC24500803C47 /* FirstScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1402131425DFC24500803C47 /* FirstScreenViewController.swift */; };
 		1402131A25DFC24800803C47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1402131925DFC24800803C47 /* Assets.xcassets */; };
 		1402131D25DFC24800803C47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1402131B25DFC24800803C47 /* LaunchScreen.storyboard */; };
-		141024F025E9003500CA951A /* FirstScreenUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141024EF25E9003500CA951A /* FirstScreenUIView.swift */; };
+		141024F025E9003500CA951A /* FirstScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141024EF25E9003500CA951A /* FirstScreenView.swift */; };
 		141024FE25E9136600CA951A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1410250025E9136600CA951A /* Localizable.strings */; };
 		1410250325E91B0600CA951A /* ofont.ru_VAG World.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 141024F425E9056100CA951A /* ofont.ru_VAG World.ttf */; };
 		1410250525E91B0A00CA951A /* Varela-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 141024F525E9056100CA951A /* Varela-Regular.ttf */; };
+		1415D45825EA1B8C00F2F6FA /* UIView+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1415D45725EA1B8C00F2F6FA /* UIView+Ex.swift */; };
 		1458CCDF25DFC2AD0091C711 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1458CCDE25DFC2AD0091C711 /* SnapKit */; };
+		14E2E94125EA2CD200CDF2EF /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E2E94025EA2CD200CDF2EF /* SignUpViewController.swift */; };
+		14E2E94425EA2CF000CDF2EF /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E2E94325EA2CF000CDF2EF /* SignUpView.swift */; };
+		14E2E94825EA2D4A00CDF2EF /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E2E94725EA2D4A00CDF2EF /* LogInView.swift */; };
+		14E2E94B25EA2D6F00CDF2EF /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E2E94A25EA2D6F00CDF2EF /* LogInViewController.swift */; };
+		14E2E95125EA395E00CDF2EF /* TextFieldWithLine.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14E2E95025EA395E00CDF2EF /* TextFieldWithLine.xib */; };
+		14E2E95425EA396B00CDF2EF /* TextFieldWithLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E2E95325EA396B00CDF2EF /* TextFieldWithLine.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,12 +32,19 @@
 		1402131925DFC24800803C47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1402131C25DFC24800803C47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1402131E25DFC24800803C47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		141024EF25E9003500CA951A /* FirstScreenUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreenUIView.swift; sourceTree = "<group>"; };
+		141024EF25E9003500CA951A /* FirstScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreenView.swift; sourceTree = "<group>"; };
 		141024F425E9056100CA951A /* ofont.ru_VAG World.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ofont.ru_VAG World.ttf"; sourceTree = "<group>"; };
 		141024F525E9056100CA951A /* Varela-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Varela-Regular.ttf"; sourceTree = "<group>"; };
 		141024F725E912FE00CA951A /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		141024FF25E9136600CA951A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1410250225E9136B00CA951A /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1415D45725EA1B8C00F2F6FA /* UIView+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ex.swift"; sourceTree = "<group>"; };
+		14E2E94025EA2CD200CDF2EF /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		14E2E94325EA2CF000CDF2EF /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		14E2E94725EA2D4A00CDF2EF /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
+		14E2E94A25EA2D6F00CDF2EF /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		14E2E95025EA395E00CDF2EF /* TextFieldWithLine.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextFieldWithLine.xib; sourceTree = "<group>"; };
+		14E2E95325EA396B00CDF2EF /* TextFieldWithLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldWithLine.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +78,8 @@
 		1402130F25DFC24500803C47 /* CircleOfMoneyProgrammaticaly */ = {
 			isa = PBXGroup;
 			children = (
+				14E2E94D25EA376A00CDF2EF /* CustomViews */,
+				1415D45525EA1B6000F2F6FA /* Helpers */,
 				141024F225E9051D00CA951A /* Support */,
 				1410250825E91FA400CA951A /* Registration */,
 				1402131025DFC24500803C47 /* AppDelegate.swift */,
@@ -84,7 +100,9 @@
 		140D687F25E7810400C487E2 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				141024EF25E9003500CA951A /* FirstScreenUIView.swift */,
+				141024EF25E9003500CA951A /* FirstScreenView.swift */,
+				14E2E94325EA2CF000CDF2EF /* SignUpView.swift */,
+				14E2E94725EA2D4A00CDF2EF /* LogInView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -93,6 +111,8 @@
 			isa = PBXGroup;
 			children = (
 				1402131425DFC24500803C47 /* FirstScreenViewController.swift */,
+				14E2E94025EA2CD200CDF2EF /* SignUpViewController.swift */,
+				14E2E94A25EA2D6F00CDF2EF /* LogInViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -131,6 +151,47 @@
 				140D688025E7810D00C487E2 /* Controller */,
 			);
 			path = Registration;
+			sourceTree = "<group>";
+		};
+		1415D45525EA1B6000F2F6FA /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				1415D45625EA1B7100F2F6FA /* Extensions */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		1415D45625EA1B7100F2F6FA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1415D45725EA1B8C00F2F6FA /* UIView+Ex.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		14E2E94D25EA376A00CDF2EF /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				14E2E94F25EA37A400CDF2EF /* Controls */,
+				14E2E94E25EA379200CDF2EF /* Xibs */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		14E2E94E25EA379200CDF2EF /* Xibs */ = {
+			isa = PBXGroup;
+			children = (
+				14E2E95025EA395E00CDF2EF /* TextFieldWithLine.xib */,
+			);
+			path = Xibs;
+			sourceTree = "<group>";
+		};
+		14E2E94F25EA37A400CDF2EF /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				14E2E95325EA396B00CDF2EF /* TextFieldWithLine.swift */,
+			);
+			path = Controls;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,6 +261,7 @@
 				1402131D25DFC24800803C47 /* LaunchScreen.storyboard in Resources */,
 				141024FE25E9136600CA951A /* Localizable.strings in Resources */,
 				1410250325E91B0600CA951A /* ofont.ru_VAG World.ttf in Resources */,
+				14E2E95125EA395E00CDF2EF /* TextFieldWithLine.xib in Resources */,
 				1402131A25DFC24800803C47 /* Assets.xcassets in Resources */,
 				1410250525E91B0A00CA951A /* Varela-Regular.ttf in Resources */,
 			);
@@ -212,9 +274,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				141024F025E9003500CA951A /* FirstScreenUIView.swift in Sources */,
+				141024F025E9003500CA951A /* FirstScreenView.swift in Sources */,
+				14E2E94825EA2D4A00CDF2EF /* LogInView.swift in Sources */,
 				1402131525DFC24500803C47 /* FirstScreenViewController.swift in Sources */,
 				1402131125DFC24500803C47 /* AppDelegate.swift in Sources */,
+				14E2E94B25EA2D6F00CDF2EF /* LogInViewController.swift in Sources */,
+				1415D45825EA1B8C00F2F6FA /* UIView+Ex.swift in Sources */,
+				14E2E94425EA2CF000CDF2EF /* SignUpView.swift in Sources */,
+				14E2E95425EA396B00CDF2EF /* TextFieldWithLine.swift in Sources */,
+				14E2E94125EA2CD200CDF2EF /* SignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

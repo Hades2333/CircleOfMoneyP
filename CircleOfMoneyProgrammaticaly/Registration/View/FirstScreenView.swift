@@ -7,9 +7,23 @@
 
 import UIKit
 
-class FirstScreenUIView: UIView {
+class FirstScreenView: UIView {
+    //MARK: - Variables
+    var signUpTransition: (() -> Void)?
+    var logInTransition: (() -> Void)?
 
     //MARK: - GUI Variables
+    private lazy var scrollView: UIScrollView = {
+        let scrollView = UIScrollView()
+        return scrollView
+    }()
+
+    private lazy var contentView: UIView = {
+        let view = UIView()
+        self.backgroundColor = UIColor(named: "mainBackgroundColor")
+        return view
+    }()
+
     private lazy var logoImage: UIImageView = {
         let view = UIImageView()
         view.image = UIImage(named: "bigLogo")
@@ -96,18 +110,27 @@ class FirstScreenUIView: UIView {
 
     private func initView() {
         self.backgroundColor = UIColor(named: "mainBackgroundColor")
-        self.addSubview(self.logoImage)
-        self.addSubview(self.welcomeLabel)
-        self.addSubview(self.textLabel)
-        self.addSubview(self.signUpBranch)
-        self.addSubview(self.signUpButton)
-        self.addSubview(self.choiceLabel)
-        self.addSubview(self.logInButton)
+        self.addSubview(self.scrollView)
+        self.scrollView.addSubview(self.contentView)
+        self.contentView.addSubviews([self.logoImage, self.welcomeLabel,
+                                     self.textLabel, self.signUpBranch,
+                                     self.signUpButton, self.choiceLabel,
+                                     self.logInButton])
         makeConstraints()
+        self.signUpButton.layer.cornerRadius = 25
     }
 
     //MARK: - Constraints
     func makeConstraints() {
+        self.scrollView.snp.makeConstraints { (make) in
+            make.edges.equalToSuperview()
+        }
+
+        self.contentView.snp.makeConstraints { (make) in
+            make.edges.width.equalToSuperview()
+            make.height.equalToSuperview().priority(750)
+        }
+
         self.logoImage.snp.makeConstraints { (make) in
             make.top.left.right.equalToSuperview().inset(50)
             make.height.equalTo(self.logoImage.snp.width).multipliedBy(169.0 / 243.0)
@@ -115,12 +138,13 @@ class FirstScreenUIView: UIView {
 
         self.welcomeLabel.snp.makeConstraints { (make) in
             make.top.equalTo(self.logoImage.snp.bottom)
-            make.left.right.equalToSuperview().inset(119)
+            make.left.right.equalToSuperview().inset(50)
         }
 
         self.textLabel.snp.makeConstraints { (make) in
             make.top.equalTo(self.welcomeLabel.snp.bottom)
-            make.left.right.equalToSuperview().inset(103)
+            make.left.right.equalToSuperview().inset(90)
+            make.height.equalTo(self.textLabel.snp.width).multipliedBy(47.0 / 84.0)
         }
 
         self.signUpBranch.snp.makeConstraints { (make) in
@@ -131,13 +155,13 @@ class FirstScreenUIView: UIView {
 
         self.signUpButton.snp.makeConstraints { (make) in
             make.top.equalTo(self.signUpBranch.snp.bottom).offset(-10)
-            make.left.right.equalToSuperview().inset(87)
-            make.height.equalTo(self.logoImage.snp.width).multipliedBy(1.0 / 4.0)
+            make.left.right.equalToSuperview().inset(87.5)
+            make.height.equalTo(self.signUpButton.snp.width).multipliedBy(1.0 / 4.0)
         }
 
         self.choiceLabel.snp.makeConstraints { (make) in
-            make.top.equalTo(self.signUpButton.snp.bottom).inset(5)
-            make.left.right.equalToSuperview().inset(90)
+            make.top.equalTo(self.signUpButton.snp.bottom).offset(5)
+            make.left.right.equalToSuperview().inset(70)
             make.height.equalTo(self.logoImage.snp.width).multipliedBy(16.0 / 147.0)
         }
 
@@ -150,11 +174,11 @@ class FirstScreenUIView: UIView {
 
     //MARK: - Methods
     @objc private func signUpButtonPressed() {
-
+        self.signUpTransition?()
     }
 
     @objc private func logInButtonPressed() {
-
+        self.logInTransition?()
     }
 
 }
