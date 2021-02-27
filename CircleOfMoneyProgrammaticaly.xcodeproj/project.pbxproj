@@ -16,13 +16,19 @@
 		1410250325E91B0600CA951A /* ofont.ru_VAG World.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 141024F425E9056100CA951A /* ofont.ru_VAG World.ttf */; };
 		1410250525E91B0A00CA951A /* Varela-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 141024F525E9056100CA951A /* Varela-Regular.ttf */; };
 		1415D45825EA1B8C00F2F6FA /* UIView+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1415D45725EA1B8C00F2F6FA /* UIView+Ex.swift */; };
-		1458CCDF25DFC2AD0091C711 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1458CCDE25DFC2AD0091C711 /* SnapKit */; };
+		1458CCDF25DFC2AD0091C711 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 1458CCDE25DFC2AD0091C711 /* SwiftPackageProductDependency */; };
 		14E2E94125EA2CD200CDF2EF /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E2E94025EA2CD200CDF2EF /* SignUpViewController.swift */; };
 		14E2E94425EA2CF000CDF2EF /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E2E94325EA2CF000CDF2EF /* SignUpView.swift */; };
 		14E2E94825EA2D4A00CDF2EF /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E2E94725EA2D4A00CDF2EF /* LogInView.swift */; };
 		14E2E94B25EA2D6F00CDF2EF /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E2E94A25EA2D6F00CDF2EF /* LogInViewController.swift */; };
 		14E2E95125EA395E00CDF2EF /* TextFieldWithLine.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14E2E95025EA395E00CDF2EF /* TextFieldWithLine.xib */; };
 		14E2E95425EA396B00CDF2EF /* TextFieldWithLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E2E95325EA396B00CDF2EF /* TextFieldWithLine.swift */; };
+		14E2E95825EA764000CDF2EF /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E2E95725EA764000CDF2EF /* CustomViewController.swift */; };
+		14E2E95D25EA7DD600CDF2EF /* AlertSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E2E95C25EA7DD600CDF2EF /* AlertSingleton.swift */; };
+		14E2E96225EA7E7600CDF2EF /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E2E96125EA7E7600CDF2EF /* ErrorHandler.swift */; };
+		14E2E96625EA7FE400CDF2EF /* UIViewController+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E2E96525EA7FE400CDF2EF /* UIViewController+Ex.swift */; };
+		14E2E96A25EA82B800CDF2EF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 14E2E96925EA82B800CDF2EF /* GoogleService-Info.plist */; };
+		27EDDD43402761F385F46255 /* Pods_CircleOfMoneyProgrammaticaly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 806281CC4F814FF9E478F3F9 /* Pods_CircleOfMoneyProgrammaticaly.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +51,14 @@
 		14E2E94A25EA2D6F00CDF2EF /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		14E2E95025EA395E00CDF2EF /* TextFieldWithLine.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextFieldWithLine.xib; sourceTree = "<group>"; };
 		14E2E95325EA396B00CDF2EF /* TextFieldWithLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldWithLine.swift; sourceTree = "<group>"; };
+		14E2E95725EA764000CDF2EF /* CustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
+		14E2E95C25EA7DD600CDF2EF /* AlertSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertSingleton.swift; sourceTree = "<group>"; };
+		14E2E96125EA7E7600CDF2EF /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
+		14E2E96525EA7FE400CDF2EF /* UIViewController+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ex.swift"; sourceTree = "<group>"; };
+		14E2E96925EA82B800CDF2EF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		323B9C57059C13D9584D36FB /* Pods-CircleOfMoneyProgrammaticaly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CircleOfMoneyProgrammaticaly.release.xcconfig"; path = "Target Support Files/Pods-CircleOfMoneyProgrammaticaly/Pods-CircleOfMoneyProgrammaticaly.release.xcconfig"; sourceTree = "<group>"; };
+		694354AD57D3723928F41522 /* Pods-CircleOfMoneyProgrammaticaly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CircleOfMoneyProgrammaticaly.debug.xcconfig"; path = "Target Support Files/Pods-CircleOfMoneyProgrammaticaly/Pods-CircleOfMoneyProgrammaticaly.debug.xcconfig"; sourceTree = "<group>"; };
+		806281CC4F814FF9E478F3F9 /* Pods_CircleOfMoneyProgrammaticaly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CircleOfMoneyProgrammaticaly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +66,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1458CCDF25DFC2AD0091C711 /* SnapKit in Frameworks */,
+				1458CCDF25DFC2AD0091C711 /* BuildFile in Frameworks */,
+				27EDDD43402761F385F46255 /* Pods_CircleOfMoneyProgrammaticaly.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +79,8 @@
 			children = (
 				1402130F25DFC24500803C47 /* CircleOfMoneyProgrammaticaly */,
 				1402130E25DFC24500803C47 /* Products */,
+				C3284F1FE1B6D4379079ED51 /* Pods */,
+				99D8A158DD1A10B22E4CFA63 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,6 +103,7 @@
 				1402131925DFC24800803C47 /* Assets.xcassets */,
 				1402131B25DFC24800803C47 /* LaunchScreen.storyboard */,
 				1402131E25DFC24800803C47 /* Info.plist */,
+				14E2E96925EA82B800CDF2EF /* GoogleService-Info.plist */,
 			);
 			path = CircleOfMoneyProgrammaticaly;
 			sourceTree = "<group>";
@@ -156,6 +174,9 @@
 		1415D45525EA1B6000F2F6FA /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				14E2E96025EA7E6300CDF2EF /* ErrorHandling */,
+				14E2E95F25EA7E0100CDF2EF /* CustomClasses */,
+				14E2E95B25EA7DBD00CDF2EF /* Singletons */,
 				1415D45625EA1B7100F2F6FA /* Extensions */,
 			);
 			path = Helpers;
@@ -165,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				1415D45725EA1B8C00F2F6FA /* UIView+Ex.swift */,
+				14E2E96525EA7FE400CDF2EF /* UIViewController+Ex.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -194,6 +216,48 @@
 			path = Controls;
 			sourceTree = "<group>";
 		};
+		14E2E95B25EA7DBD00CDF2EF /* Singletons */ = {
+			isa = PBXGroup;
+			children = (
+				14E2E95C25EA7DD600CDF2EF /* AlertSingleton.swift */,
+			);
+			path = Singletons;
+			sourceTree = "<group>";
+		};
+		14E2E95F25EA7E0100CDF2EF /* CustomClasses */ = {
+			isa = PBXGroup;
+			children = (
+				14E2E95725EA764000CDF2EF /* CustomViewController.swift */,
+			);
+			path = CustomClasses;
+			sourceTree = "<group>";
+		};
+		14E2E96025EA7E6300CDF2EF /* ErrorHandling */ = {
+			isa = PBXGroup;
+			children = (
+				14E2E96125EA7E7600CDF2EF /* ErrorHandler.swift */,
+			);
+			path = ErrorHandling;
+			sourceTree = "<group>";
+		};
+		99D8A158DD1A10B22E4CFA63 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				806281CC4F814FF9E478F3F9 /* Pods_CircleOfMoneyProgrammaticaly.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C3284F1FE1B6D4379079ED51 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				694354AD57D3723928F41522 /* Pods-CircleOfMoneyProgrammaticaly.debug.xcconfig */,
+				323B9C57059C13D9584D36FB /* Pods-CircleOfMoneyProgrammaticaly.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -201,9 +265,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1402132125DFC24800803C47 /* Build configuration list for PBXNativeTarget "CircleOfMoneyProgrammaticaly" */;
 			buildPhases = (
+				6D6DB98014FA1F79C053EC72 /* [CP] Check Pods Manifest.lock */,
 				1402130925DFC24500803C47 /* Sources */,
 				1402130A25DFC24500803C47 /* Frameworks */,
 				1402130B25DFC24500803C47 /* Resources */,
+				139DB36FD0B5731A38658252 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -211,7 +277,7 @@
 			);
 			name = CircleOfMoneyProgrammaticaly;
 			packageProductDependencies = (
-				1458CCDE25DFC2AD0091C711 /* SnapKit */,
+				1458CCDE25DFC2AD0091C711 /* SwiftPackageProductDependency */,
 			);
 			productName = CircleOfMoneyProgrammaticaly;
 			productReference = 1402130D25DFC24500803C47 /* CircleOfMoneyProgrammaticaly.app */;
@@ -242,7 +308,7 @@
 			);
 			mainGroup = 1402130425DFC24500803C47;
 			packageReferences = (
-				1458CCDD25DFC2AD0091C711 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				1458CCDD25DFC2AD0091C711 /* RemoteSwiftPackageReference */,
 			);
 			productRefGroup = 1402130E25DFC24500803C47 /* Products */;
 			projectDirPath = "";
@@ -264,10 +330,53 @@
 				14E2E95125EA395E00CDF2EF /* TextFieldWithLine.xib in Resources */,
 				1402131A25DFC24800803C47 /* Assets.xcassets in Resources */,
 				1410250525E91B0A00CA951A /* Varela-Regular.ttf in Resources */,
+				14E2E96A25EA82B800CDF2EF /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		139DB36FD0B5731A38658252 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CircleOfMoneyProgrammaticaly/Pods-CircleOfMoneyProgrammaticaly-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CircleOfMoneyProgrammaticaly/Pods-CircleOfMoneyProgrammaticaly-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CircleOfMoneyProgrammaticaly/Pods-CircleOfMoneyProgrammaticaly-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6D6DB98014FA1F79C053EC72 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CircleOfMoneyProgrammaticaly-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1402130925DFC24500803C47 /* Sources */ = {
@@ -279,8 +388,12 @@
 				1402131525DFC24500803C47 /* FirstScreenViewController.swift in Sources */,
 				1402131125DFC24500803C47 /* AppDelegate.swift in Sources */,
 				14E2E94B25EA2D6F00CDF2EF /* LogInViewController.swift in Sources */,
+				14E2E96625EA7FE400CDF2EF /* UIViewController+Ex.swift in Sources */,
 				1415D45825EA1B8C00F2F6FA /* UIView+Ex.swift in Sources */,
 				14E2E94425EA2CF000CDF2EF /* SignUpView.swift in Sources */,
+				14E2E95825EA764000CDF2EF /* CustomViewController.swift in Sources */,
+				14E2E95D25EA7DD600CDF2EF /* AlertSingleton.swift in Sources */,
+				14E2E96225EA7E7600CDF2EF /* ErrorHandler.swift in Sources */,
 				14E2E95425EA396B00CDF2EF /* TextFieldWithLine.swift in Sources */,
 				14E2E94125EA2CD200CDF2EF /* SignUpViewController.swift in Sources */,
 			);
@@ -430,6 +543,7 @@
 		};
 		1402132225DFC24800803C47 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 694354AD57D3723928F41522 /* Pods-CircleOfMoneyProgrammaticaly.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -449,6 +563,7 @@
 		};
 		1402132325DFC24800803C47 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 323B9C57059C13D9584D36FB /* Pods-CircleOfMoneyProgrammaticaly.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -490,7 +605,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		1458CCDD25DFC2AD0091C711 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+		1458CCDD25DFC2AD0091C711 /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit";
 			requirement = {
@@ -501,9 +616,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		1458CCDE25DFC2AD0091C711 /* SnapKit */ = {
+		1458CCDE25DFC2AD0091C711 /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1458CCDD25DFC2AD0091C711 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			package = 1458CCDD25DFC2AD0091C711 /* RemoteSwiftPackageReference */;
 			productName = SnapKit;
 		};
 /* End XCSwiftPackageProductDependency section */

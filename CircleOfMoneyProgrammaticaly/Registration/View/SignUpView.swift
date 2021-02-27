@@ -13,7 +13,7 @@ class SignUpView: UIView {
     var signUpTransition: (() -> Void)?
 
     //MARK: - GUI Variables
-    private lazy var scrollView: UIScrollView = {
+    lazy var scrollView: UIScrollView = {
         let scrollView = UIScrollView()
         return scrollView
     }()
@@ -40,19 +40,19 @@ class SignUpView: UIView {
         return view
     }()
 
-    private lazy var emailTextField: TextFieldWithLine = {
+    lazy var emailTextField: TextFieldWithLine = {
         let view = TextFieldWithLine()
         view.textInput.placeholder = "Enter email"
         return view
     }()
 
-    private lazy var passwordTextField: TextFieldWithLine = {
+    lazy var passwordTextField: TextFieldWithLine = {
         let view = TextFieldWithLine()
         view.textInput.placeholder = "Enter password"
         return view
     }()
 
-    private lazy var confirmPasswordTextField: TextFieldWithLine = {
+    lazy var confirmPasswordTextField: TextFieldWithLine = {
         let view = TextFieldWithLine()
         view.textInput.placeholder = "Confirm password"
         return view
