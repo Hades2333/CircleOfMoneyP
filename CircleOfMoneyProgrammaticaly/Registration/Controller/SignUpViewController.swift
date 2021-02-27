@@ -17,11 +17,7 @@ class SignUpViewController: CustomViewController {
             self?.navigationController?.popViewController(animated: true)
         }
         view.signUpTransition = { [weak self] in
-            do {
-                try self?.toRegister()
-            } catch {
-                Swift.debugPrint(error)
-            }
+            self?.toRegister()
         }
         return view
     }()
