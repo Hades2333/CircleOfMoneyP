@@ -74,26 +74,19 @@ class ChooseIconViewController: UIViewController {
         self.view.addGestureRecognizer(tapGesture)
     }
 
+    //MARK: - Navigation
     func next() {
         let next = ChooseNameViewController()
 
         next.modalTransitionStyle = .coverVertical
         next.modalPresentationStyle = .fullScreen
         next.modalPresentationStyle = .overCurrentContext
-        
+        next.selectedImage = tempImage
         present(next, animated: false, completion: nil)
     }
 
     @objc private func tapped() {
         dismiss(animated: false, completion: nil)
-    }
-
-    //MARK: - Navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        guard segue.identifier == "ChooseName" else { return }
-//        guard let destination = segue.destination as? ChooseNameViewController else { return }
-//        // передаём картинку вперёд
-//        destination.selectedImage = tempImage
     }
 }
 

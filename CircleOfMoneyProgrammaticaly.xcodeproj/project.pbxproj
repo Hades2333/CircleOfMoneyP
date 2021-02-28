@@ -46,6 +46,8 @@
 		14E400C525EB972D00C6A628 /* ChooseIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E400C425EB972D00C6A628 /* ChooseIconView.swift */; };
 		14E400CD25EBB63400C6A628 /* ChooseNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E400CC25EBB63400C6A628 /* ChooseNameViewController.swift */; };
 		14E400D025EBB65400C6A628 /* ChooseNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E400CF25EBB65400C6A628 /* ChooseNameView.swift */; };
+		14E400E325EBD4A400C6A628 /* Double+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E400E225EBD4A400C6A628 /* Double+Ex.swift */; };
+		14E400E625EBD51C00C6A628 /* Notification+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E400E525EBD51C00C6A628 /* Notification+Ex.swift */; };
 		27EDDD43402761F385F46255 /* Pods_CircleOfMoneyProgrammaticaly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 806281CC4F814FF9E478F3F9 /* Pods_CircleOfMoneyProgrammaticaly.framework */; };
 /* End PBXBuildFile section */
 
@@ -92,6 +94,8 @@
 		14E400C425EB972D00C6A628 /* ChooseIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseIconView.swift; sourceTree = "<group>"; };
 		14E400CC25EBB63400C6A628 /* ChooseNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseNameViewController.swift; sourceTree = "<group>"; };
 		14E400CF25EBB65400C6A628 /* ChooseNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseNameView.swift; sourceTree = "<group>"; };
+		14E400E225EBD4A400C6A628 /* Double+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Ex.swift"; sourceTree = "<group>"; };
+		14E400E525EBD51C00C6A628 /* Notification+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Ex.swift"; sourceTree = "<group>"; };
 		323B9C57059C13D9584D36FB /* Pods-CircleOfMoneyProgrammaticaly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CircleOfMoneyProgrammaticaly.release.xcconfig"; path = "Target Support Files/Pods-CircleOfMoneyProgrammaticaly/Pods-CircleOfMoneyProgrammaticaly.release.xcconfig"; sourceTree = "<group>"; };
 		694354AD57D3723928F41522 /* Pods-CircleOfMoneyProgrammaticaly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CircleOfMoneyProgrammaticaly.debug.xcconfig"; path = "Target Support Files/Pods-CircleOfMoneyProgrammaticaly/Pods-CircleOfMoneyProgrammaticaly.debug.xcconfig"; sourceTree = "<group>"; };
 		806281CC4F814FF9E478F3F9 /* Pods_CircleOfMoneyProgrammaticaly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CircleOfMoneyProgrammaticaly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -147,13 +151,6 @@
 			path = CircleOfMoneyProgrammaticaly;
 			sourceTree = "<group>";
 		};
-		140D687D25E780C800C487E2 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		140D687F25E7810400C487E2 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -203,7 +200,6 @@
 		1410250825E91FA400CA951A /* Registration */ = {
 			isa = PBXGroup;
 			children = (
-				140D687D25E780C800C487E2 /* Model */,
 				140D687F25E7810400C487E2 /* View */,
 				140D688025E7810D00C487E2 /* Controller */,
 			);
@@ -227,6 +223,8 @@
 			children = (
 				1415D45725EA1B8C00F2F6FA /* UIView+Ex.swift */,
 				14E2E96525EA7FE400CDF2EF /* UIViewController+Ex.swift */,
+				14E400E225EBD4A400C6A628 /* Double+Ex.swift */,
+				14E400E525EBD51C00C6A628 /* Notification+Ex.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -234,7 +232,6 @@
 		1496120C25EA897F00A59E20 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
-				1496120F25EA89A500A59E20 /* Model */,
 				1496120E25EA899C00A59E20 /* View */,
 				1496120D25EA899400A59E20 /* Controller */,
 			);
@@ -260,13 +257,6 @@
 				14E400A125EB788D00C6A628 /* OperationsView.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		1496120F25EA89A500A59E20 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		14E2E94D25EA376A00CDF2EF /* CustomViews */ = {
@@ -542,6 +532,7 @@
 				14E400C025EB955200C6A628 /* ChooseIconCollectionViewCell.swift in Sources */,
 				1415D45825EA1B8C00F2F6FA /* UIView+Ex.swift in Sources */,
 				14E2E94425EA2CF000CDF2EF /* SignUpView.swift in Sources */,
+				14E400E625EBD51C00C6A628 /* Notification+Ex.swift in Sources */,
 				14E2E95825EA764000CDF2EF /* CustomViewController.swift in Sources */,
 				14E4009625EB6D8100C6A628 /* HomeViewController.swift in Sources */,
 				14E400B125EB8F4900C6A628 /* CustomAddTableViewCell.swift in Sources */,
@@ -554,6 +545,7 @@
 				14E2E94125EA2CD200CDF2EF /* SignUpViewController.swift in Sources */,
 				14E400A825EB8B6F00C6A628 /* AccountTableViewCell.swift in Sources */,
 				14E400A225EB788D00C6A628 /* OperationsView.swift in Sources */,
+				14E400E325EBD4A400C6A628 /* Double+Ex.swift in Sources */,
 				14E4009F25EB787D00C6A628 /* HomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

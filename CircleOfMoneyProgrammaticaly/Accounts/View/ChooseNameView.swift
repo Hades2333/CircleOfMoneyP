@@ -9,6 +9,9 @@ import UIKit
 
 class ChooseNameView: UIView {
 
+    //MARK: - Variables
+    var backToTheAccounts: (() -> Void)?
+
     //MARK: - GUI Variables
     lazy private var modalView: UIView = {
         let view = UIView()
@@ -34,14 +37,14 @@ class ChooseNameView: UIView {
         return label
     }()
 
-    lazy private var nameTextField: UITextField = {
+    lazy var nameTextField: UITextField = {
         let textField = UITextField()
         textField.borderStyle = .roundedRect
         textField.backgroundColor = UIColor.white
         return textField
     }()
 
-    lazy private var moneyTextField: UITextField = {
+    lazy var moneyTextField: UITextField = {
         let textField = UITextField()
         textField.borderStyle = .roundedRect
         textField.backgroundColor = UIColor.white
@@ -135,6 +138,6 @@ class ChooseNameView: UIView {
 
     //MARK: - Methods
     @objc func okButtonPressed() {
-
+        self.backToTheAccounts?()
     }
 }

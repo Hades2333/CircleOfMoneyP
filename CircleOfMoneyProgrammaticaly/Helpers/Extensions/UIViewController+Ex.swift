@@ -59,18 +59,17 @@ extension UIViewController {
         }
     }
 
-//    //MARK: - Validation for name, amount and currency fields:
-//    func validateChooseFields(_ name: UITextField,
-//                              _ amount: UITextField?,
-//                              _ currency: UIPickerView) throws {
-//
-//        guard !name.text!.isEmpty else { throw InputError.emptyName }
-//        if amount != nil {
-//            guard !amount!.text!.isEmpty else { throw InputError.emptyAmount }
-//        }
-//        //guard !amount.text!.isEmpty else { throw InputError.emptyAmount }
-//
-//    }
+   //MARK: - Validation for name, amount and currency fields:
+    func validateChooseFields(_ name: UITextField,
+                              _ amount: UITextField?,
+                              _ currency: UIPickerView) throws {
+
+        guard !name.text!.isEmpty else { throw InputError.emptyName }
+        if amount != nil {
+            guard !amount!.text!.isEmpty else { throw InputError.emptyAmount }
+        }
+        guard !amount!.text!.isEmpty else { throw InputError.emptyAmount }
+    }
 //
 //    //MARK: - Validation numbers:
 //    func numberIsValid(_ field: COtextFieldWithLine, _ sign: String) throws -> Double {

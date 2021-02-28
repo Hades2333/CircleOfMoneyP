@@ -12,6 +12,9 @@ class ChooseNameViewController: UIViewController {
     //MARK: - GUI Variables
     private lazy var modalView: ChooseNameView = {
         let view = ChooseNameView()
+        view.backToTheAccounts = { [weak self] in
+            self?.okPressed()
+        }
         return view
     }()
 
@@ -48,50 +51,47 @@ class ChooseNameViewController: UIViewController {
     }
 
     //MARK: - Methods
+    @objc private func tapped() {
+        let p = self.presentingViewController
+        self.dismiss(animated: false) {
+            p?.dismiss(animated: false, completion: nil)
+        }
+    }
+
+    private func okPressed() {
+        do {
+            try validateChooseFields(self.modalView.nameTextField,
+                                     self.modalView.moneyTextField,
+                                     self.modalView.moneySelector)
+
+            myAccounts.append(Accounts(image: Image(withImage: selectedImage),
+                                       nameOfAccount: self.modalView.nameTextField.text!,
+                                       amountOfMoney: (Double(self.modalView.moneyTextField.text!) ?? 0).rounded(toPlaces: 2),
+                                       currency: Currency(rawValue: selectedCurrency)!))
+
+            NotificationCenter.default.post(name: .accountsDataWasUpdated,
+                                            object: nil,
+                                            userInfo: nil)
+            
+            tapped()
+        } catch {
+            LNAlertHelper.shared.show(
+                for: self,
+                title: "Error",
+                message: error.localizedDescription,
+                secondButtonTitle: "Ok",
+                secondButtonAction: {
+                    print("Alert was closed")
+                })
+        }
+    }
+
     func setupGestures() {
         tapGesture = UITapGestureRecognizer(target: self,
                                             action: #selector(tapped))
         tapGesture.delegate = self
         self.view.addGestureRecognizer(tapGesture)
     }
-
-    @objc private func tapped() {
-        self.dismiss(animated: false, completion: nil)
-    }
-
-    //MARK: - IBActions
-//    @IBAction func okButtonWasPressed(_ sender: UIButton) {
-//
-//        do {
-//            try validateChooseFields(self.nameTextField,
-//                                     self.moneyTextField,
-//                                     self.moneySelector)
-//
-//            myAccounts.append(Accounts(image: Image(withImage: selectedImage),
-//                                       nameOfAccount: nameTextField.text!,
-//                                       //amountOfMoney: Double(moneyTextField.text!) ?? 0,
-//
-//                                       amountOfMoney: (Double(moneyTextField.text!) ?? 0).rounded(toPlaces: 2),
-//                                       currency: Currency(rawValue: selectedCurrency)!))
-//
-//
-////                                       (rawValue: selectedCurrency ?? "BYN")))
-//
-//            NotificationCenter.default.post(name: .userDataWasUpdated,
-//                                            object: nil,
-//                                            userInfo: nil)
-//            done()
-//        } catch {
-//            LNAlertHelper.shared.show(
-//                for: self,
-//                title: "Error",
-//                message: error.localizedDescription,
-//                secondButtonTitle: "Ok",
-//                secondButtonAction: {
-//                    print("Alert was closed")
-//                })
-//        }
-//    }
 }
 
 //MARK: - UIGestureRecognizerDelegate

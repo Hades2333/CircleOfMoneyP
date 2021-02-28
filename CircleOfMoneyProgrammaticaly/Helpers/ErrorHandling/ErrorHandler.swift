@@ -41,3 +41,21 @@ extension ValidationError: LocalizedError {
     }
 }
 
+enum InputError: Error {
+    case emptyName
+    case emptyAmount
+}
+
+extension InputError: LocalizedError {
+    var errorDescription: String? {
+        switch self {
+        case .emptyName:
+            return NSLocalizedString("The name field is empty.",
+                                     comment: "")
+        case .emptyAmount:
+            return NSLocalizedString("The amount field is empty.",
+                                     comment: "")
+        }
+    }
+}
+

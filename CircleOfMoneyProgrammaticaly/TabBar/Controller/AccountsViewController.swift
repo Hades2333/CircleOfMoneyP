@@ -35,6 +35,26 @@ class AccountsViewController: UIViewController {
             make.edges.equalToSuperview()
         }
     }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.isNavigationBarHidden = false
+
+        NotificationCenter.default.addObserver(self ,
+                                               selector: #selector(sendDataWithObserver),
+                                               name: .accountsDataWasUpdated,
+                                               object: nil)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        NotificationCenter.default.removeObserver(Notification.Name.accountsDataWasUpdated)
+    }
+
+    //MARK: - Methods
+    @objc func sendDataWithObserver() {
+        self.tableView.reloadData()
+    }
 }
 
 extension AccountsViewController: UITableViewDelegate {
