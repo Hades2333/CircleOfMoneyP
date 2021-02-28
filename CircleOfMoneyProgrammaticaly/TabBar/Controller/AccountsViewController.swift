@@ -12,6 +12,8 @@ class AccountsViewController: UIViewController {
     //MARK: - Variables
     lazy var tableView: UITableView = {
         let table = UITableView()
+        table.backgroundColor = UIColor(named: "mainBackgroundColor")
+        
         return table
     }()
 
@@ -26,6 +28,7 @@ class AccountsViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
 
+        view.backgroundColor = UIColor(named: "mainBackgoundColor")
         view.addSubview(tableView)
         tableView.snp.makeConstraints { (make) in
             make.edges.equalToSuperview()
@@ -37,7 +40,8 @@ extension AccountsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
         if myAccounts.count == indexPath.row {
-            performSegue(withIdentifier: "ChooseIcon", sender: indexPath)
+            let next = ChooseIconViewController()
+            self.navigationController?.pushViewController(next, animated: true)
         } else {
             performSegue(withIdentifier: "DetailLook", sender: indexPath)
         }

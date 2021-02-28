@@ -40,6 +40,10 @@
 		14E400AB25EB8D7500C6A628 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E400AA25EB8D7500C6A628 /* DataModel.swift */; };
 		14E400AE25EB8F3400C6A628 /* CustomAddTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14E400AD25EB8F3400C6A628 /* CustomAddTableViewCell.xib */; };
 		14E400B125EB8F4900C6A628 /* CustomAddTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E400B025EB8F4900C6A628 /* CustomAddTableViewCell.swift */; };
+		14E400B925EB94B800C6A628 /* ChooseIconViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E400B825EB94B800C6A628 /* ChooseIconViewController.swift */; };
+		14E400BD25EB952400C6A628 /* ChooseIconCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14E400BC25EB952400C6A628 /* ChooseIconCollectionViewCell.xib */; };
+		14E400C025EB955200C6A628 /* ChooseIconCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E400BF25EB955200C6A628 /* ChooseIconCollectionViewCell.swift */; };
+		14E400C525EB972D00C6A628 /* ChooseIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E400C425EB972D00C6A628 /* ChooseIconView.swift */; };
 		27EDDD43402761F385F46255 /* Pods_CircleOfMoneyProgrammaticaly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 806281CC4F814FF9E478F3F9 /* Pods_CircleOfMoneyProgrammaticaly.framework */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +84,10 @@
 		14E400AA25EB8D7500C6A628 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		14E400AD25EB8F3400C6A628 /* CustomAddTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomAddTableViewCell.xib; sourceTree = "<group>"; };
 		14E400B025EB8F4900C6A628 /* CustomAddTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAddTableViewCell.swift; sourceTree = "<group>"; };
+		14E400B825EB94B800C6A628 /* ChooseIconViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseIconViewController.swift; sourceTree = "<group>"; };
+		14E400BC25EB952400C6A628 /* ChooseIconCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChooseIconCollectionViewCell.xib; sourceTree = "<group>"; };
+		14E400BF25EB955200C6A628 /* ChooseIconCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseIconCollectionViewCell.swift; sourceTree = "<group>"; };
+		14E400C425EB972D00C6A628 /* ChooseIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseIconView.swift; sourceTree = "<group>"; };
 		323B9C57059C13D9584D36FB /* Pods-CircleOfMoneyProgrammaticaly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CircleOfMoneyProgrammaticaly.release.xcconfig"; path = "Target Support Files/Pods-CircleOfMoneyProgrammaticaly/Pods-CircleOfMoneyProgrammaticaly.release.xcconfig"; sourceTree = "<group>"; };
 		694354AD57D3723928F41522 /* Pods-CircleOfMoneyProgrammaticaly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CircleOfMoneyProgrammaticaly.debug.xcconfig"; path = "Target Support Files/Pods-CircleOfMoneyProgrammaticaly/Pods-CircleOfMoneyProgrammaticaly.debug.xcconfig"; sourceTree = "<group>"; };
 		806281CC4F814FF9E478F3F9 /* Pods_CircleOfMoneyProgrammaticaly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CircleOfMoneyProgrammaticaly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,6 +130,9 @@
 				14E2E94D25EA376A00CDF2EF /* CustomViews */,
 				1415D45525EA1B6000F2F6FA /* Helpers */,
 				141024F225E9051D00CA951A /* Support */,
+				14E400B725EB944900C6A628 /* Operations */,
+				14E400B625EB943000C6A628 /* Home */,
+				14E400B525EB942A00C6A628 /* Accounts */,
 				1496120C25EA897F00A59E20 /* TabBar */,
 				1410250825E91FA400CA951A /* Registration */,
 				1402131025DFC24500803C47 /* AppDelegate.swift */,
@@ -199,6 +210,7 @@
 		1415D45525EA1B6000F2F6FA /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				14E400B325EB918100C6A628 /* DataHandling */,
 				14E2E96025EA7E6300CDF2EF /* ErrorHandling */,
 				14E2E95F25EA7E0100CDF2EF /* CustomClasses */,
 				14E2E95B25EA7DBD00CDF2EF /* Singletons */,
@@ -259,7 +271,6 @@
 			children = (
 				14E2E94F25EA37A400CDF2EF /* Controls */,
 				14E2E94E25EA379200CDF2EF /* Xibs */,
-				14E400AA25EB8D7500C6A628 /* DataModel.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -270,6 +281,7 @@
 				14E2E95025EA395E00CDF2EF /* TextFieldWithLine.xib */,
 				14E400A425EB8B3700C6A628 /* AccountTableViewCell.xib */,
 				14E400AD25EB8F3400C6A628 /* CustomAddTableViewCell.xib */,
+				14E400BC25EB952400C6A628 /* ChooseIconCollectionViewCell.xib */,
 			);
 			path = Xibs;
 			sourceTree = "<group>";
@@ -280,6 +292,7 @@
 				14E2E95325EA396B00CDF2EF /* TextFieldWithLine.swift */,
 				14E400A725EB8B6F00C6A628 /* AccountTableViewCell.swift */,
 				14E400B025EB8F4900C6A628 /* CustomAddTableViewCell.swift */,
+				14E400BF25EB955200C6A628 /* ChooseIconCollectionViewCell.swift */,
 			);
 			path = Controls;
 			sourceTree = "<group>";
@@ -306,6 +319,53 @@
 				14E2E96125EA7E7600CDF2EF /* ErrorHandler.swift */,
 			);
 			path = ErrorHandling;
+			sourceTree = "<group>";
+		};
+		14E400B325EB918100C6A628 /* DataHandling */ = {
+			isa = PBXGroup;
+			children = (
+				14E400AA25EB8D7500C6A628 /* DataModel.swift */,
+			);
+			path = DataHandling;
+			sourceTree = "<group>";
+		};
+		14E400B525EB942A00C6A628 /* Accounts */ = {
+			isa = PBXGroup;
+			children = (
+				14E400C325EB971B00C6A628 /* View */,
+				14E400C225EB970F00C6A628 /* Controller */,
+			);
+			path = Accounts;
+			sourceTree = "<group>";
+		};
+		14E400B625EB943000C6A628 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		14E400B725EB944900C6A628 /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Operations;
+			sourceTree = "<group>";
+		};
+		14E400C225EB970F00C6A628 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				14E400B825EB94B800C6A628 /* ChooseIconViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		14E400C325EB971B00C6A628 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				14E400C425EB972D00C6A628 /* ChooseIconView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		99D8A158DD1A10B22E4CFA63 /* Frameworks */ = {
@@ -395,6 +455,7 @@
 				14E400A525EB8B3700C6A628 /* AccountTableViewCell.xib in Resources */,
 				141024FE25E9136600CA951A /* Localizable.strings in Resources */,
 				1410250325E91B0600CA951A /* ofont.ru_VAG World.ttf in Resources */,
+				14E400BD25EB952400C6A628 /* ChooseIconCollectionViewCell.xib in Resources */,
 				14E2E95125EA395E00CDF2EF /* TextFieldWithLine.xib in Resources */,
 				1402131A25DFC24800803C47 /* Assets.xcassets in Resources */,
 				14E400AE25EB8F3400C6A628 /* CustomAddTableViewCell.xib in Resources */,
@@ -454,6 +515,7 @@
 			files = (
 				141024F025E9003500CA951A /* FirstScreenView.swift in Sources */,
 				14E2E94825EA2D4A00CDF2EF /* LogInView.swift in Sources */,
+				14E400C525EB972D00C6A628 /* ChooseIconView.swift in Sources */,
 				1402131525DFC24500803C47 /* FirstScreenViewController.swift in Sources */,
 				1402131125DFC24500803C47 /* AppDelegate.swift in Sources */,
 				14E4009925EB6D9200C6A628 /* OperationsViewController.swift in Sources */,
@@ -461,6 +523,7 @@
 				14E2E94B25EA2D6F00CDF2EF /* LogInViewController.swift in Sources */,
 				14E2E96625EA7FE400CDF2EF /* UIViewController+Ex.swift in Sources */,
 				14E4009325EB6D7400C6A628 /* AccountsViewController.swift in Sources */,
+				14E400C025EB955200C6A628 /* ChooseIconCollectionViewCell.swift in Sources */,
 				1415D45825EA1B8C00F2F6FA /* UIView+Ex.swift in Sources */,
 				14E2E94425EA2CF000CDF2EF /* SignUpView.swift in Sources */,
 				14E2E95825EA764000CDF2EF /* CustomViewController.swift in Sources */,
@@ -470,6 +533,7 @@
 				14E2E95D25EA7DD600CDF2EF /* AlertSingleton.swift in Sources */,
 				14E4009C25EB787200C6A628 /* AccountsView.swift in Sources */,
 				14E2E96225EA7E7600CDF2EF /* ErrorHandler.swift in Sources */,
+				14E400B925EB94B800C6A628 /* ChooseIconViewController.swift in Sources */,
 				14E2E95425EA396B00CDF2EF /* TextFieldWithLine.swift in Sources */,
 				14E2E94125EA2CD200CDF2EF /* SignUpViewController.swift in Sources */,
 				14E400A825EB8B6F00C6A628 /* AccountTableViewCell.swift in Sources */,
