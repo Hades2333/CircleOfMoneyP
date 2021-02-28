@@ -35,6 +35,11 @@
 		14E4009C25EB787200C6A628 /* AccountsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E4009B25EB787200C6A628 /* AccountsView.swift */; };
 		14E4009F25EB787D00C6A628 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E4009E25EB787D00C6A628 /* HomeView.swift */; };
 		14E400A225EB788D00C6A628 /* OperationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E400A125EB788D00C6A628 /* OperationsView.swift */; };
+		14E400A525EB8B3700C6A628 /* AccountTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14E400A425EB8B3700C6A628 /* AccountTableViewCell.xib */; };
+		14E400A825EB8B6F00C6A628 /* AccountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E400A725EB8B6F00C6A628 /* AccountTableViewCell.swift */; };
+		14E400AB25EB8D7500C6A628 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E400AA25EB8D7500C6A628 /* DataModel.swift */; };
+		14E400AE25EB8F3400C6A628 /* CustomAddTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14E400AD25EB8F3400C6A628 /* CustomAddTableViewCell.xib */; };
+		14E400B125EB8F4900C6A628 /* CustomAddTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E400B025EB8F4900C6A628 /* CustomAddTableViewCell.swift */; };
 		27EDDD43402761F385F46255 /* Pods_CircleOfMoneyProgrammaticaly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 806281CC4F814FF9E478F3F9 /* Pods_CircleOfMoneyProgrammaticaly.framework */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +75,11 @@
 		14E4009B25EB787200C6A628 /* AccountsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsView.swift; sourceTree = "<group>"; };
 		14E4009E25EB787D00C6A628 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		14E400A125EB788D00C6A628 /* OperationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationsView.swift; sourceTree = "<group>"; };
+		14E400A425EB8B3700C6A628 /* AccountTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountTableViewCell.xib; sourceTree = "<group>"; };
+		14E400A725EB8B6F00C6A628 /* AccountTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTableViewCell.swift; sourceTree = "<group>"; };
+		14E400AA25EB8D7500C6A628 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		14E400AD25EB8F3400C6A628 /* CustomAddTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomAddTableViewCell.xib; sourceTree = "<group>"; };
+		14E400B025EB8F4900C6A628 /* CustomAddTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAddTableViewCell.swift; sourceTree = "<group>"; };
 		323B9C57059C13D9584D36FB /* Pods-CircleOfMoneyProgrammaticaly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CircleOfMoneyProgrammaticaly.release.xcconfig"; path = "Target Support Files/Pods-CircleOfMoneyProgrammaticaly/Pods-CircleOfMoneyProgrammaticaly.release.xcconfig"; sourceTree = "<group>"; };
 		694354AD57D3723928F41522 /* Pods-CircleOfMoneyProgrammaticaly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CircleOfMoneyProgrammaticaly.debug.xcconfig"; path = "Target Support Files/Pods-CircleOfMoneyProgrammaticaly/Pods-CircleOfMoneyProgrammaticaly.debug.xcconfig"; sourceTree = "<group>"; };
 		806281CC4F814FF9E478F3F9 /* Pods_CircleOfMoneyProgrammaticaly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CircleOfMoneyProgrammaticaly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -249,6 +259,7 @@
 			children = (
 				14E2E94F25EA37A400CDF2EF /* Controls */,
 				14E2E94E25EA379200CDF2EF /* Xibs */,
+				14E400AA25EB8D7500C6A628 /* DataModel.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -257,6 +268,8 @@
 			isa = PBXGroup;
 			children = (
 				14E2E95025EA395E00CDF2EF /* TextFieldWithLine.xib */,
+				14E400A425EB8B3700C6A628 /* AccountTableViewCell.xib */,
+				14E400AD25EB8F3400C6A628 /* CustomAddTableViewCell.xib */,
 			);
 			path = Xibs;
 			sourceTree = "<group>";
@@ -265,6 +278,8 @@
 			isa = PBXGroup;
 			children = (
 				14E2E95325EA396B00CDF2EF /* TextFieldWithLine.swift */,
+				14E400A725EB8B6F00C6A628 /* AccountTableViewCell.swift */,
+				14E400B025EB8F4900C6A628 /* CustomAddTableViewCell.swift */,
 			);
 			path = Controls;
 			sourceTree = "<group>";
@@ -377,10 +392,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				1402131D25DFC24800803C47 /* LaunchScreen.storyboard in Resources */,
+				14E400A525EB8B3700C6A628 /* AccountTableViewCell.xib in Resources */,
 				141024FE25E9136600CA951A /* Localizable.strings in Resources */,
 				1410250325E91B0600CA951A /* ofont.ru_VAG World.ttf in Resources */,
 				14E2E95125EA395E00CDF2EF /* TextFieldWithLine.xib in Resources */,
 				1402131A25DFC24800803C47 /* Assets.xcassets in Resources */,
+				14E400AE25EB8F3400C6A628 /* CustomAddTableViewCell.xib in Resources */,
 				1410250525E91B0A00CA951A /* Varela-Regular.ttf in Resources */,
 				14E2E96A25EA82B800CDF2EF /* GoogleService-Info.plist in Resources */,
 			);
@@ -448,11 +465,14 @@
 				14E2E94425EA2CF000CDF2EF /* SignUpView.swift in Sources */,
 				14E2E95825EA764000CDF2EF /* CustomViewController.swift in Sources */,
 				14E4009625EB6D8100C6A628 /* HomeViewController.swift in Sources */,
+				14E400B125EB8F4900C6A628 /* CustomAddTableViewCell.swift in Sources */,
+				14E400AB25EB8D7500C6A628 /* DataModel.swift in Sources */,
 				14E2E95D25EA7DD600CDF2EF /* AlertSingleton.swift in Sources */,
 				14E4009C25EB787200C6A628 /* AccountsView.swift in Sources */,
 				14E2E96225EA7E7600CDF2EF /* ErrorHandler.swift in Sources */,
 				14E2E95425EA396B00CDF2EF /* TextFieldWithLine.swift in Sources */,
 				14E2E94125EA2CD200CDF2EF /* SignUpViewController.swift in Sources */,
+				14E400A825EB8B6F00C6A628 /* AccountTableViewCell.swift in Sources */,
 				14E400A225EB788D00C6A628 /* OperationsView.swift in Sources */,
 				14E4009F25EB787D00C6A628 /* HomeView.swift in Sources */,
 			);

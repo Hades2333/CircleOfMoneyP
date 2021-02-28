@@ -9,21 +9,73 @@ import UIKit
 
 class AccountsViewController: UIViewController {
 
+    //MARK: - Variables
+    lazy var tableView: UITableView = {
+        let table = UITableView()
+        return table
+    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.register(AccountTableViewCell.nib(),
+                           forCellReuseIdentifier:  AccountTableViewCell.identifier)
 
-        // Do any additional setup after loading the view.
+        tableView.register(CustomAddTableViewCell.nib(),
+                       forCellReuseIdentifier:  CustomAddTableViewCell.identifier)
+
+        tableView.delegate = self
+        tableView.dataSource = self
+
+        view.addSubview(tableView)
+        tableView.snp.makeConstraints { (make) in
+            make.edges.equalToSuperview()
+        }
     }
-    
+}
 
-    /*
-    // MARK: - Navigation
+extension AccountsViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if myAccounts.count == indexPath.row {
+            performSegue(withIdentifier: "ChooseIcon", sender: indexPath)
+        } else {
+            performSegue(withIdentifier: "DetailLook", sender: indexPath)
+        }
     }
-    */
 
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+
+        if editingStyle == .delete {
+            myAccounts.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        } else if editingStyle == .insert {
+            return
+        }
+    }
+}
+
+extension AccountsViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        myAccounts.count + 1
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
+        let totalRows = tableView.numberOfRows(inSection: 0)
+        if indexPath.row == totalRows - 1 {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: CustomAddTableViewCell.identifier, for: indexPath) as? CustomAddTableViewCell else {
+                fatalError("Misconfigured cell type for cell!")
+            }
+            cell.configureAddCell(title: "Add account")
+            return cell
+        }
+
+        guard let cell = tableView.dequeueReusableCell(
+                withIdentifier: AccountTableViewCell.identifier,
+                for: indexPath ) as? AccountTableViewCell else {
+            fatalError("Misconfigured cell type for cell!")
+        }
+        cell.configureAccounts(myAccounts[indexPath.row])
+        return cell
+    }
 }
