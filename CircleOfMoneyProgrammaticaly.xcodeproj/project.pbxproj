@@ -138,8 +138,7 @@
 				1402131025DFC24500803C47 /* AppDelegate.swift */,
 				1402131925DFC24800803C47 /* Assets.xcassets */,
 				1402131B25DFC24800803C47 /* LaunchScreen.storyboard */,
-				1402131E25DFC24800803C47 /* Info.plist */,
-				14E2E96925EA82B800CDF2EF /* GoogleService-Info.plist */,
+				14E400CA25EBB4CC00C6A628 /* Plists */,
 			);
 			path = CircleOfMoneyProgrammaticaly;
 			sourceTree = "<group>";
@@ -366,6 +365,15 @@
 				14E400C425EB972D00C6A628 /* ChooseIconView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		14E400CA25EBB4CC00C6A628 /* Plists */ = {
+			isa = PBXGroup;
+			children = (
+				14E2E96925EA82B800CDF2EF /* GoogleService-Info.plist */,
+				1402131E25DFC24800803C47 /* Info.plist */,
+			);
+			path = Plists;
 			sourceTree = "<group>";
 		};
 		99D8A158DD1A10B22E4CFA63 /* Frameworks */ = {
@@ -692,7 +700,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BBD9R4HKY2;
-				INFOPLIST_FILE = CircleOfMoneyProgrammaticaly/Info.plist;
+				INFOPLIST_FILE = CircleOfMoneyProgrammaticaly/Plists/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -712,7 +720,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BBD9R4HKY2;
-				INFOPLIST_FILE = CircleOfMoneyProgrammaticaly/Info.plist;
+				INFOPLIST_FILE = CircleOfMoneyProgrammaticaly/Plists/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
