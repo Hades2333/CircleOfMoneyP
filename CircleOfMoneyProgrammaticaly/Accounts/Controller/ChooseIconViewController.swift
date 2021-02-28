@@ -37,7 +37,7 @@ class ChooseIconViewController: UIViewController {
     //MARK: - Lifcycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        view.backgroundColor = UIColor.black.withAlphaComponent(0.3)
         view.addSubview(modalView)
         modalView.addSubview(collectionView)
 
@@ -74,16 +74,12 @@ class ChooseIconViewController: UIViewController {
         self.view.addGestureRecognizer(tapGesture)
     }
 
-    func done() {
-        performSegue(withIdentifier: "fromChooseIconToTheAccounts", sender: nil)
-    }
-
     func next() {
         performSegue(withIdentifier: "ChooseName", sender: nil)
     }
 
     @objc private func tapped() {
-        done()
+        dismiss(animated: false, completion: nil)
     }
 
     //MARK: - Navigation

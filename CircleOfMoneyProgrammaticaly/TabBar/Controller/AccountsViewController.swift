@@ -13,20 +13,21 @@ class AccountsViewController: UIViewController {
     lazy var tableView: UITableView = {
         let table = UITableView()
         table.backgroundColor = UIColor(named: "mainBackgroundColor")
-        
+        table.separatorStyle = .none
+        table.register(AccountTableViewCell.nib(),
+                       forCellReuseIdentifier:  AccountTableViewCell.identifier)
+
+        table.register(CustomAddTableViewCell.nib(),
+                       forCellReuseIdentifier:  CustomAddTableViewCell.identifier)
+
+        table.delegate = self
+        table.dataSource = self
         return table
     }()
 
+    //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.register(AccountTableViewCell.nib(),
-                           forCellReuseIdentifier:  AccountTableViewCell.identifier)
-
-        tableView.register(CustomAddTableViewCell.nib(),
-                       forCellReuseIdentifier:  CustomAddTableViewCell.identifier)
-
-        tableView.delegate = self
-        tableView.dataSource = self
 
         view.backgroundColor = UIColor(named: "mainBackgoundColor")
         view.addSubview(tableView)
@@ -41,7 +42,13 @@ extension AccountsViewController: UITableViewDelegate {
 
         if myAccounts.count == indexPath.row {
             let next = ChooseIconViewController()
-            self.navigationController?.pushViewController(next, animated: true)
+
+            next.modalTransitionStyle = .coverVertical
+            next.modalPresentationStyle = .fullScreen
+            next.modalPresentationStyle = .overCurrentContext
+
+            self.present(next, animated: false, completion: nil)
+
         } else {
             performSegue(withIdentifier: "DetailLook", sender: indexPath)
         }
