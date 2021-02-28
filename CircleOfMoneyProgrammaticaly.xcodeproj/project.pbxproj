@@ -48,6 +48,8 @@
 		14E400D025EBB65400C6A628 /* ChooseNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E400CF25EBB65400C6A628 /* ChooseNameView.swift */; };
 		14E400E325EBD4A400C6A628 /* Double+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E400E225EBD4A400C6A628 /* Double+Ex.swift */; };
 		14E400E625EBD51C00C6A628 /* Notification+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E400E525EBD51C00C6A628 /* Notification+Ex.swift */; };
+		14E400E925EBD9CA00C6A628 /* DetailLookAtCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E400E825EBD9CA00C6A628 /* DetailLookAtCellViewController.swift */; };
+		14E400EC25EBD9F200C6A628 /* DetailLookAtCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E400EB25EBD9F200C6A628 /* DetailLookAtCellView.swift */; };
 		27EDDD43402761F385F46255 /* Pods_CircleOfMoneyProgrammaticaly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 806281CC4F814FF9E478F3F9 /* Pods_CircleOfMoneyProgrammaticaly.framework */; };
 /* End PBXBuildFile section */
 
@@ -96,6 +98,8 @@
 		14E400CF25EBB65400C6A628 /* ChooseNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseNameView.swift; sourceTree = "<group>"; };
 		14E400E225EBD4A400C6A628 /* Double+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Ex.swift"; sourceTree = "<group>"; };
 		14E400E525EBD51C00C6A628 /* Notification+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Ex.swift"; sourceTree = "<group>"; };
+		14E400E825EBD9CA00C6A628 /* DetailLookAtCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailLookAtCellViewController.swift; sourceTree = "<group>"; };
+		14E400EB25EBD9F200C6A628 /* DetailLookAtCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailLookAtCellView.swift; sourceTree = "<group>"; };
 		323B9C57059C13D9584D36FB /* Pods-CircleOfMoneyProgrammaticaly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CircleOfMoneyProgrammaticaly.release.xcconfig"; path = "Target Support Files/Pods-CircleOfMoneyProgrammaticaly/Pods-CircleOfMoneyProgrammaticaly.release.xcconfig"; sourceTree = "<group>"; };
 		694354AD57D3723928F41522 /* Pods-CircleOfMoneyProgrammaticaly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CircleOfMoneyProgrammaticaly.debug.xcconfig"; path = "Target Support Files/Pods-CircleOfMoneyProgrammaticaly/Pods-CircleOfMoneyProgrammaticaly.debug.xcconfig"; sourceTree = "<group>"; };
 		806281CC4F814FF9E478F3F9 /* Pods_CircleOfMoneyProgrammaticaly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CircleOfMoneyProgrammaticaly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -350,6 +354,7 @@
 			children = (
 				14E400B825EB94B800C6A628 /* ChooseIconViewController.swift */,
 				14E400CC25EBB63400C6A628 /* ChooseNameViewController.swift */,
+				14E400E825EBD9CA00C6A628 /* DetailLookAtCellViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -359,6 +364,7 @@
 			children = (
 				14E400C425EB972D00C6A628 /* ChooseIconView.swift */,
 				14E400CF25EBB65400C6A628 /* ChooseNameView.swift */,
+				14E400EB25EBD9F200C6A628 /* DetailLookAtCellView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -530,6 +536,7 @@
 				14E4009325EB6D7400C6A628 /* AccountsViewController.swift in Sources */,
 				14E400CD25EBB63400C6A628 /* ChooseNameViewController.swift in Sources */,
 				14E400C025EB955200C6A628 /* ChooseIconCollectionViewCell.swift in Sources */,
+				14E400EC25EBD9F200C6A628 /* DetailLookAtCellView.swift in Sources */,
 				1415D45825EA1B8C00F2F6FA /* UIView+Ex.swift in Sources */,
 				14E2E94425EA2CF000CDF2EF /* SignUpView.swift in Sources */,
 				14E400E625EBD51C00C6A628 /* Notification+Ex.swift in Sources */,
@@ -542,6 +549,7 @@
 				14E2E96225EA7E7600CDF2EF /* ErrorHandler.swift in Sources */,
 				14E400B925EB94B800C6A628 /* ChooseIconViewController.swift in Sources */,
 				14E2E95425EA396B00CDF2EF /* TextFieldWithLine.swift in Sources */,
+				14E400E925EBD9CA00C6A628 /* DetailLookAtCellViewController.swift in Sources */,
 				14E2E94125EA2CD200CDF2EF /* SignUpViewController.swift in Sources */,
 				14E400A825EB8B6F00C6A628 /* AccountTableViewCell.swift in Sources */,
 				14E400A225EB788D00C6A628 /* OperationsView.swift in Sources */,

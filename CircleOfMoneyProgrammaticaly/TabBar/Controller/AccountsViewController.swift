@@ -70,7 +70,16 @@ extension AccountsViewController: UITableViewDelegate {
             self.present(next, animated: false, completion: nil)
 
         } else {
-            performSegue(withIdentifier: "DetailLook", sender: indexPath)
+
+            let next = DetailLookAtCellViewController()
+
+            next.modalTransitionStyle = .coverVertical
+            next.modalPresentationStyle = .fullScreen
+            next.modalPresentationStyle = .overCurrentContext
+            next.tabBarController?.tabBar.isHidden = true
+
+            //self.navigationController?.present(next, animated: true, completion: nil)
+            self.present(next, animated: false, completion: nil)
         }
     }
 
