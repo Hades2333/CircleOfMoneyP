@@ -36,8 +36,6 @@ class ChooseIconView: UIView {
     }
 
     private func initView() {
-        //MARK: - Сделать цвет прозрачный наполовину
-
         self.addSubview(self.modalView)
         self.modalView.addSubview(self.chooseIconLabel)
         makeConstraints()
