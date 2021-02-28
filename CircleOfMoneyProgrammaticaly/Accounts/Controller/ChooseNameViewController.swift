@@ -27,6 +27,14 @@ class ChooseNameViewController: UIViewController {
         super.viewDidLoad()
         self.modalView.moneySelector.delegate = self
         self.modalView.moneySelector.dataSource = self
+        
+        view.addSubview(modalView)
+
+        self.modalView.snp.makeConstraints { (make) in
+            make.top.equalToSuperview().inset(100)
+            make.bottom.equalToSuperview().inset(150)
+            make.left.right.equalToSuperview().inset(35)
+        }
     }
 
     override func viewWillAppear(_ animated: Bool) {

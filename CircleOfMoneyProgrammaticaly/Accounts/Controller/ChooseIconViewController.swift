@@ -75,7 +75,13 @@ class ChooseIconViewController: UIViewController {
     }
 
     func next() {
-        performSegue(withIdentifier: "ChooseName", sender: nil)
+        let next = ChooseNameViewController()
+
+        next.modalTransitionStyle = .coverVertical
+        next.modalPresentationStyle = .fullScreen
+        next.modalPresentationStyle = .overCurrentContext
+        
+        present(next, animated: false, completion: nil)
     }
 
     @objc private func tapped() {

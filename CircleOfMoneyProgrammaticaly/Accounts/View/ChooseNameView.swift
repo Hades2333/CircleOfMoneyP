@@ -10,31 +10,41 @@ import UIKit
 class ChooseNameView: UIView {
 
     //MARK: - GUI Variables
-    //    self.firstLayerModalView.layer.cornerRadius = 20.0
     lazy private var modalView: UIView = {
         let view = UIView()
+        view.backgroundColor = UIColor(named: "mainBackgroundColor")
         return view
     }()
 
     lazy private var nameLabel: UILabel = {
         let label = UILabel()
+        label.textAlignment = .center
+        label.font = UIFont(name: "Varela", size: 17.0)
+        label.textColor = UIColor(named: "greenLittleTint")
+        label.text = "Choose Name"
         return label
     }()
 
     lazy private var moneyLabel: UILabel = {
         let label = UILabel()
+        label.textAlignment = .center
+        label.font = UIFont(name: "Varela", size: 17.0)
+        label.textColor = UIColor(named: "greenLittleTint")
+        label.text = "Choose amount of money"
         return label
     }()
 
-    //    self.nameTextField.layer.cornerRadius = self.nameTextField.frame.height / 2
     lazy private var nameTextField: UITextField = {
         let textField = UITextField()
+        textField.borderStyle = .roundedRect
+        textField.backgroundColor = UIColor.white
         return textField
     }()
 
-//    self.moneyTextField.layer.cornerRadius = self.moneyTextField.frame.height / 2
     lazy private var moneyTextField: UITextField = {
         let textField = UITextField()
+        textField.borderStyle = .roundedRect
+        textField.backgroundColor = UIColor.white
         return textField
     }()
 
@@ -43,10 +53,18 @@ class ChooseNameView: UIView {
         return selector
     }()
 
-    //    self.okButton.layer.cornerRadius = self.okButton.frame.height / 2
-    //            self.okButton.setTitle("OK", for: .normal)
     lazy private var okButton: UIButton = {
         let button = UIButton()
+        button.setTitle(NSLocalizedString("Ok",
+                                          comment: ""),
+                        for: .normal)
+        button.titleLabel?.font = UIFont(name: "Varela", size: 17.0)
+        button.backgroundColor = UIColor(named: "greenGreatTint")
+        button.titleLabel?.textColor = UIColor(named: "mainBackgroundColor")
+        button.addTarget(self,
+                         action: #selector(self.okButtonPressed),
+                         for: .touchUpInside)
+        button.layer.cornerRadius = 25
         return button
     }()
 
@@ -65,8 +83,8 @@ class ChooseNameView: UIView {
 
         self.addSubview(self.modalView)
         self.modalView.addSubviews([self.nameLabel, self.moneyLabel,
-                                    self.moneyTextField, self.moneySelector,
-                                    self.okButton])
+                                    self.nameTextField, self.moneyTextField,
+                                    self.moneySelector, self.okButton])
         makeConstraints()
         self.modalView.layer.cornerRadius = 20
     }
@@ -79,33 +97,44 @@ class ChooseNameView: UIView {
 
         self.nameLabel.snp.makeConstraints { (make) in
             make.left.right.equalToSuperview().offset(10)
-            make.top.height.equalTo(20)
+            make.top.equalToSuperview().offset(20)
+            make.height.equalTo(20)
         }
 
-        self.moneyTextField.snp.makeConstraints { (make) in
-            make.left.right.equalToSuperview().offset(10)
-            make.top.equalTo(self.nameLabel.snp.bottom)
-            make.height.equalTo(20)
+        self.nameTextField.snp.makeConstraints { (make) in
+            make.left.right.equalToSuperview().inset(20)
+            make.top.equalTo(self.nameLabel.snp.bottom).offset(5)
+            make.height.equalTo(30)
         }
 
         self.moneyLabel.snp.makeConstraints { (make) in
             make.left.right.equalToSuperview().offset(10)
-            make.top.equalTo(self.moneyTextField.snp.bottom).offset(20)
+            make.top.equalTo(self.nameTextField.snp.bottom).offset(20)
             make.height.equalTo(20)
+        }
+
+        self.moneyTextField.snp.makeConstraints { (make) in
+            make.left.right.equalToSuperview().inset(20)
+            make.top.equalTo(self.moneyLabel.snp.bottom).offset(5)
+            make.height.equalTo(30)
         }
 
         self.moneySelector.snp.makeConstraints { (make) in
             make.left.right.equalToSuperview()
             make.top.equalTo(self.moneyTextField.snp.bottom).offset(20)
-            make.height.greaterThanOrEqualTo(70)
+            make.height.greaterThanOrEqualTo(50)
         }
 
         self.okButton.snp.makeConstraints { (make) in
-            make.left.right.equalToSuperview().inset(50)
+            make.left.right.equalToSuperview().inset(100)
             make.top.equalTo(self.moneySelector.snp.bottom).offset(5)
             make.height.equalTo(50)
             make.bottom.equalToSuperview().inset(20)
         }
     }
 
+    //MARK: - Methods
+    @objc func okButtonPressed() {
+
+    }
 }
