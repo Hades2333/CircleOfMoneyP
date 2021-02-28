@@ -16,7 +16,8 @@
 		1410250325E91B0600CA951A /* ofont.ru_VAG World.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 141024F425E9056100CA951A /* ofont.ru_VAG World.ttf */; };
 		1410250525E91B0A00CA951A /* Varela-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 141024F525E9056100CA951A /* Varela-Regular.ttf */; };
 		1415D45825EA1B8C00F2F6FA /* UIView+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1415D45725EA1B8C00F2F6FA /* UIView+Ex.swift */; };
-		1458CCDF25DFC2AD0091C711 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 1458CCDE25DFC2AD0091C711 /* SwiftPackageProductDependency */; };
+		1458CCDF25DFC2AD0091C711 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1458CCDE25DFC2AD0091C711 /* SnapKit */; };
+		1496121125EA89CA00A59E20 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1496121025EA89CA00A59E20 /* TabBar.swift */; };
 		14E2E94125EA2CD200CDF2EF /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E2E94025EA2CD200CDF2EF /* SignUpViewController.swift */; };
 		14E2E94425EA2CF000CDF2EF /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E2E94325EA2CF000CDF2EF /* SignUpView.swift */; };
 		14E2E94825EA2D4A00CDF2EF /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E2E94725EA2D4A00CDF2EF /* LogInView.swift */; };
@@ -28,6 +29,12 @@
 		14E2E96225EA7E7600CDF2EF /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E2E96125EA7E7600CDF2EF /* ErrorHandler.swift */; };
 		14E2E96625EA7FE400CDF2EF /* UIViewController+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E2E96525EA7FE400CDF2EF /* UIViewController+Ex.swift */; };
 		14E2E96A25EA82B800CDF2EF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 14E2E96925EA82B800CDF2EF /* GoogleService-Info.plist */; };
+		14E4009325EB6D7400C6A628 /* AccountsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E4009225EB6D7400C6A628 /* AccountsViewController.swift */; };
+		14E4009625EB6D8100C6A628 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E4009525EB6D8100C6A628 /* HomeViewController.swift */; };
+		14E4009925EB6D9200C6A628 /* OperationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E4009825EB6D9200C6A628 /* OperationsViewController.swift */; };
+		14E4009C25EB787200C6A628 /* AccountsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E4009B25EB787200C6A628 /* AccountsView.swift */; };
+		14E4009F25EB787D00C6A628 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E4009E25EB787D00C6A628 /* HomeView.swift */; };
+		14E400A225EB788D00C6A628 /* OperationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E400A125EB788D00C6A628 /* OperationsView.swift */; };
 		27EDDD43402761F385F46255 /* Pods_CircleOfMoneyProgrammaticaly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 806281CC4F814FF9E478F3F9 /* Pods_CircleOfMoneyProgrammaticaly.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +52,7 @@
 		141024FF25E9136600CA951A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1410250225E9136B00CA951A /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1415D45725EA1B8C00F2F6FA /* UIView+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ex.swift"; sourceTree = "<group>"; };
+		1496121025EA89CA00A59E20 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		14E2E94025EA2CD200CDF2EF /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		14E2E94325EA2CF000CDF2EF /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		14E2E94725EA2D4A00CDF2EF /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
@@ -56,6 +64,12 @@
 		14E2E96125EA7E7600CDF2EF /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
 		14E2E96525EA7FE400CDF2EF /* UIViewController+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ex.swift"; sourceTree = "<group>"; };
 		14E2E96925EA82B800CDF2EF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		14E4009225EB6D7400C6A628 /* AccountsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsViewController.swift; sourceTree = "<group>"; };
+		14E4009525EB6D8100C6A628 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		14E4009825EB6D9200C6A628 /* OperationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationsViewController.swift; sourceTree = "<group>"; };
+		14E4009B25EB787200C6A628 /* AccountsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsView.swift; sourceTree = "<group>"; };
+		14E4009E25EB787D00C6A628 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		14E400A125EB788D00C6A628 /* OperationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationsView.swift; sourceTree = "<group>"; };
 		323B9C57059C13D9584D36FB /* Pods-CircleOfMoneyProgrammaticaly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CircleOfMoneyProgrammaticaly.release.xcconfig"; path = "Target Support Files/Pods-CircleOfMoneyProgrammaticaly/Pods-CircleOfMoneyProgrammaticaly.release.xcconfig"; sourceTree = "<group>"; };
 		694354AD57D3723928F41522 /* Pods-CircleOfMoneyProgrammaticaly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CircleOfMoneyProgrammaticaly.debug.xcconfig"; path = "Target Support Files/Pods-CircleOfMoneyProgrammaticaly/Pods-CircleOfMoneyProgrammaticaly.debug.xcconfig"; sourceTree = "<group>"; };
 		806281CC4F814FF9E478F3F9 /* Pods_CircleOfMoneyProgrammaticaly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CircleOfMoneyProgrammaticaly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,7 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1458CCDF25DFC2AD0091C711 /* BuildFile in Frameworks */,
+				1458CCDF25DFC2AD0091C711 /* SnapKit in Frameworks */,
 				27EDDD43402761F385F46255 /* Pods_CircleOfMoneyProgrammaticaly.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -98,6 +112,7 @@
 				14E2E94D25EA376A00CDF2EF /* CustomViews */,
 				1415D45525EA1B6000F2F6FA /* Helpers */,
 				141024F225E9051D00CA951A /* Support */,
+				1496120C25EA897F00A59E20 /* TabBar */,
 				1410250825E91FA400CA951A /* Registration */,
 				1402131025DFC24500803C47 /* AppDelegate.swift */,
 				1402131925DFC24800803C47 /* Assets.xcassets */,
@@ -191,6 +206,44 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		1496120C25EA897F00A59E20 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				1496120F25EA89A500A59E20 /* Model */,
+				1496120E25EA899C00A59E20 /* View */,
+				1496120D25EA899400A59E20 /* Controller */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		1496120D25EA899400A59E20 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1496121025EA89CA00A59E20 /* TabBar.swift */,
+				14E4009225EB6D7400C6A628 /* AccountsViewController.swift */,
+				14E4009525EB6D8100C6A628 /* HomeViewController.swift */,
+				14E4009825EB6D9200C6A628 /* OperationsViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1496120E25EA899C00A59E20 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				14E4009B25EB787200C6A628 /* AccountsView.swift */,
+				14E4009E25EB787D00C6A628 /* HomeView.swift */,
+				14E400A125EB788D00C6A628 /* OperationsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1496120F25EA89A500A59E20 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		14E2E94D25EA376A00CDF2EF /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -254,7 +307,6 @@
 				694354AD57D3723928F41522 /* Pods-CircleOfMoneyProgrammaticaly.debug.xcconfig */,
 				323B9C57059C13D9584D36FB /* Pods-CircleOfMoneyProgrammaticaly.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -277,7 +329,7 @@
 			);
 			name = CircleOfMoneyProgrammaticaly;
 			packageProductDependencies = (
-				1458CCDE25DFC2AD0091C711 /* SwiftPackageProductDependency */,
+				1458CCDE25DFC2AD0091C711 /* SnapKit */,
 			);
 			productName = CircleOfMoneyProgrammaticaly;
 			productReference = 1402130D25DFC24500803C47 /* CircleOfMoneyProgrammaticaly.app */;
@@ -308,7 +360,7 @@
 			);
 			mainGroup = 1402130425DFC24500803C47;
 			packageReferences = (
-				1458CCDD25DFC2AD0091C711 /* RemoteSwiftPackageReference */,
+				1458CCDD25DFC2AD0091C711 /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = 1402130E25DFC24500803C47 /* Products */;
 			projectDirPath = "";
@@ -387,15 +439,22 @@
 				14E2E94825EA2D4A00CDF2EF /* LogInView.swift in Sources */,
 				1402131525DFC24500803C47 /* FirstScreenViewController.swift in Sources */,
 				1402131125DFC24500803C47 /* AppDelegate.swift in Sources */,
+				14E4009925EB6D9200C6A628 /* OperationsViewController.swift in Sources */,
+				1496121125EA89CA00A59E20 /* TabBar.swift in Sources */,
 				14E2E94B25EA2D6F00CDF2EF /* LogInViewController.swift in Sources */,
 				14E2E96625EA7FE400CDF2EF /* UIViewController+Ex.swift in Sources */,
+				14E4009325EB6D7400C6A628 /* AccountsViewController.swift in Sources */,
 				1415D45825EA1B8C00F2F6FA /* UIView+Ex.swift in Sources */,
 				14E2E94425EA2CF000CDF2EF /* SignUpView.swift in Sources */,
 				14E2E95825EA764000CDF2EF /* CustomViewController.swift in Sources */,
+				14E4009625EB6D8100C6A628 /* HomeViewController.swift in Sources */,
 				14E2E95D25EA7DD600CDF2EF /* AlertSingleton.swift in Sources */,
+				14E4009C25EB787200C6A628 /* AccountsView.swift in Sources */,
 				14E2E96225EA7E7600CDF2EF /* ErrorHandler.swift in Sources */,
 				14E2E95425EA396B00CDF2EF /* TextFieldWithLine.swift in Sources */,
 				14E2E94125EA2CD200CDF2EF /* SignUpViewController.swift in Sources */,
+				14E400A225EB788D00C6A628 /* OperationsView.swift in Sources */,
+				14E4009F25EB787D00C6A628 /* HomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -605,7 +664,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		1458CCDD25DFC2AD0091C711 /* RemoteSwiftPackageReference */ = {
+		1458CCDD25DFC2AD0091C711 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit";
 			requirement = {
@@ -616,9 +675,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		1458CCDE25DFC2AD0091C711 /* SwiftPackageProductDependency */ = {
+		1458CCDE25DFC2AD0091C711 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1458CCDD25DFC2AD0091C711 /* RemoteSwiftPackageReference */;
+			package = 1458CCDD25DFC2AD0091C711 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
 		};
 /* End XCSwiftPackageProductDependency section */

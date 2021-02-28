@@ -2,8 +2,12 @@
 # platform :ios, '9.0'
 
 target 'CircleOfMoneyProgrammaticaly' do
+
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
+
+pod 'CircleBar', '~> 0.8'
+pod 'ASPCircleChart', '~> 3.0'
 
 pod 'Firebase/Analytics'
 pod 'Firebase/Auth'

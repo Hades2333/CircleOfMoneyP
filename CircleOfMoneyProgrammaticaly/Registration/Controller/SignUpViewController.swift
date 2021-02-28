@@ -76,6 +76,7 @@ class SignUpViewController: CustomViewController {
 //                                                  name: UIResponder.keyboardWillHideNotification,
 //                                                  object: nil)
 //    }
+    //MARK: - Methods
     private func toRegister() {
 
         do {
@@ -89,15 +90,13 @@ class SignUpViewController: CustomViewController {
                 .trimmingCharacters(in: .whitespacesAndNewlines)
 
             Auth.auth().createUser(withEmail: userEmail,
-                                   password: userPassword) { (result, err ) in
-
-                if err != nil {
-                    print(err?.localizedDescription as Any)
+                                   password: userPassword) { (result, error ) in
+                if error != nil {
+                    print(error?.localizedDescription as Any)
                 } else {
                     print("User signs up successfully")
-
-                    // переход на главный экран
-                    //self.performSegue(withIdentifier: Constants.Segues.signUpVCToCircleBarC, sender: self)
+                    let next = TabBar()
+                    self.navigationController?.pushViewController(next, animated: true)
                 }
             }
         } catch {

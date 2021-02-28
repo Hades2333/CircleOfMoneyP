@@ -79,24 +79,24 @@ extension UIViewController {
 //        return number
 //    }
 
-    //MARK: - Header constructor
-    func headerConstructor(_ view: UIView,
-                         _ height: CGFloat,
-                         _ title: String) -> UIView {
-        let widthSize = view.bounds.size.width
-
-        let header = UIView(frame: CGRect(x: 0, y: 0,
-                                          width: widthSize,
-                                          height: height + 10))
-
-        header.backgroundColor = UIColor(named: "mainBackgroundColor")
-        let headerLabel: UILabel = UILabel(frame: header.bounds)
-        headerLabel.text = "      " + "\(title):"
-        headerLabel.textAlignment = .left
-        headerLabel.font = UIFont(name: "Varela", size: height)
-        headerLabel.textColor = UIColor(named: "greenLittleTint")
-        header.addSubview(headerLabel)
-        return header
-    }
+//    //MARK: - Header constructor
+//    func headerConstructor(_ view: UIView,
+//                         _ height: CGFloat,
+//                         _ title: String) -> UIView {
+//        let widthSize = view.bounds.size.width
+//
+//        let header = UIView(frame: CGRect(x: 0, y: 0,
+//                                          width: widthSize,
+//                                          height: height + 10))
+//
+//        header.backgroundColor = UIColor(named: "mainBackgroundColor")
+//        let headerLabel: UILabel = UILabel(frame: header.bounds)
+//        headerLabel.text = "      " + "\(title):"
+//        headerLabel.textAlignment = .left
+//        headerLabel.font = UIFont(name: "Varela", size: height)
+//        headerLabel.textColor = UIColor(named: "greenLittleTint")
+//        header.addSubview(headerLabel)
+//        return header
+//    }
 }
 

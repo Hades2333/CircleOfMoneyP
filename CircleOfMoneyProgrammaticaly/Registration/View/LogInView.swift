@@ -36,17 +36,17 @@ class LogInView: UIView {
 
     private lazy var mainLogo: UIImageView = {
         let view = UIImageView()
-        view.image = UIImage(named: "signUpImage")
+        view.image = UIImage(named: "logInImage")
         return view
     }()
 
-    private lazy var emailTextField: TextFieldWithLine = {
+    lazy var emailTextField: TextFieldWithLine = {
         let view = TextFieldWithLine()
         view.textInput.placeholder = "Enter email"
         return view
     }()
 
-    private lazy var passwordTextField: TextFieldWithLine = {
+    lazy var passwordTextField: TextFieldWithLine = {
         let view = TextFieldWithLine()
         view.textInput.placeholder = "Enter password"
         return view
@@ -60,14 +60,14 @@ class LogInView: UIView {
 
     private lazy var logInButton: UIButton = {
         let button = UIButton()
-        button.setTitle(NSLocalizedString("Register",
+        button.setTitle(NSLocalizedString("Log In",
                                           comment: ""),
                         for: .normal)
         button.titleLabel?.font = UIFont(name: "Varela", size: 17.0)
         button.backgroundColor = UIColor(named: "greenGreatTint")
         button.titleLabel?.textColor = UIColor(named: "")
         button.addTarget(self,
-                         action: #selector(self.signUpButtonPressed),
+                         action: #selector(self.logInButtonPressed),
                          for: .touchUpInside)
         return button
     }()
@@ -148,7 +148,7 @@ class LogInView: UIView {
         self.backTransition?()
     }
 
-    @objc private func signUpButtonPressed() {
+    @objc private func logInButtonPressed() {
         self.logInTransition?()
     }
 }
