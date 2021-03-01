@@ -29,7 +29,9 @@ class AccountsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = UIColor(named: "mainBackgoundColor")
+        view.backgroundColor = UIColor(named: "mainBackgroundColor")
+        self.edgesForExtendedLayout = []
+
         view.addSubview(tableView)
         tableView.snp.makeConstraints { (make) in
             make.edges.equalToSuperview()

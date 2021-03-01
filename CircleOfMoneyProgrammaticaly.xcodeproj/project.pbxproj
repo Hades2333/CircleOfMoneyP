@@ -19,6 +19,7 @@
 		1426818425ECBF42007C8413 /* UIViewStack+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1426818325ECBF42007C8413 /* UIViewStack+Ex.swift */; };
 		1426818825ECC816007C8413 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1426818725ECC816007C8413 /* CalculatorViewController.swift */; };
 		1426818B25ECC82B007C8413 /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1426818A25ECC82B007C8413 /* CalculatorView.swift */; };
+		142681A425ED1F3C007C8413 /* ExchangeRates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142681A325ED1F3C007C8413 /* ExchangeRates.swift */; };
 		1458CCDF25DFC2AD0091C711 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1458CCDE25DFC2AD0091C711 /* SnapKit */; };
 		1496121125EA89CA00A59E20 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1496121025EA89CA00A59E20 /* TabBar.swift */; };
 		14E2E94125EA2CD200CDF2EF /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E2E94025EA2CD200CDF2EF /* SignUpViewController.swift */; };
@@ -35,9 +36,6 @@
 		14E4009325EB6D7400C6A628 /* AccountsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E4009225EB6D7400C6A628 /* AccountsViewController.swift */; };
 		14E4009625EB6D8100C6A628 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E4009525EB6D8100C6A628 /* HomeViewController.swift */; };
 		14E4009925EB6D9200C6A628 /* OperationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E4009825EB6D9200C6A628 /* OperationsViewController.swift */; };
-		14E4009C25EB787200C6A628 /* AccountsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E4009B25EB787200C6A628 /* AccountsView.swift */; };
-		14E4009F25EB787D00C6A628 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E4009E25EB787D00C6A628 /* HomeView.swift */; };
-		14E400A225EB788D00C6A628 /* OperationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E400A125EB788D00C6A628 /* OperationsView.swift */; };
 		14E400A525EB8B3700C6A628 /* AccountTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14E400A425EB8B3700C6A628 /* AccountTableViewCell.xib */; };
 		14E400A825EB8B6F00C6A628 /* AccountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E400A725EB8B6F00C6A628 /* AccountTableViewCell.swift */; };
 		14E400AB25EB8D7500C6A628 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E400AA25EB8D7500C6A628 /* DataModel.swift */; };
@@ -73,6 +71,7 @@
 		1426818325ECBF42007C8413 /* UIViewStack+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewStack+Ex.swift"; sourceTree = "<group>"; };
 		1426818725ECC816007C8413 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
 		1426818A25ECC82B007C8413 /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
+		142681A325ED1F3C007C8413 /* ExchangeRates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRates.swift; sourceTree = "<group>"; };
 		1496121025EA89CA00A59E20 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		14E2E94025EA2CD200CDF2EF /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		14E2E94325EA2CF000CDF2EF /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
@@ -88,9 +87,6 @@
 		14E4009225EB6D7400C6A628 /* AccountsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsViewController.swift; sourceTree = "<group>"; };
 		14E4009525EB6D8100C6A628 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		14E4009825EB6D9200C6A628 /* OperationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationsViewController.swift; sourceTree = "<group>"; };
-		14E4009B25EB787200C6A628 /* AccountsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsView.swift; sourceTree = "<group>"; };
-		14E4009E25EB787D00C6A628 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		14E400A125EB788D00C6A628 /* OperationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationsView.swift; sourceTree = "<group>"; };
 		14E400A425EB8B3700C6A628 /* AccountTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountTableViewCell.xib; sourceTree = "<group>"; };
 		14E400A725EB8B6F00C6A628 /* AccountTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTableViewCell.swift; sourceTree = "<group>"; };
 		14E400AA25EB8D7500C6A628 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
@@ -219,6 +215,7 @@
 		1415D45525EA1B6000F2F6FA /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				142681A225ED1F2A007C8413 /* Network */,
 				14E400B325EB918100C6A628 /* DataHandling */,
 				14E2E96025EA7E6300CDF2EF /* ErrorHandling */,
 				14E2E95F25EA7E0100CDF2EF /* CustomClasses */,
@@ -240,10 +237,31 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		1426819D25ED1492007C8413 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1426819E25ED149D007C8413 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		142681A225ED1F2A007C8413 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				142681A325ED1F3C007C8413 /* ExchangeRates.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		1496120C25EA897F00A59E20 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
-				1496120E25EA899C00A59E20 /* View */,
 				1496120D25EA899400A59E20 /* Controller */,
 			);
 			path = TabBar;
@@ -258,16 +276,6 @@
 				14E4009825EB6D9200C6A628 /* OperationsViewController.swift */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		1496120E25EA899C00A59E20 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				14E4009B25EB787200C6A628 /* AccountsView.swift */,
-				14E4009E25EB787D00C6A628 /* HomeView.swift */,
-				14E400A125EB788D00C6A628 /* OperationsView.swift */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		14E2E94D25EA376A00CDF2EF /* CustomViews */ = {
@@ -345,6 +353,8 @@
 		14E400B625EB943000C6A628 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				1426819E25ED149D007C8413 /* View */,
+				1426819D25ED1492007C8413 /* Controller */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -542,6 +552,7 @@
 				1496121125EA89CA00A59E20 /* TabBar.swift in Sources */,
 				14E2E94B25EA2D6F00CDF2EF /* LogInViewController.swift in Sources */,
 				14E400D025EBB65400C6A628 /* ChooseNameView.swift in Sources */,
+				142681A425ED1F3C007C8413 /* ExchangeRates.swift in Sources */,
 				14E2E96625EA7FE400CDF2EF /* UIViewController+Ex.swift in Sources */,
 				14E4009325EB6D7400C6A628 /* AccountsViewController.swift in Sources */,
 				14E400CD25EBB63400C6A628 /* ChooseNameViewController.swift in Sources */,
@@ -557,16 +568,13 @@
 				14E400B125EB8F4900C6A628 /* CustomAddTableViewCell.swift in Sources */,
 				14E400AB25EB8D7500C6A628 /* DataModel.swift in Sources */,
 				14E2E95D25EA7DD600CDF2EF /* AlertSingleton.swift in Sources */,
-				14E4009C25EB787200C6A628 /* AccountsView.swift in Sources */,
 				14E2E96225EA7E7600CDF2EF /* ErrorHandler.swift in Sources */,
 				14E400B925EB94B800C6A628 /* ChooseIconViewController.swift in Sources */,
 				14E2E95425EA396B00CDF2EF /* TextFieldWithLine.swift in Sources */,
 				14E400E925EBD9CA00C6A628 /* DetailLookAtCellViewController.swift in Sources */,
 				14E2E94125EA2CD200CDF2EF /* SignUpViewController.swift in Sources */,
 				14E400A825EB8B6F00C6A628 /* AccountTableViewCell.swift in Sources */,
-				14E400A225EB788D00C6A628 /* OperationsView.swift in Sources */,
 				14E400E325EBD4A400C6A628 /* Double+Ex.swift in Sources */,
-				14E4009F25EB787D00C6A628 /* HomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -20,23 +20,21 @@ class TabBar: UITabBarController {
     }
 
     fileprivate func createNavController(for rootViewController: UIViewController,
-                                         title: String,
                                          image: UIImage) -> UIViewController {
         let navController = UINavigationController(rootViewController: rootViewController)
 
-        navController.tabBarItem.title = title
         navController.tabBarItem.image = image
-        navController.navigationBar.prefersLargeTitles = true
-        rootViewController.navigationItem.title = title
+        navController.navigationBar.prefersLargeTitles = false
+        //rootViewController.navigationItem.title = title
 
         return navController
     }
 
     func setupVCs() {
         viewControllers = [
-            createNavController(for: AccountsViewController(), title: NSLocalizedString("Accounts", comment: ""), image: UIImage(named: "accountsIcon")!),
-            createNavController(for: HomeViewController(), title: NSLocalizedString("Home", comment: ""), image: UIImage(named: "mainIcon")!),
-            createNavController(for: OperationsViewController(), title: NSLocalizedString("Operations", comment: ""), image: UIImage(named: "operationsIcon")!)]
+            createNavController(for: AccountsViewController(), image: UIImage(named: "accountsIcon")!),
+            createNavController(for: HomeViewController(), image: UIImage(named: "mainIcon")!),
+            createNavController(for: OperationsViewController(), image: UIImage(named: "operationsIcon")!)]
     }
 }
 
