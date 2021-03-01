@@ -173,9 +173,15 @@ extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
         if myCategories.count == indexPath.row {
-            //performSegue(withIdentifier: "HomeChooseColor", sender: indexPath)
+            let next = HomeChooseColorViewController()
+            next.modalTransitionStyle = .coverVertical
+            next.modalPresentationStyle = .overFullScreen
+            self.present(next, animated: false, completion: nil)
         } else {
-            //performSegue(withIdentifier: "HomeDetailLook", sender: indexPath)
+            let next = HomeDetailViewController()
+            next.modalTransitionStyle = .coverVertical
+            next.modalPresentationStyle = .overFullScreen
+            self.present(next, animated: false, completion: nil)
         }
     }
 

@@ -20,6 +20,13 @@
 		1426818825ECC816007C8413 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1426818725ECC816007C8413 /* CalculatorViewController.swift */; };
 		1426818B25ECC82B007C8413 /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1426818A25ECC82B007C8413 /* CalculatorView.swift */; };
 		142681A425ED1F3C007C8413 /* ExchangeRates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142681A325ED1F3C007C8413 /* ExchangeRates.swift */; };
+		142681AF25ED29A0007C8413 /* HomeChooseColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142681AE25ED29A0007C8413 /* HomeChooseColorViewController.swift */; };
+		142681B225ED29B5007C8413 /* HomeChooseIconViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142681B125ED29B5007C8413 /* HomeChooseIconViewController.swift */; };
+		142681B525ED29C8007C8413 /* HomeChooseNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142681B425ED29C8007C8413 /* HomeChooseNameViewController.swift */; };
+		142681C525ED3D93007C8413 /* ChooseColorCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 142681C425ED3D93007C8413 /* ChooseColorCollectionViewCell.xib */; };
+		142681C825ED3DD1007C8413 /* ChooseColorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142681C725ED3DD1007C8413 /* ChooseColorCollectionViewCell.swift */; };
+		142681CE25ED3F1E007C8413 /* HomeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142681CD25ED3F1E007C8413 /* HomeDetailViewController.swift */; };
+		142681D125ED3F70007C8413 /* HomeChooseAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142681D025ED3F70007C8413 /* HomeChooseAccountViewController.swift */; };
 		1458CCDF25DFC2AD0091C711 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1458CCDE25DFC2AD0091C711 /* SnapKit */; };
 		1496121125EA89CA00A59E20 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1496121025EA89CA00A59E20 /* TabBar.swift */; };
 		14E2E94125EA2CD200CDF2EF /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E2E94025EA2CD200CDF2EF /* SignUpViewController.swift */; };
@@ -72,6 +79,13 @@
 		1426818725ECC816007C8413 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
 		1426818A25ECC82B007C8413 /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
 		142681A325ED1F3C007C8413 /* ExchangeRates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRates.swift; sourceTree = "<group>"; };
+		142681AE25ED29A0007C8413 /* HomeChooseColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeChooseColorViewController.swift; sourceTree = "<group>"; };
+		142681B125ED29B5007C8413 /* HomeChooseIconViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeChooseIconViewController.swift; sourceTree = "<group>"; };
+		142681B425ED29C8007C8413 /* HomeChooseNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeChooseNameViewController.swift; sourceTree = "<group>"; };
+		142681C425ED3D93007C8413 /* ChooseColorCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChooseColorCollectionViewCell.xib; sourceTree = "<group>"; };
+		142681C725ED3DD1007C8413 /* ChooseColorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseColorCollectionViewCell.swift; sourceTree = "<group>"; };
+		142681CD25ED3F1E007C8413 /* HomeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDetailViewController.swift; sourceTree = "<group>"; };
+		142681D025ED3F70007C8413 /* HomeChooseAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeChooseAccountViewController.swift; sourceTree = "<group>"; };
 		1496121025EA89CA00A59E20 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		14E2E94025EA2CD200CDF2EF /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		14E2E94325EA2CF000CDF2EF /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
@@ -240,15 +254,13 @@
 		1426819D25ED1492007C8413 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				142681AE25ED29A0007C8413 /* HomeChooseColorViewController.swift */,
+				142681B125ED29B5007C8413 /* HomeChooseIconViewController.swift */,
+				142681B425ED29C8007C8413 /* HomeChooseNameViewController.swift */,
+				142681CD25ED3F1E007C8413 /* HomeDetailViewController.swift */,
+				142681D025ED3F70007C8413 /* HomeChooseAccountViewController.swift */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		1426819E25ED149D007C8413 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		142681A225ED1F2A007C8413 /* Network */ = {
@@ -294,6 +306,7 @@
 				14E400A425EB8B3700C6A628 /* AccountTableViewCell.xib */,
 				14E400AD25EB8F3400C6A628 /* CustomAddTableViewCell.xib */,
 				14E400BC25EB952400C6A628 /* ChooseIconCollectionViewCell.xib */,
+				142681C425ED3D93007C8413 /* ChooseColorCollectionViewCell.xib */,
 			);
 			path = Xibs;
 			sourceTree = "<group>";
@@ -305,6 +318,7 @@
 				14E400A725EB8B6F00C6A628 /* AccountTableViewCell.swift */,
 				14E400B025EB8F4900C6A628 /* CustomAddTableViewCell.swift */,
 				14E400BF25EB955200C6A628 /* ChooseIconCollectionViewCell.swift */,
+				142681C725ED3DD1007C8413 /* ChooseColorCollectionViewCell.swift */,
 			);
 			path = Controls;
 			sourceTree = "<group>";
@@ -353,7 +367,6 @@
 		14E400B625EB943000C6A628 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				1426819E25ED149D007C8413 /* View */,
 				1426819D25ED1492007C8413 /* Controller */,
 			);
 			path = Home;
@@ -488,6 +501,7 @@
 				14E2E95125EA395E00CDF2EF /* TextFieldWithLine.xib in Resources */,
 				1402131A25DFC24800803C47 /* Assets.xcassets in Resources */,
 				14E400AE25EB8F3400C6A628 /* CustomAddTableViewCell.xib in Resources */,
+				142681C525ED3D93007C8413 /* ChooseColorCollectionViewCell.xib in Resources */,
 				1410250525E91B0A00CA951A /* Varela-Regular.ttf in Resources */,
 				14E2E96A25EA82B800CDF2EF /* GoogleService-Info.plist in Resources */,
 			);
@@ -544,21 +558,25 @@
 			files = (
 				141024F025E9003500CA951A /* FirstScreenView.swift in Sources */,
 				1426818B25ECC82B007C8413 /* CalculatorView.swift in Sources */,
+				142681D125ED3F70007C8413 /* HomeChooseAccountViewController.swift in Sources */,
 				14E2E94825EA2D4A00CDF2EF /* LogInView.swift in Sources */,
 				14E400C525EB972D00C6A628 /* ChooseIconView.swift in Sources */,
 				1402131525DFC24500803C47 /* FirstScreenViewController.swift in Sources */,
 				1402131125DFC24500803C47 /* AppDelegate.swift in Sources */,
 				14E4009925EB6D9200C6A628 /* OperationsViewController.swift in Sources */,
 				1496121125EA89CA00A59E20 /* TabBar.swift in Sources */,
+				142681AF25ED29A0007C8413 /* HomeChooseColorViewController.swift in Sources */,
 				14E2E94B25EA2D6F00CDF2EF /* LogInViewController.swift in Sources */,
 				14E400D025EBB65400C6A628 /* ChooseNameView.swift in Sources */,
 				142681A425ED1F3C007C8413 /* ExchangeRates.swift in Sources */,
 				14E2E96625EA7FE400CDF2EF /* UIViewController+Ex.swift in Sources */,
+				142681B225ED29B5007C8413 /* HomeChooseIconViewController.swift in Sources */,
 				14E4009325EB6D7400C6A628 /* AccountsViewController.swift in Sources */,
 				14E400CD25EBB63400C6A628 /* ChooseNameViewController.swift in Sources */,
 				1426818425ECBF42007C8413 /* UIViewStack+Ex.swift in Sources */,
 				14E400C025EB955200C6A628 /* ChooseIconCollectionViewCell.swift in Sources */,
 				14E400EC25EBD9F200C6A628 /* DetailLookAtCellView.swift in Sources */,
+				142681C825ED3DD1007C8413 /* ChooseColorCollectionViewCell.swift in Sources */,
 				1415D45825EA1B8C00F2F6FA /* UIView+Ex.swift in Sources */,
 				1426818825ECC816007C8413 /* CalculatorViewController.swift in Sources */,
 				14E2E94425EA2CF000CDF2EF /* SignUpView.swift in Sources */,
@@ -571,6 +589,8 @@
 				14E2E96225EA7E7600CDF2EF /* ErrorHandler.swift in Sources */,
 				14E400B925EB94B800C6A628 /* ChooseIconViewController.swift in Sources */,
 				14E2E95425EA396B00CDF2EF /* TextFieldWithLine.swift in Sources */,
+				142681CE25ED3F1E007C8413 /* HomeDetailViewController.swift in Sources */,
+				142681B525ED29C8007C8413 /* HomeChooseNameViewController.swift in Sources */,
 				14E400E925EBD9CA00C6A628 /* DetailLookAtCellViewController.swift in Sources */,
 				14E2E94125EA2CD200CDF2EF /* SignUpViewController.swift in Sources */,
 				14E400A825EB8B6F00C6A628 /* AccountTableViewCell.swift in Sources */,
