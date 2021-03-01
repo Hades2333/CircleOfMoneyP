@@ -197,7 +197,7 @@ extension HomeViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // в конец добавляем CustomAddCell
+
         let totalRows = tableView.numberOfRows(inSection: 0)
 
         if indexPath.row == totalRows - 1 {
@@ -213,7 +213,7 @@ extension HomeViewController: UITableViewDataSource {
                 for: indexPath ) as? AccountTableViewCell else {
             fatalError("Misconfigured cell type for cell!")
         }
-        //cell.configureCategories(myCategories[indexPath.row])
+        cell.configureCategories(myCategories[indexPath.row])
         return cell
     }
 }
