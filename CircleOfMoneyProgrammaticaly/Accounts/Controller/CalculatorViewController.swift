@@ -7,153 +7,131 @@
 
 import UIKit
 
-class CalculatorViewController: UIViewController {
+protocol CalculatorViewControllerDelegate {
+    func action(with sender: UIButton)
+}
 
+class CalculatorViewController: UIViewController {
+    
     //MARK: - GUI Variables
     private lazy var modalView: CalculatorView = {
         let view = CalculatorView()
+        view.myDelegate = self
         return view
     }()
-
+    
+    //MARK: - Properties
+    var tapGesture = UITapGestureRecognizer()
+    
+    private var tempFromImage: UIImage?
+    private var tempOperationImage: UIImage?
+    private var id: Int?
+    
     //MARK: - Lifecycle
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+
         view.backgroundColor = UIColor.black.withAlphaComponent(0.3)
-
+        setupGestures()
         view.addSubview(self.modalView)
-
+        
         self.modalView.snp.makeConstraints { (make) in
             make.left.right.equalToSuperview().inset(35)
             make.top.equalToSuperview().inset(100)
             make.bottom.equalToSuperview().inset(118)
         }
         self.modalView.layer.cornerRadius = 25.0
+
+        updateGUI()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        self.view.removeGestureRecognizer(tapGesture)
+    }
+    
+    //MARK: - Methods
+    func transferGUI(_ from: UIImage,
+                     _ operation: UIImage,
+                     _ id: Int) {
+        self.tempFromImage = from
+        self.tempOperationImage = operation
+        self.id = id
+    }
+    
+    func setupGestures() {
+        tapGesture = UITapGestureRecognizer(target: self,
+                                            action: #selector(tapped))
+        tapGesture.delegate = self
+        self.view.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc func tapped() {
+        NotificationCenter.default.post(Notification.init(name: .accountsDataWasUpdated))
+        let p = self.presentingViewController
+        self.dismiss(animated: false) {
+            p?.dismiss(animated: false, completion: nil)
+        }
+    }
+
+    func updateGUI() {
+        self.modalView.fromImage.image = tempFromImage
+        self.modalView.operationImage.image = tempOperationImage
+    }
+
+    func okPressed(with number: Double) {
+        guard let existingId = self.id else { fatalError("id not found") }
+        myAccounts[existingId].amountOfMoney += number.rounded(toPlaces: 2)
+        tapped()
+    }
+
+    func calculatorButtonPressed(_ sender: UIButton) {
+        switch sender.tag {
+        case 0...9:
+            self.modalView.textField.textInput.text?.append("\(sender.tag)")
+            self.modalView.textField.reloadInputViews()
+        case 10:
+            self.modalView.textField.textInput.text?.append(".")
+        case 11:
+            do {
+                let sign = self.modalView.operationImage.image == UIImage(named: "onlyPlus") ? "+" : "-"
+                try okPressed(with: numberIsValid(self.modalView.textField, sign))
+            } catch {
+                LNAlertHelper.shared.show(
+                    for: self,
+                    title: "Error",
+                    message: error.localizedDescription,
+                    secondButtonTitle: "Ok",
+                    secondButtonAction: {
+                        print("Alert was closed")
+                    })
+            }
+        default:
+            return
+        }
     }
 }
-//    //MARK: - Properties
-//    var tapGesture = UITapGestureRecognizer()
-//
-//    private var tempFromImage: UIImage?
-//    private var tempOperationImage: UIImage?
-//    private var id: Int?
-//
-//    //MARK: - Lifecycle
-//
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
-//        setupGestures()
-//    }
-//
-//    override func viewDidDisappear(_ animated: Bool) {
-//        super.viewDidDisappear(animated)
-//        self.view.removeGestureRecognizer(tapGesture)
-//    }
-//
-//    override func viewDidLayoutSubviews() {
-//        configureElements()
-//        updateGUI()
-//    }
-//
-//    //MARK: - Methods
-//    func configureElements() {
-//        self.calculatorButtons.forEach {
-//            $0.backgroundColor = UIColor(named: "mainBackgroundColor")
-//            $0.tintColor = UIColor(named: "greenLittleTint")
-//            $0.titleLabel?.font = UIFont(name: "Varela", size: 20.0)
-//            $0.layer.cornerRadius = self.calculatorButtons[0].bounds.height / 2
-//            $0.layer.masksToBounds = false
-//            $0.layer.shadowColor = UIColor.black.cgColor
-//            $0.layer.shadowOpacity = 0.5
-//            $0.layer.shadowOffset = .zero
-//            $0.layer.shadowRadius = 5
-//        }
-//        self.calculatorButtons[9].setTitle(".", for: .normal)
-//        self.calculatorButtons[11].setTitle("Ok", for: .normal)
-//
-//        self.modalView.layer.cornerRadius = 20.0
-//    }
-//
-//    func setupGestures() {
-//        tapGesture = UITapGestureRecognizer(target: self,
-//                                            action: #selector(tapped))
-//        tapGesture.delegate = self
-//        self.view.addGestureRecognizer(tapGesture)
-//    }
-//
-//    @objc func tapped() {
-//        performSegue(withIdentifier: "toTheDetailLook", sender: nil)
-//    }
-//
-//    func transferGUI(_ from: UIImage,
-//                     _ operation: UIImage,
-//                     _ id: Int) {
-//        self.tempFromImage = from
-//        self.tempOperationImage = operation
-//        self.id = id
-//    }
-//
-//    func updateGUI() {
-//        self.fromImage.image = tempFromImage
-//        self.operationImage.image = tempOperationImage
-//    }
-//
-//
-//    func okPressed(with number: Double) {
-//        //MARK: - TO DO тут нужен делегат чтобы увеличить или уменьшить значения в массиве
-//        guard let existingId = self.id else { fatalError("id not found") }
-//        myAccounts[existingId].amountOfMoney += number.rounded(toPlaces: 2)
-//        performSegue(withIdentifier: "backToTheAccounts", sender: nil) // тут выходим обратно
-//    }
-//
-//    //MARK: - Navigation
-//    // делаем reload
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "backToTheAccounts" {
-//            guard let next = segue.destination as? AccountsViewController else { fatalError() }
-//            next.table.reloadData()
-//        }
-//    }
-//
-//    //MARK: - IBActions
-//    @IBAction func buttonPressed(_ sender: UIButton) {
-//        switch sender.tag {
-//        case 0...9:
-//            self.textField.textInput.text?.append("\(sender.tag)")
-//        case 10:
-//            self.textField.textInput.text?.append(".")
-//        case 11:
-//            do {
-//                let sign = self.operationImage.image == UIImage(named: "onlyPlus") ? "+" : "-"
-//                try okPressed(with: numberIsValid(self.textField, sign))
-//            } catch {
-//                LNAlertHelper.shared.show(
-//                    for: self,
-//                    title: "Error",
-//                    message: error.localizedDescription,
-//                    secondButtonTitle: "Ok",
-//                    secondButtonAction: {
-//                        print("Alert was closed")
-//                    })
-//            }
-//        default:
-//            return
-//        }
-//    }
-//}
-//
-////MARK: - UIGestureRecognizerDelegate
-//extension CalculatorViewController: UIGestureRecognizerDelegate {
-//
-//    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer,
-//                           shouldReceive touch: UITouch) -> Bool {
-//
-//        if let touchView = touch.view {
-//            if touchView.isDescendant(of: modalView){
-//                return false
-//            }
-//        }
-//        return true
-//    }
-//}
-//
+
+//MARK: - CalculatorViewControllerDelegate
+extension CalculatorViewController: CalculatorViewControllerDelegate {
+    func action(with sender: UIButton) {
+        calculatorButtonPressed(sender)
+    }
+}
+
+//MARK: - UIGestureRecognizerDelegate
+extension CalculatorViewController: UIGestureRecognizerDelegate {
+    
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer,
+                           shouldReceive touch: UITouch) -> Bool {
+        
+        if let touchView = touch.view {
+            if touchView.isDescendant(of: modalView){
+                return false
+            }
+        }
+        return true
+    }
+}
+
 

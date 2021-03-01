@@ -59,3 +59,26 @@ extension InputError: LocalizedError {
     }
 }
 
+enum NumberError: Error {
+    case account
+    case emptyField
+    case invalidNumber
+}
+
+extension NumberError: LocalizedError {
+    var errorDescription: String? {
+        switch self {
+        case .account:
+            return NSLocalizedString("You dont choose account",
+                                     comment: "")
+        case .emptyField:
+            return NSLocalizedString("TextField is empty",
+                                     comment: "")
+        case .invalidNumber:
+            return NSLocalizedString("Invalid Number",
+                                     comment: "")
+        }
+    }
+}
+
+

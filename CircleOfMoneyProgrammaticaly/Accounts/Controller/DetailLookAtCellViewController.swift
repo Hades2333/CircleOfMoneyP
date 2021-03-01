@@ -27,13 +27,14 @@ class DetailLookAtCellViewController: UIViewController {
     var intermediateImage: UIImage?
     var intermediateName: String?
     var intermediateAmount: String?
+
     private var id: Int?
 
     //MARK: - Lifecycle
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-        //updateDetailValue()
+        updateDetailValue()
         setupGestures()
 
         view.addSubview(self.modalView)
@@ -44,9 +45,9 @@ class DetailLookAtCellViewController: UIViewController {
         }
     }
 
-//    override func viewDidLayoutSubviews() {
-//        self.viewForAccountImage.layer.cornerRadius = self.viewForAccountImage.layer.bounds.width / 2
-//    }
+    override func viewDidLayoutSubviews() {
+        self.modalView.viewForAccountImage.layer.cornerRadius = self.modalView.viewForAccountImage.layer.bounds.width / 2
+    }
 
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
@@ -54,18 +55,6 @@ class DetailLookAtCellViewController: UIViewController {
     }
 
     //MARK: - Methods
-    func minusPressed() {
-        let next = CalculatorViewController()
-
-        next.modalTransitionStyle = .coverVertical
-        next.modalPresentationStyle = .overCurrentContext
-        present(next, animated: false, completion: nil)
-    }
-
-    func plusPressed() {
-
-    }
-
     func setupGestures() {
         tapGesture = UITapGestureRecognizer(target: self,
                                             action: #selector(tapped))
@@ -82,37 +71,46 @@ class DetailLookAtCellViewController: UIViewController {
         self.intermediateAmount = amount
         self.id = indexPath
     }
-
-//    func updateDetailValue() {
-//        self.accountImage.image = intermediateImage
-//        self.accountName.text = intermediateName
-//        self.accountAmountOfMoney.text = intermediateAmount
-//    }
+    
+    func updateDetailValue() {
+        self.modalView.accountImage.image = intermediateImage
+        self.modalView.accountName.text = intermediateName
+        self.modalView.accountAmountOfMoney.text = intermediateAmount
+    }
 
     @objc func tapped() {
         dismiss(animated: true, completion: nil)
     }
-//
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        guard let mySender = sender as? UIButton else { return }
-//        //guard let next = segue.destination as? CalculatorViewController else { return }
-//        guard let existingImage = intermediateImage else { fatalError("image not found") }
-//        guard let existingId = self.id else { fatalError("id not found") }
-//        switch mySender.tag {
-//        case 1001:
-//            next.transferGUI(existingImage, UIImage(named: "onlyMinus") ?? existingImage,
-//                             existingId)
-//        case 1002:
-//            next.transferGUI(existingImage, UIImage(named: "onlyPlus") ?? existingImage,
-//                             existingId)
-//        default:
-//            return
-//        }
-//    }
 
-    //MARK: - IBActions
-    @IBAction func buttonPressed(_ sender: UIButton) {
-        performSegue(withIdentifier: "transferButtonPressed", sender: sender)
+    //MARK: - Navigation
+    func minusPressed() {
+        let next = CalculatorViewController()
+
+        next.modalTransitionStyle = .coverVertical
+        next.modalPresentationStyle = .overCurrentContext
+
+        guard let existingId = self.id else { fatalError("id not found") }
+
+        next.transferGUI(self.intermediateImage ?? UIImage(named: "error")!,
+                         UIImage(named: "onlyMinus") ?? UIImage(named: "error")!,
+                         existingId)
+
+        present(next, animated: false, completion: nil)
+    }
+
+    func plusPressed() {
+        let next = CalculatorViewController()
+
+        next.modalTransitionStyle = .coverVertical
+        next.modalPresentationStyle = .overCurrentContext
+
+        guard let existingId = self.id else { fatalError("id not found") }
+
+        next.transferGUI(self.intermediateImage ?? UIImage(named: "error")!,
+                         UIImage(named: "onlyPlus") ?? UIImage(named: "error")!,
+                         existingId)
+
+        present(next, animated: false, completion: nil)
     }
 }
 

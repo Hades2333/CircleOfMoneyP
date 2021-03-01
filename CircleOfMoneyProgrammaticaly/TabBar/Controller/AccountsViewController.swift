@@ -67,6 +67,11 @@ extension AccountsViewController: UITableViewDelegate {
             self.present(next, animated: false, completion: nil)
         } else {
             let next = DetailLookAtCellViewController()
+
+            next.transferDetailValue(myAccounts[indexPath.row].image.getImage()!,
+                                     myAccounts[indexPath.row].nameOfAccount,
+                                     "\(myAccounts[indexPath.row].amountOfMoney) \(myAccounts[indexPath.row].currency)", indexPath.row)
+            
             next.modalTransitionStyle = .coverVertical
             next.modalPresentationStyle = .overFullScreen
             self.present(next, animated: false, completion: nil)

@@ -20,18 +20,18 @@ class DetailLookAtCellView: UIView {
         return view
     }()
 
-    lazy private var viewForAccountImage: UIView = {
+    lazy var viewForAccountImage: UIView = {
         let view = UIView()
         view.backgroundColor = UIColor(named: "mainBackgroundColor")
         return view
     }()
 
-    lazy private var accountImage: UIImageView = {
+    lazy var accountImage: UIImageView = {
         let image = UIImageView()
         return image
     }()
 
-    lazy private var accountName: UILabel = {
+    lazy var accountName: UILabel = {
         let label = UILabel()
         label.font = UIFont(name: "Varela", size: 17.0)
         label.textColor = UIColor(named: "mainBackgroundColor")
@@ -39,7 +39,7 @@ class DetailLookAtCellView: UIView {
         return label
     }()
 
-    lazy private var accountAmountOfMoney: UILabel = {
+    lazy var accountAmountOfMoney: UILabel = {
         let label = UILabel()
         label.font = UIFont(name: "Varela", size: 17.0)
         label.textColor = UIColor(named: "mainBackgroundColor")

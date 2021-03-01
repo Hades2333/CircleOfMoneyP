@@ -70,13 +70,13 @@ extension UIViewController {
         }
         guard !amount!.text!.isEmpty else { throw InputError.emptyAmount }
     }
-//
-//    //MARK: - Validation numbers:
-//    func numberIsValid(_ field: COtextFieldWithLine, _ sign: String) throws -> Double {
-//        guard let text = field.textInput.text, !text.isEmpty else { throw NumberError.emptyField }
-//        guard let number = Double("\(sign)\(text)") else { throw NumberError.invalidNumber }
-//        return number
-//    }
+
+    //MARK: - Validation numbers:
+    func numberIsValid(_ field: TextFieldWithLine, _ sign: String) throws -> Double {
+        guard let text = field.textInput.text, !text.isEmpty else { throw NumberError.emptyField }
+        guard let number = Double("\(sign)\(text)") else { throw NumberError.invalidNumber }
+        return number
+    }
 
 //    //MARK: - Header constructor
 //    func headerConstructor(_ view: UIView,
