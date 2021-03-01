@@ -62,23 +62,13 @@ extension AccountsViewController: UITableViewDelegate {
 
         if myAccounts.count == indexPath.row {
             let next = ChooseIconViewController()
-
             next.modalTransitionStyle = .coverVertical
-            next.modalPresentationStyle = .fullScreen
-            next.modalPresentationStyle = .overCurrentContext
-
+            next.modalPresentationStyle = .overFullScreen
             self.present(next, animated: false, completion: nil)
-
         } else {
-
             let next = DetailLookAtCellViewController()
-
             next.modalTransitionStyle = .coverVertical
-            next.modalPresentationStyle = .fullScreen
-            next.modalPresentationStyle = .overCurrentContext
-            next.tabBarController?.tabBar.isHidden = true
-
-            //self.navigationController?.present(next, animated: true, completion: nil)
+            next.modalPresentationStyle = .overFullScreen
             self.present(next, animated: false, completion: nil)
         }
     }

@@ -16,6 +16,7 @@
 		1410250325E91B0600CA951A /* ofont.ru_VAG World.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 141024F425E9056100CA951A /* ofont.ru_VAG World.ttf */; };
 		1410250525E91B0A00CA951A /* Varela-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 141024F525E9056100CA951A /* Varela-Regular.ttf */; };
 		1415D45825EA1B8C00F2F6FA /* UIView+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1415D45725EA1B8C00F2F6FA /* UIView+Ex.swift */; };
+		1426818425ECBF42007C8413 /* UIViewStack+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1426818325ECBF42007C8413 /* UIViewStack+Ex.swift */; };
 		1458CCDF25DFC2AD0091C711 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1458CCDE25DFC2AD0091C711 /* SnapKit */; };
 		1496121125EA89CA00A59E20 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1496121025EA89CA00A59E20 /* TabBar.swift */; };
 		14E2E94125EA2CD200CDF2EF /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E2E94025EA2CD200CDF2EF /* SignUpViewController.swift */; };
@@ -67,6 +68,7 @@
 		141024FF25E9136600CA951A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1410250225E9136B00CA951A /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1415D45725EA1B8C00F2F6FA /* UIView+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ex.swift"; sourceTree = "<group>"; };
+		1426818325ECBF42007C8413 /* UIViewStack+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewStack+Ex.swift"; sourceTree = "<group>"; };
 		1496121025EA89CA00A59E20 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		14E2E94025EA2CD200CDF2EF /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		14E2E94325EA2CF000CDF2EF /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
@@ -225,6 +227,7 @@
 		1415D45625EA1B7100F2F6FA /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				1426818325ECBF42007C8413 /* UIViewStack+Ex.swift */,
 				1415D45725EA1B8C00F2F6FA /* UIView+Ex.swift */,
 				14E2E96525EA7FE400CDF2EF /* UIViewController+Ex.swift */,
 				14E400E225EBD4A400C6A628 /* Double+Ex.swift */,
@@ -535,6 +538,7 @@
 				14E2E96625EA7FE400CDF2EF /* UIViewController+Ex.swift in Sources */,
 				14E4009325EB6D7400C6A628 /* AccountsViewController.swift in Sources */,
 				14E400CD25EBB63400C6A628 /* ChooseNameViewController.swift in Sources */,
+				1426818425ECBF42007C8413 /* UIViewStack+Ex.swift in Sources */,
 				14E400C025EB955200C6A628 /* ChooseIconCollectionViewCell.swift in Sources */,
 				14E400EC25EBD9F200C6A628 /* DetailLookAtCellView.swift in Sources */,
 				1415D45825EA1B8C00F2F6FA /* UIView+Ex.swift in Sources */,

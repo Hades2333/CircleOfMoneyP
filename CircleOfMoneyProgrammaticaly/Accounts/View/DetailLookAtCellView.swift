@@ -16,7 +16,7 @@ class DetailLookAtCellView: UIView {
     //MARK: - GUI Variables
     lazy private var modalView: UIView = {
         let view = UIView()
-        view.backgroundColor = UIColor(named: "greenLittleTint")
+        view.backgroundColor = UIColor(named: "greenGreatTint")
         return view
     }()
 
@@ -35,6 +35,7 @@ class DetailLookAtCellView: UIView {
         let label = UILabel()
         label.font = UIFont(name: "Varela", size: 17.0)
         label.textColor = UIColor(named: "mainBackgroundColor")
+        label.textAlignment = .left
         return label
     }()
 
@@ -42,16 +43,21 @@ class DetailLookAtCellView: UIView {
         let label = UILabel()
         label.font = UIFont(name: "Varela", size: 17.0)
         label.textColor = UIColor(named: "mainBackgroundColor")
+        label.textAlignment = .right
         return label
     }()
 
     lazy private var minusButton: UIButton = {
         let button = UIButton()
+        button.setImage(UIImage(named: "minusButton"),
+                        for: .normal)
         return button
     }()
 
     lazy private var plusButton: UIButton = {
         let button = UIButton()
+        button.setImage(UIImage(named: "plusButton"),
+                        for: .normal)
         return button
     }()
 
@@ -76,7 +82,7 @@ class DetailLookAtCellView: UIView {
     lazy private var horizontalButtonsStack: UIStackView = {
         let stack = UIStackView()
         stack.axis = .horizontal
-        stack.alignment = .fill
+        stack.alignment = .center
         stack.distribution = .fillProportionally
         stack.spacing = 30.0
         return stack
@@ -91,18 +97,22 @@ class DetailLookAtCellView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
+    
     private func initView() {
         self.addSubview(self.modalView)
         self.addSubview(self.verticalStack)
-        self.addSubviews([self.horizontalImagesStack,
-                          self.horizontalButtonsStack])
-        self.horizontalImagesStack.addSubviews([self.viewForAccountImage,
-                                                self.accountName,
-                                                self.accountAmountOfMoney])
+
+        self.verticalStack.addArrangedSubviews([self.horizontalImagesStack,
+                                                self.horizontalButtonsStack])
+
+        self.horizontalImagesStack.addArrangedSubviews([self.viewForAccountImage,
+                                                        self.accountName,
+                                                        self.accountAmountOfMoney])
+
         self.viewForAccountImage.addSubview(self.accountImage)
-        self.horizontalButtonsStack.addSubviews([self.minusButton,
-                                                 self.plusButton])
+
+        self.horizontalButtonsStack.addArrangedSubviews([self.minusButton,
+                                                         self.plusButton])
         makeConstraints()
     }
 
@@ -110,16 +120,38 @@ class DetailLookAtCellView: UIView {
     func makeConstraints() {
         self.modalView.snp.makeConstraints { (make) in
             make.edges.equalToSuperview()
-//            make.left.right.bottom.equalToSuperview()
-//            make.height.equalTo(170)
         }
 
         self.verticalStack.snp.makeConstraints { (make) in
             make.edges.equalToSuperview().inset(20)
         }
 
+        self.horizontalImagesStack.snp.makeConstraints { (make) in
+            make.top.equalToSuperview()
+            make.left.right.equalToSuperview()
+        }
+
         self.viewForAccountImage.snp.makeConstraints { (make) in
-            make.height.equalTo(self.viewForAccountImage.snp.width)
+            make.top.left.bottom.equalToSuperview()
+            make.width.equalTo(self.viewForAccountImage.snp.height)
+        }
+
+        self.accountImage.snp.makeConstraints { (make) in
+            make.edges.equalToSuperview().inset(10)
+        }
+
+        self.accountAmountOfMoney.snp.makeConstraints { (make) in
+            make.width.equalTo(self.accountName.snp.width)
+        }
+
+        self.minusButton.snp.makeConstraints { (make) in
+            make.top.bottom.equalToSuperview()
+            make.width.equalTo(self.minusButton.snp.height)
+        }
+
+        self.plusButton.snp.makeConstraints { (make) in
+            make.top.bottom.equalToSuperview()
+            make.width.equalTo(self.plusButton.snp.height)
         }
     }
 }

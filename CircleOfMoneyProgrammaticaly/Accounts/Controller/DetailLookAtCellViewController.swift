@@ -29,10 +29,6 @@ class DetailLookAtCellViewController: UIViewController {
         //updateDetailValue()
         setupGestures()
 
-
-        //tabBarController?.tabBar.isTranslucent = false
-        //self.tabBarController?.tabBar.isHidden = true
-        
         view.addSubview(self.modalView)
         self.modalView.snp.makeConstraints { (make) in
             make.left.right.equalToSuperview()
