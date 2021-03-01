@@ -17,6 +17,8 @@
 		1410250525E91B0A00CA951A /* Varela-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 141024F525E9056100CA951A /* Varela-Regular.ttf */; };
 		1415D45825EA1B8C00F2F6FA /* UIView+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1415D45725EA1B8C00F2F6FA /* UIView+Ex.swift */; };
 		1426818425ECBF42007C8413 /* UIViewStack+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1426818325ECBF42007C8413 /* UIViewStack+Ex.swift */; };
+		1426818825ECC816007C8413 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1426818725ECC816007C8413 /* CalculatorViewController.swift */; };
+		1426818B25ECC82B007C8413 /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1426818A25ECC82B007C8413 /* CalculatorView.swift */; };
 		1458CCDF25DFC2AD0091C711 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1458CCDE25DFC2AD0091C711 /* SnapKit */; };
 		1496121125EA89CA00A59E20 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1496121025EA89CA00A59E20 /* TabBar.swift */; };
 		14E2E94125EA2CD200CDF2EF /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E2E94025EA2CD200CDF2EF /* SignUpViewController.swift */; };
@@ -69,6 +71,8 @@
 		1410250225E9136B00CA951A /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1415D45725EA1B8C00F2F6FA /* UIView+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ex.swift"; sourceTree = "<group>"; };
 		1426818325ECBF42007C8413 /* UIViewStack+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewStack+Ex.swift"; sourceTree = "<group>"; };
+		1426818725ECC816007C8413 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
+		1426818A25ECC82B007C8413 /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
 		1496121025EA89CA00A59E20 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		14E2E94025EA2CD200CDF2EF /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		14E2E94325EA2CF000CDF2EF /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
@@ -358,6 +362,7 @@
 				14E400B825EB94B800C6A628 /* ChooseIconViewController.swift */,
 				14E400CC25EBB63400C6A628 /* ChooseNameViewController.swift */,
 				14E400E825EBD9CA00C6A628 /* DetailLookAtCellViewController.swift */,
+				1426818725ECC816007C8413 /* CalculatorViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -368,6 +373,7 @@
 				14E400C425EB972D00C6A628 /* ChooseIconView.swift */,
 				14E400CF25EBB65400C6A628 /* ChooseNameView.swift */,
 				14E400EB25EBD9F200C6A628 /* DetailLookAtCellView.swift */,
+				1426818A25ECC82B007C8413 /* CalculatorView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -527,6 +533,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				141024F025E9003500CA951A /* FirstScreenView.swift in Sources */,
+				1426818B25ECC82B007C8413 /* CalculatorView.swift in Sources */,
 				14E2E94825EA2D4A00CDF2EF /* LogInView.swift in Sources */,
 				14E400C525EB972D00C6A628 /* ChooseIconView.swift in Sources */,
 				1402131525DFC24500803C47 /* FirstScreenViewController.swift in Sources */,
@@ -542,6 +549,7 @@
 				14E400C025EB955200C6A628 /* ChooseIconCollectionViewCell.swift in Sources */,
 				14E400EC25EBD9F200C6A628 /* DetailLookAtCellView.swift in Sources */,
 				1415D45825EA1B8C00F2F6FA /* UIView+Ex.swift in Sources */,
+				1426818825ECC816007C8413 /* CalculatorViewController.swift in Sources */,
 				14E2E94425EA2CF000CDF2EF /* SignUpView.swift in Sources */,
 				14E400E625EBD51C00C6A628 /* Notification+Ex.swift in Sources */,
 				14E2E95825EA764000CDF2EF /* CustomViewController.swift in Sources */,

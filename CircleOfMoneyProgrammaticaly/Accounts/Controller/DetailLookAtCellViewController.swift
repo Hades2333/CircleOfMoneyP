@@ -12,6 +12,12 @@ class DetailLookAtCellViewController: UIViewController {
     //MARK: - GUI Variables
     private lazy var modalView: DetailLookAtCellView = {
         let view = DetailLookAtCellView()
+        view.minusAction = { [weak self] in
+            self?.minusPressed()
+        }
+        view.plusAction = { [weak self] in
+            self?.plusPressed()
+        }
         return view
     }()
 
@@ -26,6 +32,7 @@ class DetailLookAtCellViewController: UIViewController {
     //MARK: - Lifecycle
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+
         //updateDetailValue()
         setupGestures()
 
@@ -47,6 +54,18 @@ class DetailLookAtCellViewController: UIViewController {
     }
 
     //MARK: - Methods
+    func minusPressed() {
+        let next = CalculatorViewController()
+
+        next.modalTransitionStyle = .coverVertical
+        next.modalPresentationStyle = .overCurrentContext
+        present(next, animated: false, completion: nil)
+    }
+
+    func plusPressed() {
+
+    }
+
     func setupGestures() {
         tapGesture = UITapGestureRecognizer(target: self,
                                             action: #selector(tapped))
@@ -73,9 +92,6 @@ class DetailLookAtCellViewController: UIViewController {
     @objc func tapped() {
         dismiss(animated: true, completion: nil)
     }
-
-    //MARK: - Navigation
-//    @IBAction func unwindToTheDetailLook( _ sender: UIStoryboardSegue) {}
 //
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 //        guard let mySender = sender as? UIButton else { return }

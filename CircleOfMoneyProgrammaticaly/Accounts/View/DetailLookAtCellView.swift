@@ -10,8 +10,8 @@ import UIKit
 class DetailLookAtCellView: UIView {
 
     //MARK: - Variables
-    var plusAction: (() -> Void)?
     var minusAction: (() -> Void)?
+    var plusAction: (() -> Void)?
 
     //MARK: - GUI Variables
     lazy private var modalView: UIView = {
@@ -51,6 +51,9 @@ class DetailLookAtCellView: UIView {
         let button = UIButton()
         button.setImage(UIImage(named: "minusButton"),
                         for: .normal)
+        button.addTarget(self,
+                         action: #selector(self.minusPressed),
+                         for: .touchUpInside)
         return button
     }()
 
@@ -58,6 +61,9 @@ class DetailLookAtCellView: UIView {
         let button = UIButton()
         button.setImage(UIImage(named: "plusButton"),
                         for: .normal)
+        button.addTarget(self,
+                         action: #selector(self.plusPressed),
+                         for: .touchUpInside)
         return button
     }()
 
@@ -104,7 +110,7 @@ class DetailLookAtCellView: UIView {
 
         self.verticalStack.addArrangedSubviews([self.horizontalImagesStack,
                                                 self.horizontalButtonsStack])
-
+        
         self.horizontalImagesStack.addArrangedSubviews([self.viewForAccountImage,
                                                         self.accountName,
                                                         self.accountAmountOfMoney])
@@ -153,5 +159,14 @@ class DetailLookAtCellView: UIView {
             make.top.bottom.equalToSuperview()
             make.width.equalTo(self.plusButton.snp.height)
         }
+    }
+
+    //MARK: - Methods
+    @objc func minusPressed() {
+        self.minusAction?()
+    }
+
+    @objc func plusPressed() {
+        self.plusAction?()
     }
 }
