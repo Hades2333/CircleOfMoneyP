@@ -77,10 +77,8 @@ class ChooseIconViewController: UIViewController {
     //MARK: - Navigation
     func next() {
         let next = ChooseNameViewController()
-
         next.modalTransitionStyle = .coverVertical
-        next.modalPresentationStyle = .fullScreen
-        next.modalPresentationStyle = .overCurrentContext
+        next.modalPresentationStyle = .overFullScreen
         next.selectedImage = tempImage
         present(next, animated: false, completion: nil)
     }
@@ -127,7 +125,6 @@ extension ChooseIconViewController: UICollectionViewDelegate {
                         didSelectItemAt indexPath: IndexPath) {
 
         tempImage = UIImage(named: "\(indexPath.row)")!
-
         next()
     }
 }

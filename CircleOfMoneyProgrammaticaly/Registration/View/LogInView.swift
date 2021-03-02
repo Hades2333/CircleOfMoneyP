@@ -8,6 +8,7 @@
 import UIKit
 
 class LogInView: UIView {
+
     //MARK: - Variables
     var backTransition: (() -> Void)?
     var logInTransition: (() -> Void)?
@@ -140,7 +141,6 @@ class LogInView: UIView {
             make.bottom.equalTo(self.logInButton.snp.top)
             make.left.equalTo(self.logInButton.snp.left).multipliedBy(1.0 / 3.0)
         }
-
     }
 
     //MARK: - Methods

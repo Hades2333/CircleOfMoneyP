@@ -10,7 +10,8 @@ import UIKit
 class HomeDetailView: UIView {
 
     //MARK: - Variables
-    var myDelegate: CalculatorViewControllerDelegate?
+    var chooseAccount: (() -> Void)?
+    var homeDelegate: CalculatorViewControllerDelegate?
 
     //MARK: - GUI Variables
     lazy private var modalView: UIView = {
@@ -35,6 +36,9 @@ class HomeDetailView: UIView {
         button.setTitle("Choose account", for: .normal)
         button.tintColor = UIColor(named: "mainBackgroundColor")
         button.titleLabel?.font = UIFont(name: "Varela", size: 15.0)
+        button.addTarget(self,
+                         action: #selector(self.fromButtonPressed),
+                         for: .touchUpInside)
         return button
     }()
 
@@ -44,8 +48,10 @@ class HomeDetailView: UIView {
         return view
     }()
 
-    lazy private var onCategory: UILabel = {
+    lazy var onCategory: UILabel = {
         let label = UILabel()
+        label.textColor = UIColor(named: "mainBackgroundColor")
+        label.textAlignment = .center
         return label
     }()
 
@@ -175,6 +181,7 @@ class HomeDetailView: UIView {
         }
         for index in 0...11 {
             self.buttons[index].snp.makeConstraints { (make) in
+                make.height.equalTo(self.commonHorizontalStack[0].snp.height)
                 make.width.equalTo(self.buttons[index].snp.height)
             }
         }
@@ -198,6 +205,10 @@ class HomeDetailView: UIView {
     }
 
     @objc func buttonPressed(_ sender: UIButton) {
-        myDelegate?.action(with: sender)
+        homeDelegate?.action(with: sender)
+    }
+
+    @objc func fromButtonPressed() {
+        self.chooseAccount?()
     }
 }

@@ -9,7 +9,7 @@ import UIKit
 
 class AccountsViewController: UIViewController {
 
-    //MARK: - Variables
+    //MARK: - GUI Variables
     lazy var tableView: UITableView = {
         let table = UITableView()
         table.backgroundColor = UIColor(named: "mainBackgroundColor")
@@ -59,6 +59,7 @@ class AccountsViewController: UIViewController {
     }
 }
 
+//MARK: - UITableViewDelegate
 extension AccountsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
@@ -91,6 +92,7 @@ extension AccountsViewController: UITableViewDelegate {
     }
 }
 
+//MARK: - UITableViewDataSource
 extension AccountsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         myAccounts.count + 1

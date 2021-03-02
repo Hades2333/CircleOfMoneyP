@@ -10,6 +10,7 @@ import CircleBar
 
 class TabBar: UITabBarController {
 
+    //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
@@ -19,6 +20,7 @@ class TabBar: UITabBarController {
         self.selectedIndex = 1
     }
 
+    //MARK: - Methods
     fileprivate func createNavController(for rootViewController: UIViewController,
                                          image: UIImage) -> UIViewController {
         let navController = UINavigationController(rootViewController: rootViewController)

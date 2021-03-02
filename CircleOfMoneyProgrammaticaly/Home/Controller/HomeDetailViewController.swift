@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol ChooseAccountDetailViewControllerDelegate: AnyObject {
+protocol HomeDetailViewControllerDelegate: AnyObject {
     func updateAccountTarget(_ accountId: Int)
 }
 
@@ -16,6 +16,9 @@ class HomeDetailViewController: UIViewController {
     //MARK: - GUI Variables
     lazy var modalView: HomeDetailView = {
         let view = HomeDetailView()
+        view.chooseAccount = { [weak self] in
+            self?.transitionToHomeChooseAccount()
+        }
         return view
     }()
 
@@ -29,8 +32,7 @@ class HomeDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-//        self.modalView.moneySelector.delegate = self
-//        self.modalView.moneySelector.dataSource = self
+        self.modalView.homeDelegate = self
         view.backgroundColor = UIColor.black.withAlphaComponent(0.3)
 
         view.addSubview(modalView)
@@ -70,15 +72,6 @@ class HomeDetailViewController: UIViewController {
         self.modalView.rightView.layer.cornerRadius = 20
         self.modalView.fromButton.layer.maskedCorners = [.layerMinXMinYCorner]
         self.modalView.rightView.layer.maskedCorners = [.layerMaxXMinYCorner]
-
-        self.modalView.buttons.forEach {
-            $0.layer.cornerRadius = self.modalView.buttons[0].bounds.height / 2
-            $0.layer.masksToBounds = false
-            $0.layer.shadowColor = UIColor.black.cgColor
-            $0.layer.shadowOpacity = 0.5
-            $0.layer.shadowOffset = .zero
-            $0.layer.shadowRadius = 5
-        }
     }
 
     func setupGestures() {
@@ -93,19 +86,13 @@ class HomeDetailViewController: UIViewController {
         self.categoryTargetId = id
     }
 
-    //    func checkForValidation() throws {
-    //        guard accountTargetId != nil else { throw NumberError.account }
-    //        guard let text = textField.textInput.text else { throw NumberError.emptyField }
-    //        guard !text.isEmpty else { throw NumberError.emptyField }
-    //        guard Double(text) != nil else { throw NumberError.invalidNumber }
-    //    }
-
-    func homeOkPressed() {
-        // выходим обратно
-        performSegue(withIdentifier: "fromDetailBackToHome", sender: nil)
+    func checkForValidation() throws {
+        guard accountTargetId != nil else { throw NumberError.account }
+        guard let text = modalView.textField.textInput.text else { throw NumberError.emptyField }
+        guard !text.isEmpty else { throw NumberError.emptyField }
+        guard Double(text) != nil else { throw NumberError.invalidNumber }
     }
 
-    //MARK: - TO Do error handling
     func convert(from account: Accounts,
                  to category: Categories,
                  amount: Double) throws {
@@ -115,9 +102,7 @@ class HomeDetailViewController: UIViewController {
             throw NumberError.account
         }
 
-
         var convertedValue: Double = 0.0
-
 
         URLSession.shared.dataTask(with: url) { [self] (data, response, error) in
 
@@ -137,128 +122,93 @@ class HomeDetailViewController: UIViewController {
                 myAccounts[id].amountOfMoney -= convertedValue
 
             } catch {
-                print("вот та самая ошибка \(error)")
+                print("Ошибка: \(error)")
             }
         }.resume()
     }
 
-    //    func takeAwayFromAccount() {
-    //        guard let id = accountTargetId else {
-    //            fatalError("couldnt find id for account")
-    //        }
-    //
-    //        // валюта счёта
-    //        let accountCurrency = myAccounts[id].currency
-    //        // валюта категории
-    //        guard let categoryTargetId = self.categoryTargetId else {
-    //            fatalError("couldnt find id for category")
-    //        }
-    //        let categoryCurrency = myCategories[categoryTargetId].currency
-    //
-    //        // если валюты равны то делаем как обычно
-    //        if accountCurrency == categoryCurrency {
-    //            myAccounts[id].amountOfMoney -= Double(textField.textInput.text!)!.rounded(toPlaces: 2)
-    //        } else {
-    //            do {
-    //                try convert(from: myAccounts[id],
-    //                            to: myCategories[categoryTargetId],
-    //                            amount: Double(textField.textInput.text!)!)
-    //            } catch {
-    //                print(error)
-    //            }
-    //
-    //        }
-    //    }
+    func convertAndTakeAway() {
+        guard let id = accountTargetId else {
+            fatalError("couldnt find id for account")
+        }
+        let accountCurrency = myAccounts[id].currency
+        guard let categoryTargetId = self.categoryTargetId else {
+            fatalError("couldnt find id for category")
+        }
+        let categoryCurrency = myCategories[categoryTargetId].currency
 
-    func plusCategories(_ amount: Double) {
+        if accountCurrency == categoryCurrency {
+            myAccounts[id].amountOfMoney -= Double(modalView.textField.textInput.text!)!.rounded(toPlaces: 2)
+        } else {
+            do {
+                try convert(from: myAccounts[id],
+                            to: myCategories[categoryTargetId],
+                            amount: Double(modalView.textField.textInput.text!)!)
+            } catch {
+                print(error)
+            }
+        }
+    }
+
+    func plusAmountToCategory(_ amount: Double) {
         guard let categoryTargetId = self.categoryTargetId else {
             fatalError("couldnt find id for category")
         }
         myCategories[categoryTargetId].amountOfMoney += amount
     }
 
-    //    //MARK: - Navigation
-    //    @IBAction func unwindToDetailHomeView( _ sender: UIStoryboardSegue) {}
-    //    @IBAction func unwindToDetailHomeViewWithInfo( _ sender: UIStoryboardSegue) {}
-    //
-    //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    //        if segue.identifier == "chooseAccountFromDetail" {
-    //            guard let next = segue.destination as? ChooseAccountUIViewController else {
-    //                fatalError("segue not found")
-    //            }
-    //            next.homeDelegate = self
-    //        }
-    //    }
+    //MARK: - Navigation
+    private func transitionToHomeChooseAccount() {
+        let next = HomeChooseAccountViewCotroller()
 
-    //MARK: - IBActions
-    @IBAction func chooseAccount(_ sender: UIButton) {
-
-        // переход на выбор аккаунта
-        performSegue(withIdentifier: "chooseAccountFromDetail", sender: nil)
-
+        next.modalTransitionStyle = .coverVertical
+        next.modalPresentationStyle = .overCurrentContext
+        next.homeDelegate = self
+        present(next, animated: false, completion: nil)
     }
 
-    //    @IBAction func buttons(_ sender: UIButton) {
-    //        switch sender.tag {
-    //        case 0...9:
-    //            self.textField.textInput.text?.append("\(sender.tag)")
-    //        case 10:
-    //            self.textField.textInput.text?.append(".")
-    //        case 11:
-    //            do {
-    //                // проверка, что всё чётко
-    //                try checkForValidation()
-    //
-    //                // списываем деньги с accounts
-    //                //MARK: - TO DO сначала нужно перевести эти деньги, которые списываем в валюту аккаунта
-    //                takeAwayFromAccount()
-    //
-    //                // зачисляем в categories
-    //                let money = Double(self.textField.textInput.text!)!
-    //                plusCategories(money)
-    //
-    //                //MARK: - Здесь создание экземпляра операции
-    //                myOperations.append(Operations(category: myCategories[categoryTargetId ?? 0],
-    //                                               account: myAccounts[accountTargetId ?? 0],
-    //                                               amountOfMoney: money,
-    //                                               currency: myCategories[categoryTargetId ?? 0].currency,
-    //                                               date: Date()))
-    //
-    //                // обновляем данные в accounts
-    //                NotificationCenter.default.post(name: .userDataWasUpdated,
-    //                                                object: nil,
-    //                                                userInfo: nil)
-    //
-    //                // обновляем данные в categories
-    //                NotificationCenter.default.post(name: .dataUpdatedFromHome,
-    //                                                object: nil,
-    //                                                userInfo: nil)
-    //
-    //                NotificationCenter.default.post(name: .operationsUpdate,
-    //                                                object: nil,
-    //                                                userInfo: nil)
-    //
-    //                // непосредственно переход
-    //                homeOkPressed()
-    //
-    //            } catch {
-    //                //вызываем singleton
-    //                LNAlertHelper.shared.show(
-    //                    for: self,
-    //                    title: "Error",
-    //                    message: error.localizedDescription,
-    //                    secondButtonTitle: "Ok",
-    //                    secondButtonAction: {
-    //                        print("Alert was closed")
-    //                    })
-    //            }
-    //        default:
-    //            return
-    //        }
-    //    }
-    //}
-    //
+    private func calculatorButtonPressed(_ sender: UIButton) {
+        switch sender.tag {
+        case 0...9:
+            self.modalView.textField.textInput.text?.append("\(sender.tag)")
+        case 10:
+            self.modalView.textField.textInput.text?.append(".")
+        case 11:
+            do {
+                try checkForValidation()
 
+                convertAndTakeAway()
+
+                let money = Double(self.modalView.textField.textInput.text!)!
+                plusAmountToCategory(money)
+
+                myOperations.append(Operations(category: myCategories[categoryTargetId ?? 0],
+                                               account: myAccounts[accountTargetId ?? 0],
+                                               amountOfMoney: money,
+                                               currency: myCategories[categoryTargetId ?? 0].currency,
+                                               date: Date()))
+
+                NotificationCenter.default.post(name: .accountsAndCategoriesWasUpdated,
+                                                object: nil,
+                                                userInfo: nil)
+                NotificationCenter.default.post(name: .operationsUpdate,
+                                                object: nil,
+                                                userInfo: nil)
+                dismiss(animated: false)
+            } catch {
+                LNAlertHelper.shared.show(
+                    for: self,
+                    title: "Error",
+                    message: error.localizedDescription,
+                    secondButtonTitle: "Ok",
+                    secondButtonAction: {
+                        print("Alert was closed")
+                    })
+            }
+        default:
+            return
+        }
+    }
 }
 
 extension HomeDetailViewController: UIGestureRecognizerDelegate {
@@ -274,10 +224,18 @@ extension HomeDetailViewController: UIGestureRecognizerDelegate {
     }
 }
 
-extension HomeDetailViewController: ChooseAccountDetailViewControllerDelegate {
+extension HomeDetailViewController: CalculatorViewControllerDelegate {
+    func action(with sender: UIButton) {
+        self.calculatorButtonPressed(sender)
+    }
+}
+
+extension HomeDetailViewController: HomeDetailViewControllerDelegate {
     func updateAccountTarget(_ accountId: Int) {
-        //        self.accountTargetId = accountId
-        //        self.modalView.fromButton.setImage(myAccounts[accountId].image.getImage(), for: .normal)
+        self.accountTargetId = accountId
+        self.modalView.fromButton.setImage(myAccounts[accountId].image.getImage(), for: .normal)
+        self.modalView.fromButton.setTitle("", for: .normal)
+        self.modalView.onCategory.text = myAccounts[accountId].nameOfAccount
     }
 }
 

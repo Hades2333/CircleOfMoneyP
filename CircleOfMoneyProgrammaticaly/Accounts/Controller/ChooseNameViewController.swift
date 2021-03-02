@@ -12,6 +12,8 @@ class ChooseNameViewController: UIViewController {
     //MARK: - GUI Variables
     private lazy var modalView: ChooseNameView = {
         let view = ChooseNameView()
+        self.modalView.moneySelector.delegate = self
+        self.modalView.moneySelector.dataSource = self
         view.backToTheAccounts = { [weak self] in
             self?.okPressed()
         }
@@ -20,7 +22,6 @@ class ChooseNameViewController: UIViewController {
 
     //MARK: - Properties
     var tapGesture = UITapGestureRecognizer()
-
     var selectedImage = UIImage()
     var selectedColor = UIColor()
     var selectedCurrency: String = "Dollars"
@@ -28,9 +29,7 @@ class ChooseNameViewController: UIViewController {
     //MARK: - Lifcycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.modalView.moneySelector.delegate = self
-        self.modalView.moneySelector.dataSource = self
-        
+
         view.addSubview(modalView)
 
         self.modalView.snp.makeConstraints { (make) in

@@ -66,8 +66,6 @@ class HomeChooseNameView: UIView {
     }
 
     private func initView() {
-        //MARK: - Сделать цвет прозрачный наполовину
-
         self.addSubview(self.modalView)
         self.modalView.addSubviews([self.nameLabel,
                                     self.nameTextField,

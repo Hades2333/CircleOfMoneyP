@@ -9,7 +9,7 @@ import UIKit
 
 class DetailLookAtCellView: UIView {
 
-    //MARK: - Variables
+    //MARK: - Closures
     var minusAction: (() -> Void)?
     var plusAction: (() -> Void)?
 

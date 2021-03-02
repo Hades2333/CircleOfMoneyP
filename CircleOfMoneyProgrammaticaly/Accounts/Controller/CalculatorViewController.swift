@@ -22,7 +22,6 @@ class CalculatorViewController: UIViewController {
     
     //MARK: - Properties
     var tapGesture = UITapGestureRecognizer()
-    
     private var tempFromImage: UIImage?
     private var tempOperationImage: UIImage?
     private var id: Int?

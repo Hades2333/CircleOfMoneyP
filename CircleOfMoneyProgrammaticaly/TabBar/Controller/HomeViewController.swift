@@ -37,7 +37,6 @@ class HomeViewController: UIViewController {
     //MARK: - Variables
     var arrayOfMoney: [Double] = []
     var arrayOfColors: [UIColor] = []
-
     var fetchedCurrency: [String: Double] = [:]
 
     //MARK: - Lifecycle
@@ -66,7 +65,7 @@ class HomeViewController: UIViewController {
         self.mainTable.snp.makeConstraints { (make) in
             make.top.equalTo(self.chart.snp.bottom).offset(20)
             make.left.right.equalToSuperview().inset(20)
-            make.bottom.equalToSuperview().inset(20)
+            make.bottom.equalToSuperview()
         }
 
         NotificationCenter.default.addObserver(self ,
@@ -119,13 +118,8 @@ class HomeViewController: UIViewController {
             if category.currency == .USD {
                 tempArray.append(category.amountOfMoney)
             } else {
-
-
                 convertedValue = category.amountOfMoney / (fetchedCurrency["\(category.currency)"]!)
-
                 tempArray.append(convertedValue)
-                print(tempArray)
-
             }
         }
         return tempArray
@@ -145,23 +139,9 @@ class HomeViewController: UIViewController {
         } catch {
             print(error)
         }
-
         self.arrayOfColors = countColorsForChart()
         self.chart.reloadData()
     }
-
-    //MARK: - Navigation
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "HomeDetailLook" {
-//            guard let next = segue.destination as? HomeDetailViewController else {
-//                fatalError("destination not found")
-//            }
-//            guard let neededIndexPath = sender as? IndexPath else {
-//                fatalError("indexPath not found")
-//            }
-//            next.updateLabelAndId(with: myCategories[neededIndexPath.row].nameOfAccount, id: neededIndexPath.row)
-//        }
-//    }
 }
 
 extension HomeViewController: UITableViewDelegate {
@@ -175,6 +155,7 @@ extension HomeViewController: UITableViewDelegate {
             self.present(next, animated: false, completion: nil)
         } else {
             let next = HomeDetailViewController()
+            next.updateLabelAndId(with: myCategories[indexPath.row].nameOfAccount, id: indexPath.row)
             next.modalTransitionStyle = .coverVertical
             next.modalPresentationStyle = .overFullScreen
             self.present(next, animated: false, completion: nil)

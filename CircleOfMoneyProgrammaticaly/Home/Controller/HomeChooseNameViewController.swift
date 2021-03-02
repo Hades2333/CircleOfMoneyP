@@ -20,12 +20,11 @@ class HomeChooseNameViewController: UIViewController {
 
     //MARK: - Properties
     var tapGesture = UITapGestureRecognizer()
-
     var mySelectedImage = UIImage()
     var selectedColor = UIColor()
     var selectedCurrency: String = "Dollars"
 
-    //    //MARK: - Lifcycle
+    //MARK: - Lifcycle
     override func viewDidLoad() {
 
         self.modalView.moneySelector.delegate = self
@@ -50,14 +49,6 @@ class HomeChooseNameViewController: UIViewController {
         self.view.removeGestureRecognizer(tapGesture)
     }
 
-    //MARK: - Methods
-    func setupGestures() {
-        tapGesture = UITapGestureRecognizer(target: self,
-                                            action: #selector(tapped))
-        tapGesture.delegate = self
-        self.view.addGestureRecognizer(tapGesture)
-    }
-
     //MARK: - Navigation
     @objc private func tapped() {
         done()
@@ -68,6 +59,13 @@ class HomeChooseNameViewController: UIViewController {
     }
 
     //MARK: - Methods
+    func setupGestures() {
+        tapGesture = UITapGestureRecognizer(target: self,
+                                            action: #selector(tapped))
+        tapGesture.delegate = self
+        self.view.addGestureRecognizer(tapGesture)
+    }
+
     private func okButtonPressed() {
         do {
             try validateChooseFields(self.modalView.nameTextField,

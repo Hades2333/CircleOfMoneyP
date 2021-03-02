@@ -23,7 +23,6 @@ class DetailLookAtCellViewController: UIViewController {
 
     //MARK: - Properties
     var tapGesture = UITapGestureRecognizer()
-
     var intermediateImage: UIImage?
     var intermediateName: String?
     var intermediateAmount: String?

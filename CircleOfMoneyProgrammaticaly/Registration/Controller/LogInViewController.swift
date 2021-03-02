@@ -23,7 +23,7 @@ class LogInViewController: UIViewController {
         return view
     }()
 
-    //MARK: - Life cycle
+    //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden = true
@@ -36,10 +36,8 @@ class LogInViewController: UIViewController {
     //MARK: - Methods
     private func toLogIn() {
 
-        //MARK: - Temporary log in
+        //MARK: - TO DO - delete in production
         let next = TabBar()
-
-        
         self.navigationController?.pushViewController(next, animated: true)
 
 //        do {

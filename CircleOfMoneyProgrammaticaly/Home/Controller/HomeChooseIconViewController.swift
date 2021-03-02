@@ -32,7 +32,6 @@ class HomeChooseIconViewController: UIViewController {
 
     //MARK: - Properties
     var tapGesture = UITapGestureRecognizer()
-
     var chooseIconTempColor = UIColor()
     var chooseIconTempImage = UIImage()
 
@@ -82,9 +81,7 @@ class HomeChooseIconViewController: UIViewController {
         let next = HomeChooseNameViewController()
 
         next.modalTransitionStyle = .coverVertical
-        next.modalPresentationStyle = .fullScreen
         next.modalPresentationStyle = .overCurrentContext
-
         next.mySelectedImage = chooseIconTempImage
         next.selectedColor = chooseIconTempColor
 
@@ -117,7 +114,6 @@ extension HomeChooseIconViewController: UIGestureRecognizerDelegate {
 //MARK: - UICollectionViewDataSource
 extension HomeChooseIconViewController: UICollectionViewDataSource {
 
-
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return iconsForAccounts.count
     }
@@ -138,10 +134,8 @@ extension HomeChooseIconViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView,
                         didSelectItemAt indexPath: IndexPath) {
 
-        // выбранная фотка
         chooseIconTempImage = UIImage(named: "\(indexPath.row)")!
             .withTintColor(chooseIconTempColor)
-
         next()
     }
 }

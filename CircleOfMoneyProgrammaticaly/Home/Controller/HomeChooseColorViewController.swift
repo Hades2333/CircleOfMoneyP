@@ -32,7 +32,6 @@ class HomeChooseColorViewController: UIViewController {
 
     //MARK: - Properties
     var chooseColorTempColor = UIColor()
-
     var tapGesture = UITapGestureRecognizer()
 
     //MARK: - Lifcycle
@@ -109,7 +108,6 @@ extension HomeChooseColorViewController: UIGestureRecognizerDelegate {
 
 //MARK: - UICollectionViewDataSource
 extension HomeChooseColorViewController: UICollectionViewDataSource {
-
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return colorsForAccounts.count

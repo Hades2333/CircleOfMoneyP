@@ -8,6 +8,7 @@
 import UIKit
 
 class SignUpView: UIView {
+    
     //MARK: - Variables
     var backTransition: (() -> Void)?
     var signUpTransition: (() -> Void)?

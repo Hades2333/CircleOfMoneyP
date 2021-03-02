@@ -8,6 +8,7 @@
 import UIKit
 
 class FirstScreenView: UIView {
+    
     //MARK: - Variables
     var signUpTransition: (() -> Void)?
     var logInTransition: (() -> Void)?

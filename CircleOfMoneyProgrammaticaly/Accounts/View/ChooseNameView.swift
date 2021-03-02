@@ -9,7 +9,7 @@ import UIKit
 
 class ChooseNameView: UIView {
 
-    //MARK: - Variables
+    //MARK: - Closures
     var backToTheAccounts: (() -> Void)?
 
     //MARK: - GUI Variables

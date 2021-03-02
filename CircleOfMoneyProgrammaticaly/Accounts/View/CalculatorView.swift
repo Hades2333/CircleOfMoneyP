@@ -7,8 +7,6 @@
 
 import UIKit
 
-
-
 class CalculatorView: UIView {
 
     //MARK: - Variables
