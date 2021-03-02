@@ -70,8 +70,6 @@ extension UIViewController {
             guard !amount!.text!.isEmpty else { throw InputError.emptyAmount }
             guard !amount!.text!.isEmpty else { throw InputError.emptyAmount }
         }
-
-
     }
 
     //MARK: - Validation numbers:

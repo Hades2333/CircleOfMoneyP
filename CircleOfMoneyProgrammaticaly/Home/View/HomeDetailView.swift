@@ -1,15 +1,13 @@
 //
-//  CalculatorView.swift
+//  HomeDetailView.swift
 //  CircleOfMoneyProgrammaticaly
 //
-//  Created by Hellizar on 1.03.21.
+//  Created by Hellizar on 2.03.21.
 //
 
 import UIKit
 
-
-
-class CalculatorView: UIView {
+class HomeDetailView: UIView {
 
     //MARK: - Variables
     var myDelegate: CalculatorViewControllerDelegate?
@@ -21,7 +19,47 @@ class CalculatorView: UIView {
         return view
     }()
 
-    lazy private var topVerticalStack: UIStackView = {
+    lazy var horizontalButtonsTopStack: UIStackView = {
+        let stack = UIStackView()
+        stack.backgroundColor = .green
+        stack.axis = .horizontal
+        stack.alignment = .fill
+        stack.distribution = .fillEqually
+        stack.spacing = 0.0
+        return stack
+    }()
+
+    lazy var fromButton: UIButton = {
+        let button = UIButton()
+        button.backgroundColor = UIColor(named: "misticGreen")
+        button.setTitle("Choose account", for: .normal)
+        button.tintColor = UIColor(named: "mainBackgroundColor")
+        button.titleLabel?.font = UIFont(name: "Varela", size: 15.0)
+        return button
+    }()
+
+    lazy var rightView: UIView = {
+        let view = UIView()
+        view.backgroundColor = UIColor(named: "greenGreatTint")
+        return view
+    }()
+
+    lazy private var onCategory: UILabel = {
+        let label = UILabel()
+        return label
+    }()
+
+    lazy var textField: TextFieldWithLine = {
+        let textField = TextFieldWithLine()
+        //MARK: - Delete
+        textField.backgroundColor = .lightGray
+        textField.textInput.clearButtonMode = .whileEditing
+        textField.textInput.font = UIFont(name: "Varela", size: 20.0)
+        textField.textInput.textColor = UIColor(named: "greenLittleTint")
+        return textField
+    }()
+
+    lazy private var verticalStack: UIStackView = {
         let stack = UIStackView()
         stack.backgroundColor = UIColor(named: "mainBackgroundColor")
         stack.axis = .vertical
@@ -31,41 +69,17 @@ class CalculatorView: UIView {
         return stack
     }()
 
-    lazy private var bottomVerticalStack: UIStackView = {
-        let stack = UIStackView()
-        stack.axis = .vertical
-        stack.alignment = .fill
-        stack.distribution = .fillEqually
-        stack.spacing = 10.0
-        return stack
-    }()
-
-    lazy var fromImage: UIImageView = {
-        let image = UIImageView()
-        return image
-    }()
-
-    lazy var operationImage: UIImageView = {
-        let image = UIImageView()
-        image.contentMode = .scaleAspectFit
-        return image
-    }()
-
-    lazy private var emptyImages: [UIImageView] = {
-        var images = [UIImageView]()
-        for element in 0...2 {
-            let image = UIImageView()
-            images.append(image)
+    lazy private var commonHorizontalStack: [UIStackView] = {
+        var stacks = [UIStackView]()
+        for _ in 0...3 {
+            let stack = UIStackView()
+            stack.axis = .horizontal
+            stack.alignment = .center
+            stack.distribution = .fillEqually
+            stack.spacing = 30.0
+            stacks.append(stack)
         }
-        return images
-    }()
-
-    lazy var textField: TextFieldWithLine = {
-        let textField = TextFieldWithLine()
-        textField.textInput.clearButtonMode = .whileEditing
-        textField.textInput.font = UIFont(name: "Varela", size: 20.0)
-        textField.textInput.textColor = UIColor(named: "greenLittleTint")
-        return textField
+        return stacks
     }()
 
     lazy var buttons: [UIButton] = {
@@ -89,28 +103,6 @@ class CalculatorView: UIView {
         return buttons
     }()
 
-    lazy private var horizontalTopStack: UIStackView = {
-        let stack = UIStackView()
-        stack.axis = .horizontal
-        stack.alignment = .fill
-        stack.distribution = .fillEqually
-        stack.spacing = 20.0
-        return stack
-    }()
-
-    lazy private var commonHorizontalStack: [UIStackView] = {
-        var stacks = [UIStackView]()
-        for _ in 0...3 {
-            let stack = UIStackView()
-            stack.axis = .horizontal
-            stack.alignment = .center
-            stack.distribution = .fillEqually
-            stack.spacing = 30.0
-            stacks.append(stack)
-        }
-        return stacks
-    }()
-
     //MARK: - Initialization
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -124,19 +116,16 @@ class CalculatorView: UIView {
     private func initView() {
         self.addSubview(self.modalView)
 
-        self.modalView.addSubviews([self.topVerticalStack,
-                                    self.bottomVerticalStack])
+        self.modalView.addSubviews([self.horizontalButtonsTopStack,
+                                    self.textField,
+                                    self.verticalStack])
 
-        self.topVerticalStack.addArrangedSubviews([self.horizontalTopStack,
-                                                   self.textField])
+        self.horizontalButtonsTopStack.addArrangedSubviews([self.fromButton,
+                                                            self.rightView])
+        self.rightView.addSubview(self.onCategory)
 
-        self.horizontalTopStack.addArrangedSubviews([self.fromImage,
-                                                     self.operationImage,
-                                                     self.emptyImages[0],
-                                                     self.emptyImages[1],
-                                                     self.emptyImages[2]])
         for index in 0...3 {
-            self.bottomVerticalStack.addArrangedSubview(commonHorizontalStack[index])
+            self.verticalStack.addArrangedSubview(commonHorizontalStack[index])
         }
 
         for index in 0...2 {
@@ -165,21 +154,25 @@ class CalculatorView: UIView {
             make.edges.equalToSuperview()
         }
 
-        self.topVerticalStack.snp.makeConstraints { (make) in
-            make.top.left.right.equalToSuperview().inset(20)
-            make.height.lessThanOrEqualTo(150)
+        self.horizontalButtonsTopStack.snp.makeConstraints { (make) in
+            make.top.left.right.equalToSuperview()
+            make.height.equalTo(80)
         }
 
-        self.bottomVerticalStack.snp.makeConstraints { (make) in
-            make.left.right.equalToSuperview().inset(50)
-            make.top.equalTo(self.topVerticalStack.snp.bottom).offset(20)
-            make.bottom.equalToSuperview().inset(20)
+        self.onCategory.snp.makeConstraints { (make) in
+            make.edges.equalToSuperview()
         }
 
-        self.fromImage.snp.makeConstraints { (make) in
-            make.width.equalTo(self.fromImage.snp.height)
+        self.textField.snp.makeConstraints { (make) in
+            make.top.equalTo(self.horizontalButtonsTopStack.snp.bottom).offset(10)
+            make.left.right.equalToSuperview().inset(20)
+            make.height.greaterThanOrEqualTo(30)
         }
 
+        self.verticalStack.snp.makeConstraints { (make) in
+            make.top.equalTo(self.textField.snp.bottom).offset(10)
+            make.left.right.bottom.equalToSuperview().inset(20)
+        }
         for index in 0...11 {
             self.buttons[index].snp.makeConstraints { (make) in
                 make.width.equalTo(self.buttons[index].snp.height)
