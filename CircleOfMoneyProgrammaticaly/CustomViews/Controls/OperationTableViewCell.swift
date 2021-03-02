@@ -35,7 +35,11 @@ class OperationTableViewCell: UITableViewCell {
         self.accountLabel.text = account.account.nameOfAccount
 
         self.moneyLabel.text = "\(account.amountOfMoney) \(account.currency)"
-        self.dateLabel.text = String("\(account.date)")
+
+        let format = DateFormatter()
+        format.dateFormat = "MM-dd-yyyy HH:mm"
+//account.date
+        self.dateLabel.text = String("\(format.string(from: account.date))")
     }
 
     override func awakeFromNib() {
