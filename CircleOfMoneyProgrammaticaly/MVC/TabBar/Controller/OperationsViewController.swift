@@ -59,7 +59,18 @@ class OperationsViewController: UIViewController {
 
 //MARK: - UITableViewDelegate
 extension OperationsViewController: UITableViewDelegate {
-    
+
+    func tableView(_ tableView: UITableView,
+                   commit editingStyle: UITableViewCell.EditingStyle,
+                   forRowAt indexPath: IndexPath) {
+
+        if editingStyle == .delete {
+            myOperations.remove(at: indexPath.row)
+            operationTable.deleteRows(at: [indexPath], with: .fade)
+        } else if editingStyle == .insert {
+            return
+        }
+    }
 }
 
 //MARK: - OperationsViewController
