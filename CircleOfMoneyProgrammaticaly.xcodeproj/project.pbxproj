@@ -162,11 +162,7 @@
 				14E2E94D25EA376A00CDF2EF /* CustomViews */,
 				1415D45525EA1B6000F2F6FA /* Helpers */,
 				141024F225E9051D00CA951A /* Support */,
-				14E400B725EB944900C6A628 /* Operations */,
-				14E400B625EB943000C6A628 /* Home */,
-				14E400B525EB942A00C6A628 /* Accounts */,
-				1496120C25EA897F00A59E20 /* TabBar */,
-				1410250825E91FA400CA951A /* Registration */,
+				14105FD625EEA47E00E86DE5 /* MVC */,
 				1402131025DFC24500803C47 /* AppDelegate.swift */,
 				1402131925DFC24800803C47 /* Assets.xcassets */,
 				1402131B25DFC24800803C47 /* LaunchScreen.storyboard */,
@@ -228,6 +224,18 @@
 				140D688025E7810D00C487E2 /* Controller */,
 			);
 			path = Registration;
+			sourceTree = "<group>";
+		};
+		14105FD625EEA47E00E86DE5 /* MVC */ = {
+			isa = PBXGroup;
+			children = (
+				14E400B725EB944900C6A628 /* Operations */,
+				14E400B625EB943000C6A628 /* Home */,
+				14E400B525EB942A00C6A628 /* Accounts */,
+				1496120C25EA897F00A59E20 /* TabBar */,
+				1410250825E91FA400CA951A /* Registration */,
+			);
+			path = MVC;
 			sourceTree = "<group>";
 		};
 		1415D45525EA1B6000F2F6FA /* Helpers */ = {
