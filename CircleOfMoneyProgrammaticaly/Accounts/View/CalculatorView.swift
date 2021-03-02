@@ -154,7 +154,6 @@ class CalculatorView: UIView {
         for index in 9...11 {
             self.commonHorizontalStack[3].addArrangedSubview(buttons[index])
         }
-
         makeConstraints()
         configureElements()
     }

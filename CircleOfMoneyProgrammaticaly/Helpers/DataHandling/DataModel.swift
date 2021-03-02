@@ -82,10 +82,10 @@ struct Categories {
     }
 }
 
-var myCategories: [Categories] = [Categories(image: Image(withImage: UIImage(named: "6")!.withTintColor(.cyan)),
+var myCategories: [Categories] = [Categories(image: Image(withImage: UIImage(named: "6")!.withTintColor(UIColor(named: "Color8")!)),
                                              nameOfAccount: "Music",
                                              amountOfMoney: 60,
-                                             color: Color(uiColor: .cyan),
+                                             color: Color(uiColor: UIColor(named: "Color8")!),
                                              currency: .USD)]
 
 struct Operations {
