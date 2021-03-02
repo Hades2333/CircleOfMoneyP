@@ -37,6 +37,10 @@ class ChooseIconViewController: UIViewController {
     //MARK: - Lifcycle
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        collectionView.delegate = self
+        collectionView.dataSource = self
+
         view.backgroundColor = UIColor.black.withAlphaComponent(0.3)
         view.addSubview(modalView)
         modalView.addSubview(collectionView)
@@ -78,7 +82,11 @@ class ChooseIconViewController: UIViewController {
     func next() {
         let next = ChooseNameViewController()
         next.modalTransitionStyle = .coverVertical
+
         next.modalPresentationStyle = .overFullScreen
+        //next.modalPresentationStyle = .fullScreen
+        //next.modalPresentationStyle = .overCurrentContext
+
         next.selectedImage = tempImage
         present(next, animated: false, completion: nil)
     }
