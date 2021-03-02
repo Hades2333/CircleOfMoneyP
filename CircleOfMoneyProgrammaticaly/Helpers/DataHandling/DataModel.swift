@@ -58,9 +58,13 @@ struct Color : Codable {
 }
 
 var myAccounts: [Accounts] = [Accounts(image: Image(withImage: UIImage(named: "3")!),
-                                       nameOfAccount: "My job",
+                                       nameOfAccount: "Job",
                                        amountOfMoney: 43.9,
-                                       currency: .USD)]
+                                       currency: .USD),
+                              Accounts(image: Image(withImage: UIImage(named: "4")!),
+                                                                     nameOfAccount: "Renting",
+                                                                     amountOfMoney: 391,
+                                                                     currency: .PLN)]
 
 struct Categories {
     var image: Image
