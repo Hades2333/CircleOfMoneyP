@@ -5,8 +5,6 @@
 //  Created by Hellizar on 1.03.21.
 //
 
-import Foundation
-
 import UIKit
 
 class HomeChooseColorViewController: UIViewController {
@@ -78,24 +76,19 @@ class HomeChooseColorViewController: UIViewController {
         self.view.addGestureRecognizer(tapGesture)
     }
 
-    func done() {
-        performSegue(withIdentifier: "fromChooseColorToHome", sender: nil)
-    }
-
+    //MARK: - Navigation
     func next() {
-        performSegue(withIdentifier: "HomeChooseIcon", sender: nil)
+        let next = HomeChooseIconViewController()
+
+        next.modalTransitionStyle = .coverVertical
+        next.modalPresentationStyle = .fullScreen
+        next.modalPresentationStyle = .overCurrentContext
+        next.chooseIconTempColor = chooseColorTempColor
+        present(next, animated: false, completion: nil)
     }
 
     @objc private func tapped() {
-        done()
-    }
-
-    //MARK: - Navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        //guard segue.identifier == "HomeChooseIcon" else { return }
-//        guard let destination = segue.destination as? HomeChooseIconViewController else { return }
-        // передаём цвет вперёд
-        //destination.chooseIconTempColor = chooseColorTempColor
+        dismiss(animated: false, completion: nil)
     }
 }
 

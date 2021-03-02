@@ -70,18 +70,18 @@ class HomeViewController: UIViewController {
         }
 
         NotificationCenter.default.addObserver(self ,
-                                               selector: #selector(sendDataWithObserverHome),
-                                               name: .dataUpdatedFromHome,
+                                               selector: #selector(dataWasUpdated),
+                                               name: .accountsAndCategoriesWasUpdated,
                                                object: nil)
     }
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        NotificationCenter.default.removeObserver(Notification.Name.dataUpdatedFromHome)
+        NotificationCenter.default.removeObserver(Notification.Name.accountsAndCategoriesWasUpdated)
     }
 
     //MARK: - Methods
-    @objc func sendDataWithObserverHome() {
+    @objc func dataWasUpdated() {
         self.mainTable.reloadData()
         updateValueForChart()
     }
@@ -139,8 +139,6 @@ class HomeViewController: UIViewController {
         return tempArray
     }
 
-
-
     func updateValueForChart() {
         do {
             try self.arrayOfMoney = countMoneyForChart()
@@ -153,8 +151,6 @@ class HomeViewController: UIViewController {
     }
 
     //MARK: - Navigation
-    @IBAction func unwindToTheHomeViewController( _ sender: UIStoryboardSegue) {}
-
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 //        if segue.identifier == "HomeDetailLook" {
 //            guard let next = segue.destination as? HomeDetailViewController else {

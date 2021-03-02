@@ -9,7 +9,7 @@ import Foundation
 
 extension Notification.Name {
     static let accountsDataWasUpdated = Notification.Name("userDataUpdateNotification")
+    static let accountsAndCategoriesWasUpdated = Notification.Name("userDataWasUpdatedFromHome")
     
-    static let dataUpdatedFromHome = Notification.Name("userDataWasUpdatedFromHome")
     static let operationsUpdate = Notification.Name("operationsUpdate")
 }

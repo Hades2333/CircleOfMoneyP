@@ -29,6 +29,7 @@
 		142681D125ED3F70007C8413 /* HomeChooseAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142681D025ED3F70007C8413 /* HomeChooseAccountViewController.swift */; };
 		1458CCDF25DFC2AD0091C711 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1458CCDE25DFC2AD0091C711 /* SnapKit */; };
 		1496121125EA89CA00A59E20 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1496121025EA89CA00A59E20 /* TabBar.swift */; };
+		14D5FE4125EE0327000F0484 /* HomeChooseNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D5FE4025EE0327000F0484 /* HomeChooseNameView.swift */; };
 		14E2E94125EA2CD200CDF2EF /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E2E94025EA2CD200CDF2EF /* SignUpViewController.swift */; };
 		14E2E94425EA2CF000CDF2EF /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E2E94325EA2CF000CDF2EF /* SignUpView.swift */; };
 		14E2E94825EA2D4A00CDF2EF /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E2E94725EA2D4A00CDF2EF /* LogInView.swift */; };
@@ -87,6 +88,7 @@
 		142681CD25ED3F1E007C8413 /* HomeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDetailViewController.swift; sourceTree = "<group>"; };
 		142681D025ED3F70007C8413 /* HomeChooseAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeChooseAccountViewController.swift; sourceTree = "<group>"; };
 		1496121025EA89CA00A59E20 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		14D5FE4025EE0327000F0484 /* HomeChooseNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeChooseNameView.swift; sourceTree = "<group>"; };
 		14E2E94025EA2CD200CDF2EF /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		14E2E94325EA2CF000CDF2EF /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		14E2E94725EA2D4A00CDF2EF /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
@@ -290,6 +292,14 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		14D5FE3F25EE0318000F0484 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				14D5FE4025EE0327000F0484 /* HomeChooseNameView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		14E2E94D25EA376A00CDF2EF /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -367,6 +377,7 @@
 		14E400B625EB943000C6A628 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				14D5FE3F25EE0318000F0484 /* View */,
 				1426819D25ED1492007C8413 /* Controller */,
 			);
 			path = Home;
@@ -589,6 +600,7 @@
 				14E2E96225EA7E7600CDF2EF /* ErrorHandler.swift in Sources */,
 				14E400B925EB94B800C6A628 /* ChooseIconViewController.swift in Sources */,
 				14E2E95425EA396B00CDF2EF /* TextFieldWithLine.swift in Sources */,
+				14D5FE4125EE0327000F0484 /* HomeChooseNameView.swift in Sources */,
 				142681CE25ED3F1E007C8413 /* HomeDetailViewController.swift in Sources */,
 				142681B525ED29C8007C8413 /* HomeChooseNameViewController.swift in Sources */,
 				14E400E925EBD9CA00C6A628 /* DetailLookAtCellViewController.swift in Sources */,
