@@ -53,9 +53,12 @@ class SHCircleBarController: UITabBarController {
 
         circleView.addSubview(circleImageView)
         self.view.addSubview(circleView)
-        let tabWidth = self.view.bounds.width / CGFloat(self.tabBar.items?.count ?? 4)
 
-        circleView.frame = CGRect(x: tabWidth / 2 - 30, y: self.tabBar.frame.origin.y - 40, width: 60, height: 60)
+        let tabWidth = self.view.bounds.width / CGFloat(self.tabBar.items?.count ?? 3)
+        //updateTabBarFrame()
+        circleView.frame = CGRect(x: tabWidth / 2 - 30, y: self.tabBar.frame.origin.y - 20, width: 60, height: 60)
+        print("высота общая \(self.tabBar.frame.origin.y)")
+        //print("высота общая \(self.tabBar.frame.origin.y)")
         circleImageView.frame = self.circleView.bounds
     }
     open override func viewWillAppear(_ animated: Bool) {
