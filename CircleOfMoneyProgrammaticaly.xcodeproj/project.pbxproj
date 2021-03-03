@@ -31,6 +31,8 @@
 		146BFCA025EEA9E5003D769B /* OperationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 146BFC9F25EEA9E5003D769B /* OperationTableViewCell.xib */; };
 		146BFCA325EEAA03003D769B /* OperationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146BFCA225EEAA03003D769B /* OperationTableViewCell.swift */; };
 		1479C3CF25EF619400033EE0 /* MyDataSavings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1479C3CE25EF619400033EE0 /* MyDataSavings.swift */; };
+		1479C3D525EF6CDC00033EE0 /* SHCircleBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1479C3D425EF6CDC00033EE0 /* SHCircleBar.swift */; };
+		1479C3D925EF6D0400033EE0 /* SHCircleBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1479C3D825EF6D0400033EE0 /* SHCircleBarController.swift */; };
 		1496121125EA89CA00A59E20 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1496121025EA89CA00A59E20 /* TabBar.swift */; };
 		14D5FE4125EE0327000F0484 /* HomeChooseNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D5FE4025EE0327000F0484 /* HomeChooseNameView.swift */; };
 		14D5FE4625EE0B03000F0484 /* HomeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D5FE4525EE0B03000F0484 /* HomeDetailView.swift */; };
@@ -94,6 +96,8 @@
 		146BFC9F25EEA9E5003D769B /* OperationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OperationTableViewCell.xib; sourceTree = "<group>"; };
 		146BFCA225EEAA03003D769B /* OperationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationTableViewCell.swift; sourceTree = "<group>"; };
 		1479C3CE25EF619400033EE0 /* MyDataSavings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDataSavings.swift; sourceTree = "<group>"; };
+		1479C3D425EF6CDC00033EE0 /* SHCircleBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHCircleBar.swift; sourceTree = "<group>"; };
+		1479C3D825EF6D0400033EE0 /* SHCircleBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHCircleBarController.swift; sourceTree = "<group>"; };
 		1496121025EA89CA00A59E20 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		14D5FE4025EE0327000F0484 /* HomeChooseNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeChooseNameView.swift; sourceTree = "<group>"; };
 		14D5FE4525EE0B03000F0484 /* HomeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDetailView.swift; sourceTree = "<group>"; };
@@ -288,6 +292,15 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		1479C3D325EF6CCF00033EE0 /* Bar */ = {
+			isa = PBXGroup;
+			children = (
+				1479C3D425EF6CDC00033EE0 /* SHCircleBar.swift */,
+				1479C3D825EF6D0400033EE0 /* SHCircleBarController.swift */,
+			);
+			path = Bar;
+			sourceTree = "<group>";
+		};
 		1496120C25EA897F00A59E20 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -319,6 +332,7 @@
 		14E2E94D25EA376A00CDF2EF /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				1479C3D325EF6CCF00033EE0 /* Bar */,
 				14E2E94F25EA37A400CDF2EF /* Controls */,
 				14E2E94E25EA379200CDF2EF /* Xibs */,
 			);
@@ -594,11 +608,13 @@
 				14E400D025EBB65400C6A628 /* ChooseNameView.swift in Sources */,
 				142681A425ED1F3C007C8413 /* ExchangeRates.swift in Sources */,
 				14E2E96625EA7FE400CDF2EF /* UIViewController+Ex.swift in Sources */,
+				1479C3D525EF6CDC00033EE0 /* SHCircleBar.swift in Sources */,
 				142681B225ED29B5007C8413 /* HomeChooseIconViewController.swift in Sources */,
 				14E4009325EB6D7400C6A628 /* AccountsViewController.swift in Sources */,
 				14E400CD25EBB63400C6A628 /* ChooseNameViewController.swift in Sources */,
 				1426818425ECBF42007C8413 /* UIViewStack+Ex.swift in Sources */,
 				14E400C025EB955200C6A628 /* ChooseIconCollectionViewCell.swift in Sources */,
+				1479C3D925EF6D0400033EE0 /* SHCircleBarController.swift in Sources */,
 				14E400EC25EBD9F200C6A628 /* DetailLookAtCellView.swift in Sources */,
 				142681C825ED3DD1007C8413 /* ChooseColorCollectionViewCell.swift in Sources */,
 				1415D45825EA1B8C00F2F6FA /* UIView+Ex.swift in Sources */,

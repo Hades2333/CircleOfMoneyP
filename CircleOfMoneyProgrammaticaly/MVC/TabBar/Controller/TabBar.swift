@@ -8,16 +8,16 @@
 import UIKit
 import CircleBar
 
-class TabBar: UITabBarController {
+class TabBar: SHCircleBarController {
 
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemBackground
+        view.backgroundColor = UIColor(named: "mainBackgroundColor")
         UITabBar.appearance().barTintColor = .systemBackground
         tabBar.tintColor = .label
         setupVCs()
-        self.selectedIndex = 1
+        self.selectedIndex = 0
     }
 
     //MARK: - Methods
