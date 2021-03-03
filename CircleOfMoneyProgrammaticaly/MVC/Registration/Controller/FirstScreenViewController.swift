@@ -25,6 +25,7 @@ class FirstScreenViewController: UIViewController {
     //MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.navigationController?.navigationBar.isHidden = true
         
         self.view.addSubview(firstScreenView)
@@ -43,6 +44,4 @@ class FirstScreenViewController: UIViewController {
         let next = LogInViewController()
         self.navigationController?.pushViewController(next, animated: true)
     }
-
 }
-

@@ -23,9 +23,10 @@ class TabBar: SHCircleBarController {
     fileprivate func createNavController(for rootViewController: UIViewController,
                                          image: UIImage) -> UIViewController {
         let navController = UINavigationController(rootViewController: rootViewController)
+        navController.navigationBar.isTranslucent = false
+        navController.navigationBar.barTintColor = UIColor(named: "greenGreatTint")
 
         navController.tabBarItem.image = image
-        navController.navigationBar.prefersLargeTitles = false
         return navController
     }
 

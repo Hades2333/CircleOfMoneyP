@@ -22,7 +22,7 @@ class LogInViewController: UIViewController {
         }
         return view
     }()
-
+    
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,6 +58,7 @@ class LogInViewController: UIViewController {
 //                }
 //
 //                let next = TabBar()
+
 //                self.navigationController?.pushViewController(next, animated: true)
 //            }
 //        } catch {

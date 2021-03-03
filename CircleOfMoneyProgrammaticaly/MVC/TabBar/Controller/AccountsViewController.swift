@@ -29,6 +29,11 @@ class AccountsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "logOut")?.withTintColor(.red),
+                                                                style: .done,
+                                                                target: self,
+                                                                action: #selector(self.backButtonPressed))
+
         view.backgroundColor = UIColor(named: "mainBackgroundColor")
         self.edgesForExtendedLayout = []
 
@@ -56,6 +61,12 @@ class AccountsViewController: UIViewController {
     //MARK: - Methods
     @objc func sendDataWithObserver() {
         self.tableView.reloadData()
+    }
+
+    @objc func backButtonPressed() {
+    //self.navigationController?.popToViewController(previous ?? self, animated: false)
+//        guard let existingRootView = TabBar().firstStackViewController else { return }
+//        navigationController?.popToViewController(existingRootView, animated: false)
     }
 }
 
