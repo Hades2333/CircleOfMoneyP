@@ -9,7 +9,8 @@ import UIKit
 import SnapKit
 import Firebase
 
-class SignUpViewController: CustomViewController {
+class SignUpViewController: UIViewController {
+
     //MARK: - GUI Variables
     private lazy var signUpView: SignUpView = {
         let view = SignUpView()
@@ -33,49 +34,54 @@ class SignUpViewController: CustomViewController {
         }
     }
 
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
-//
-//        self.registerForKeyboardNotifications()
-//    }
-//
-//    override func viewWillDisappear(_ animated: Bool) {
-//        super.viewWillDisappear(animated)
-//
-//        self.unregisterFromKeyboardNotifications()
-//    }
-//
-//    // MARK: - Methods for keyboard
-//    @objc override func keyboardWillShow(_ scroll: UIScrollView,
-//                                   _ notification: Notification) {
-//        super.keyboardWillShow(self.signUpView.scrollView, notification)
-//    }
-//
-//    @objc override func keyboardWillHide(_ scroll: UIScrollView) {
-//        super.keyboardWillHide(self.signUpView.scrollView)
-//    }
-//
-//    // MARK: - Observers
-//    private func registerForKeyboardNotifications() {
-//        self.unregisterFromKeyboardNotifications()
-//        NotificationCenter.default.addObserver(self,
-//                                               selector: #selector(self.keyboardWillShow(_:_:)),
-//                                               name: UIResponder.keyboardWillShowNotification,
-//                                               object: nil)
-//        NotificationCenter.default.addObserver(self,
-//                                               selector: #selector(self.keyboardWillHide(_:)),
-//                                               name: UIResponder.keyboardWillHideNotification,
-//                                               object: nil)
-//    }
-//
-//    private func unregisterFromKeyboardNotifications() {
-//        NotificationCenter.default.removeObserver(self,
-//                                                  name: UIResponder.keyboardWillShowNotification,
-//                                                  object: nil)
-//        NotificationCenter.default.removeObserver(self,
-//                                                  name: UIResponder.keyboardWillHideNotification,
-//                                                  object: nil)
-//    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        self.registerForKeyboardNotifications()
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+
+        self.unregisterFromKeyboardNotifications()
+    }
+
+    // MARK: - Methods for keyboard
+    @objc private func keyboardWillShow(_ notification: Notification) {
+
+        guard let userInfo = (notification as Notification).userInfo else { return }
+        guard let keyboardNSValue: NSValue = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else { return }
+        let keybordFrame = keyboardNSValue.cgRectValue
+
+        self.signUpView.scrollView.contentInset.bottom = keybordFrame.size.height + 50
+    }
+
+    @objc private func keyboardWillHide() {
+        self.signUpView.scrollView.contentInset.bottom = .zero
+    }
+
+    // MARK: - Observers
+    private func registerForKeyboardNotifications() {
+        self.unregisterFromKeyboardNotifications()
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(self.keyboardWillShow(_:)),
+                                               name: UIResponder.keyboardWillShowNotification,
+                                               object: nil)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(self.keyboardWillHide),
+                                               name: UIResponder.keyboardWillHideNotification,
+                                               object: nil)
+    }
+
+    private func unregisterFromKeyboardNotifications() {
+        NotificationCenter.default.removeObserver(self,
+                                                  name: UIResponder.keyboardWillShowNotification,
+                                                  object: nil)
+        NotificationCenter.default.removeObserver(self,
+                                                  name: UIResponder.keyboardWillHideNotification,
+                                                  object: nil)
+    }
+
     //MARK: - Methods
     private func toRegister() {
 

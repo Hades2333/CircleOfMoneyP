@@ -14,7 +14,7 @@ class LogInView: UIView {
     var logInTransition: (() -> Void)?
 
     //MARK: - GUI Variables
-    private lazy var scrollView: UIScrollView = {
+    lazy var scrollView: UIScrollView = {
         let scrollView = UIScrollView()
         return scrollView
     }()

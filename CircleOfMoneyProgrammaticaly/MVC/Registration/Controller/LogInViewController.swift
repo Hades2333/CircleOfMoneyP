@@ -33,6 +33,54 @@ class LogInViewController: UIViewController {
         }
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        self.registerForKeyboardNotifications()
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+
+        self.unregisterFromKeyboardNotifications()
+    }
+
+    // MARK: - Methods for keyboard
+    @objc private func keyboardWillShow(_ notification: Notification) {
+
+        guard let userInfo = (notification as Notification).userInfo else { return }
+        guard let keyboardNSValue: NSValue = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else { return }
+        let keybordFrame = keyboardNSValue.cgRectValue
+
+        self.logInView.scrollView.contentInset.bottom = keybordFrame.size.height + 50
+    }
+
+    @objc private func keyboardWillHide() {
+        self.logInView.scrollView.contentInset.bottom = .zero
+    }
+
+    // MARK: - Observers
+    private func registerForKeyboardNotifications() {
+        self.unregisterFromKeyboardNotifications()
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(self.keyboardWillShow(_:)),
+                                               name: UIResponder.keyboardWillShowNotification,
+                                               object: nil)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(self.keyboardWillHide),
+                                               name: UIResponder.keyboardWillHideNotification,
+                                               object: nil)
+    }
+
+    private func unregisterFromKeyboardNotifications() {
+        NotificationCenter.default.removeObserver(self,
+                                                  name: UIResponder.keyboardWillShowNotification,
+                                                  object: nil)
+        NotificationCenter.default.removeObserver(self,
+                                                  name: UIResponder.keyboardWillHideNotification,
+                                                  object: nil)
+    }
+
     //MARK: - Methods
     private func toLogIn() {
 
