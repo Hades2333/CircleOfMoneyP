@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import CircleBar
 
 class TabBar: SHCircleBarController {
 
@@ -27,8 +26,6 @@ class TabBar: SHCircleBarController {
 
         navController.tabBarItem.image = image
         navController.navigationBar.prefersLargeTitles = false
-        //rootViewController.navigationItem.title = title
-
         return navController
     }
 
