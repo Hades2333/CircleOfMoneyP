@@ -7,25 +7,11 @@
 
 import UIKit
 
-struct DataModel {
-    var accounts: [Accounts]
-    var categories: [Categories]
-    var operations: [Operations]
-}
-
 struct Accounts: Codable {
     var image: Image
     var nameOfAccount: String
     var amountOfMoney: Double
     var currency: Currency
-
-    init(image: Image, nameOfAccount: String,
-         amountOfMoney: Double, currency: Currency) {
-        self.image = image
-        self.nameOfAccount = nameOfAccount
-        self.amountOfMoney = amountOfMoney
-        self.currency = currency
-    }
 }
 
 struct Image: Codable {
@@ -66,7 +52,7 @@ var myAccounts: [Accounts] = [Accounts(image: Image(withImage: UIImage(named: "3
                                                                      amountOfMoney: 391,
                                                                      currency: .PLN)]
 
-struct Categories {
+struct Categories: Codable {
     var image: Image
     var nameOfAccount: String
     var amountOfMoney: Double
@@ -92,7 +78,7 @@ var myCategories: [Categories] = [Categories(image: Image(withImage: UIImage(nam
                                              color: Color(uiColor: UIColor(named: "Color9")!),
                                              currency: .USD)]
 
-struct Operations {
+struct Operations: Codable {
     var category: Categories
     var account: Accounts
     var amountOfMoney: Double

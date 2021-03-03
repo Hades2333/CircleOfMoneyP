@@ -30,6 +30,7 @@
 		1458CCDF25DFC2AD0091C711 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1458CCDE25DFC2AD0091C711 /* SnapKit */; };
 		146BFCA025EEA9E5003D769B /* OperationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 146BFC9F25EEA9E5003D769B /* OperationTableViewCell.xib */; };
 		146BFCA325EEAA03003D769B /* OperationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146BFCA225EEAA03003D769B /* OperationTableViewCell.swift */; };
+		1479C3CF25EF619400033EE0 /* MyDataSavings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1479C3CE25EF619400033EE0 /* MyDataSavings.swift */; };
 		1496121125EA89CA00A59E20 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1496121025EA89CA00A59E20 /* TabBar.swift */; };
 		14D5FE4125EE0327000F0484 /* HomeChooseNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D5FE4025EE0327000F0484 /* HomeChooseNameView.swift */; };
 		14D5FE4625EE0B03000F0484 /* HomeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D5FE4525EE0B03000F0484 /* HomeDetailView.swift */; };
@@ -92,6 +93,7 @@
 		142681D025ED3F70007C8413 /* HomeChooseAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeChooseAccountViewController.swift; sourceTree = "<group>"; };
 		146BFC9F25EEA9E5003D769B /* OperationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OperationTableViewCell.xib; sourceTree = "<group>"; };
 		146BFCA225EEAA03003D769B /* OperationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationTableViewCell.swift; sourceTree = "<group>"; };
+		1479C3CE25EF619400033EE0 /* MyDataSavings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDataSavings.swift; sourceTree = "<group>"; };
 		1496121025EA89CA00A59E20 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		14D5FE4025EE0327000F0484 /* HomeChooseNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeChooseNameView.swift; sourceTree = "<group>"; };
 		14D5FE4525EE0B03000F0484 /* HomeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDetailView.swift; sourceTree = "<group>"; };
@@ -377,6 +379,7 @@
 			isa = PBXGroup;
 			children = (
 				14E400AA25EB8D7500C6A628 /* DataModel.swift */,
+				1479C3CE25EF619400033EE0 /* MyDataSavings.swift */,
 			);
 			path = DataHandling;
 			sourceTree = "<group>";
@@ -605,6 +608,7 @@
 				14E2E95825EA764000CDF2EF /* CustomViewController.swift in Sources */,
 				14E4009625EB6D8100C6A628 /* HomeViewController.swift in Sources */,
 				14E400B125EB8F4900C6A628 /* CustomAddTableViewCell.swift in Sources */,
+				1479C3CF25EF619400033EE0 /* MyDataSavings.swift in Sources */,
 				14E400AB25EB8D7500C6A628 /* DataModel.swift in Sources */,
 				14E2E95D25EA7DD600CDF2EF /* AlertSingleton.swift in Sources */,
 				14E2E96225EA7E7600CDF2EF /* ErrorHandler.swift in Sources */,

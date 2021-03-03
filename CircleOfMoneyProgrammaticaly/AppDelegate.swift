@@ -12,9 +12,12 @@ import Firebase
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var dataModel = DataModelSavings()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
+        dataModel.loadAll()
+        
         FirebaseApp.configure()
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
@@ -27,6 +30,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             window.makeKeyAndVisible()
         }
         return true
+    }
+
+    func applicationDidEnterBackground(_ application: UIApplication) {
+        dataModel.saveAll()
+    }
+
+    func applicationWillEnterForeground(_ application: UIApplication) {
+        dataModel.loadAll()
     }
 }
 
