@@ -34,20 +34,26 @@ class AccountTableViewCell: UITableViewCell {
     }
     
     public func configureAccounts(_ account: Accounts) {
+        let money = account.amountOfMoney.rounded(toPlaces: 2)
+
         labelName.text = account.nameOfAccount
-        labelMoney.text = "\(account.amountOfMoney)   \(account.currency)"
+        labelMoney.text = "\(money)   \(account.currency)"
         imageIcon.image = account.image.getImage()
     }
     
     public func configureCategories(_ account: Categories) {
+        let money = account.amountOfMoney.rounded(toPlaces: 2)
+
         labelName.text = account.nameOfAccount
-        labelMoney.text = "\(account.amountOfMoney)   \(account.currency)"
+        labelMoney.text = "\(money)   \(account.currency)"
         imageIcon.image = account.image.getImage(with: account.color.uiColor)
     }
     
     public func configureOperations(_ account: Operations) {
+        let money = account.amountOfMoney.rounded(toPlaces: 2)
+
         self.labelName.text = account.category.nameOfAccount
-        self.labelMoney.text = "\(account.amountOfMoney)   \(account.currency)"
+        self.labelMoney.text = "\(money)   \(account.currency)"
         self.imageIcon.image = account.category.image.getImage(with: account.category.color.uiColor)
         self.date.text = String("\(account.date)")
     }
