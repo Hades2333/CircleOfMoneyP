@@ -44,7 +44,6 @@ class COMPNetworking {
         let fullUrl = baseUrl + apiKey + currency
 
         let request = URLRequest(url: URL(string: fullUrl) ?? URL(string: "https://v6.exchangerate-api.com/v6/b8cf407191ff9a2a81cde6e9/latest/USD")!)
-        print(request)
 
         let dataTask = self.session.dataTask(with: request) { data, response, error in
 

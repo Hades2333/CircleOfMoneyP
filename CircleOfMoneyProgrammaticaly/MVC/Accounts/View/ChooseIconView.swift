@@ -12,6 +12,7 @@ class ChooseIconView: UIView {
     //MARK: - GUI Variables
     private lazy var modalView: UIView = {
         let view = UIView()
+        view.layer.cornerRadius = 20.0
         view.backgroundColor = UIColor(named: "mainBackgroundColor")
         return view
     }()
@@ -39,7 +40,7 @@ class ChooseIconView: UIView {
         self.addSubview(self.modalView)
         self.modalView.addSubview(self.chooseIconLabel)
         makeConstraints()
-        self.modalView.layer.cornerRadius = 20
+        //self.modalView.layer.cornerRadius = 20
     }
 
     //MARK: - Constraints

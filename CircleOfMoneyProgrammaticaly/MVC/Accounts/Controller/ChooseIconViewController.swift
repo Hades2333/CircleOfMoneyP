@@ -82,7 +82,6 @@ class ChooseIconViewController: UIViewController {
     func next() {
         let next = ChooseNameViewController()
         next.modalTransitionStyle = .coverVertical
-
         next.modalPresentationStyle = .overFullScreen
         //next.modalPresentationStyle = .fullScreen
         //next.modalPresentationStyle = .overCurrentContext
