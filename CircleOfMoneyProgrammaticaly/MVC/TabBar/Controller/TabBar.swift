@@ -22,6 +22,8 @@ class TabBar: SHCircleBarController {
         view.backgroundColor = UIColor(named: "mainBackgroundColor")
         //UITabBar.appearance().barTintColor = .systemBackground
         //tabBar.tintColor = .label
+
+        //UITabBarButtonLabel
         setupVCs()
         self.selectedIndex = 0
     }

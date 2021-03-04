@@ -172,7 +172,7 @@ extension AccountsViewController {
             }
         }
         let money = allMoney.reduce(0, +).rounded(toPlaces: 2)
-        self.title = String("Total \(money) $")
+        self.navigationItem.title = String("Total \(money) $")
 
     }
 
