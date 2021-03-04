@@ -61,13 +61,7 @@ class AccountsViewController: UIViewController {
 
         self.navigationController?.navigationBar.barStyle = .default
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor(named: "mainBackgroundColor") ?? .black]
-//        do {
-//            let money = try countAccountsMoney()
-//            self.navigationItem.title = money
-//        } catch {
-//            Swift.debugPrint(error)
-//        }
-        self.navigationItem.title = "пока что пусто"
+        self.sendRequest()
     }
 
     private func setupViews() {
@@ -148,5 +142,56 @@ extension AccountsViewController: UITableViewDataSource {
         }
         cell.configureAccounts(myAccounts[indexPath.row])
         return cell
+    }
+}
+
+extension AccountsViewController {
+
+    private func sendRequest() {
+         COMPNetworking.shared.request(
+            url: COMPUrlPaths.usd,
+            currency: "/latest/USD",
+            successHandler: { [weak self] (model: ExchangeRates) in
+                self?.handleResponse(model: model)
+            },
+            errorHandler: { [weak self] (error: COMPNetworkError) in
+                self?.handleError(error: error)
+            })
+    }
+
+    private func handleResponse(model: ExchangeRates) {
+
+        var allMoney: [Double] = []
+
+        for account in myAccounts {
+            if account.currency.rawValue == "USD" {
+                allMoney.append(account.amountOfMoney)
+            } else {
+                let converted = account.amountOfMoney / (model.conversion_rates["\(account.currency)"] ?? 1.0)
+                allMoney.append(converted)
+            }
+        }
+        let money = allMoney.reduce(0, +).rounded(toPlaces: 2)
+        self.title = String("Total \(money) $")
+
+    }
+
+    private func handleError(error: COMPNetworkError) {
+        let title: String = "Error"
+        var message: String = "Something went wrong!"
+        switch error {
+        case .incorrectUrl:
+            message = "Incorrect URL"
+        case .networkError(let error):
+            message = error.localizedDescription
+        default:
+            break
+        }
+
+        let alert = UIAlertController(
+            title: title,
+            message: message,
+            preferredStyle: .alert)
+        self.present(alert, animated: true)
     }
 }
