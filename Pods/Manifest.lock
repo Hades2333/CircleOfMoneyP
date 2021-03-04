@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (5.4.1)
   - ASPCircleChart (3.0.1)
   - Firebase/Analytics (6.32.2):
     - Firebase/Core
@@ -74,12 +75,14 @@ PODS:
   - PromisesObjC (1.2.10)
 
 DEPENDENCIES:
+  - Alamofire (~> 5.2)
   - ASPCircleChart (~> 3.0)
   - Firebase/Analytics
   - Firebase/Auth
 
 SPEC REPOS:
   trunk:
+    - Alamofire
     - ASPCircleChart
     - Firebase
     - FirebaseAnalytics
@@ -95,6 +98,7 @@ SPEC REPOS:
     - PromisesObjC
 
 SPEC CHECKSUMS:
+  Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
   ASPCircleChart: 847c34d33e2391b07aa1d7e95bf901f614554595
   Firebase: 47176280bfba198e531f909cfb1612dad216cb96
   FirebaseAnalytics: 3c2fee6a922023ccfda7af87e4e641bad1fc11ba
@@ -109,6 +113,6 @@ SPEC CHECKSUMS:
   nanopb: 59317e09cf1f1a0af72f12af412d54edf52603fc
   PromisesObjC: b14b1c6b68e306650688599de8a45e49fae81151
 
-PODFILE CHECKSUM: cce78c3f4d9ddbd20a1a69e8adb637d64eb5081d
+PODFILE CHECKSUM: 69c7be337a8e94ebfeb94aab10143e4b0d159aa2
 
 COCOAPODS: 1.10.1

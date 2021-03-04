@@ -31,20 +31,8 @@ class AccountsViewController: UIViewController {
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "logOut")?.withTintColor(.red),
-                                                                style: .done,
-                                                                target: self,
-                                                                action: #selector(self.backButtonPressed))
-        self.navigationItem.leftBarButtonItem?.tintColor = UIColor(named: "mainBackgroundColor")
-
-        view.backgroundColor = UIColor(named: "mainBackgroundColor")
-        self.edgesForExtendedLayout = []
-
-        view.addSubview(tableView)
-        tableView.snp.makeConstraints { (make) in
-            make.edges.equalToSuperview()
-        }
+        setupNavigationBar()
+        setupViews()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -63,6 +51,35 @@ class AccountsViewController: UIViewController {
     }
 
     //MARK: - Methods
+    private func setupNavigationBar() {
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "logOut")?.withTintColor(.red),
+                                                                style: .done,
+                                                                target: self,
+                                                                action: #selector(self.backButtonPressed))
+        self.navigationItem.leftBarButtonItem?.tintColor = UIColor(named: "mainBackgroundColor")
+
+
+        self.navigationController?.navigationBar.barStyle = .default
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor(named: "mainBackgroundColor") ?? .black]
+//        do {
+//            let money = try countAccountsMoney()
+//            self.navigationItem.title = money
+//        } catch {
+//            Swift.debugPrint(error)
+//        }
+        self.navigationItem.title = "пока что пусто"
+    }
+
+    private func setupViews() {
+        view.backgroundColor = UIColor(named: "mainBackgroundColor")
+        self.edgesForExtendedLayout = []
+
+        view.addSubview(tableView)
+        tableView.snp.makeConstraints { (make) in
+            make.edges.equalToSuperview()
+        }
+    }
+
     @objc func sendDataWithObserver() {
         self.tableView.reloadData()
     }
