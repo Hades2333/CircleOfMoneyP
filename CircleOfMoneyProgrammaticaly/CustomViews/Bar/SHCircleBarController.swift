@@ -55,7 +55,6 @@ class SHCircleBarController: UITabBarController {
         self.view.addSubview(circleView)
 
         let tabWidth = self.view.bounds.width / CGFloat(self.tabBar.items?.count ?? 3)
-        //updateTabBarFrame()
         circleView.frame = CGRect(x: tabWidth / 2 - 30, y: self.tabBar.frame.origin.y - 20, width: 60, height: 60)
         circleImageView.frame = self.circleView.bounds
     }

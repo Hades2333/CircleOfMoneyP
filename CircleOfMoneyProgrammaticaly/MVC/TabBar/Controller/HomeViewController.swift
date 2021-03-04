@@ -51,7 +51,8 @@ class HomeViewController: UIViewController {
                                                                 style: .done,
                                                                 target: self,
                                                                 action: #selector(self.backButtonPressed))
-        
+        self.navigationItem.leftBarButtonItem?.tintColor = UIColor(named: "mainBackgroundColor")
+
         self.edgesForExtendedLayout = []
 
         chart.reloadData()
@@ -67,14 +68,14 @@ class HomeViewController: UIViewController {
 
         self.chart.snp.makeConstraints { (make) in
             make.top.equalToSuperview().offset(20)
-            make.left.right.equalToSuperview().inset(50)
+            make.left.right.equalToSuperview().inset(60)
             make.height.equalTo(self.chart.snp.width)
         }
 
         self.mainTable.snp.makeConstraints { (make) in
             make.top.equalTo(self.chart.snp.bottom).offset(20)
             make.left.right.equalToSuperview().inset(20)
-            make.bottom.equalToSuperview()
+            make.bottom.equalToSuperview().inset(20)
         }
 
         NotificationCenter.default.addObserver(self ,

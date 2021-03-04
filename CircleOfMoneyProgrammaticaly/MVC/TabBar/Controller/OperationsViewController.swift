@@ -16,6 +16,7 @@ class OperationsViewController: UIViewController {
     private lazy var operationTable: UITableView = {
         let table = UITableView()
         table.backgroundColor = UIColor(named: "mainBackgroundColor")
+        table.separatorStyle = .none
         table.register(OperationTableViewCell.nib(),
                        forCellReuseIdentifier:  OperationTableViewCell.identifier)
         return table
@@ -30,7 +31,8 @@ class OperationsViewController: UIViewController {
                                                                 style: .done,
                                                                 target: self,
                                                                 action: #selector(self.backButtonPressed))
-        
+        self.navigationItem.leftBarButtonItem?.tintColor = UIColor(named: "mainBackgroundColor")
+
         tuneViews()
         NotificationCenter.default.addObserver(self ,
                                                selector: #selector(updateOperations),

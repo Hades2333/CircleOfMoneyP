@@ -36,6 +36,7 @@ class AccountsViewController: UIViewController {
                                                                 style: .done,
                                                                 target: self,
                                                                 action: #selector(self.backButtonPressed))
+        self.navigationItem.leftBarButtonItem?.tintColor = UIColor(named: "mainBackgroundColor")
 
         view.backgroundColor = UIColor(named: "mainBackgroundColor")
         self.edgesForExtendedLayout = []
