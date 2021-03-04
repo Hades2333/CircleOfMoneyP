@@ -86,38 +86,40 @@ class LogInViewController: UIViewController {
 
         //MARK: - TO DO - delete in production
         let next = TabBar()
+        next.firstNavigationController = self.navigationController
         self.navigationController?.pushViewController(next, animated: true)
 
-//        do {
-//            try validateFields(self.logInView.emailTextField,
-//                               self.logInView.passwordTextField)
-//
-//            let userEmail = self.logInView.emailTextField.textInput.text!
-//                .trimmingCharacters(in: .whitespacesAndNewlines)
-//            let userPassword = self.logInView.passwordTextField.textInput.text!
-//                .trimmingCharacters(in: .whitespacesAndNewlines)
-//
-//            Auth.auth().signIn(withEmail: userEmail,
-//                               password: userPassword) { (result, error) in
-//                if error != nil {
-//                    print(error?.localizedDescription as Any)
-//                } else {
-//                    print("User log in successfully")
-//                }
-//
-//                let next = TabBar()
+        //        do {
+        //            try validateFields(self.logInView.emailTextField,
+        //                               self.logInView.passwordTextField)
+        //
+        //            let userEmail = self.logInView.emailTextField.textInput.text!
+        //                .trimmingCharacters(in: .whitespacesAndNewlines)
+        //            let userPassword = self.logInView.passwordTextField.textInput.text!
+        //                .trimmingCharacters(in: .whitespacesAndNewlines)
+        //
+        //            Auth.auth().signIn(withEmail: userEmail,
+        //                               password: userPassword) { (result, error) in
+        //                if error != nil {
+        //                    print(error?.localizedDescription as Any)
+        //                } else {
+        //                    print("User log in successfully")
+        //                }
+        //
+        //                let next = TabBar()
+        //        next.firstNavigationController = self.navigationController
 
-//                self.navigationController?.pushViewController(next, animated: true)
-//            }
-//        } catch {
-//            LNAlertHelper.shared.show(
-//                for: self,
-//                title: "Error",
-//                message: error.localizedDescription,
-//                secondButtonTitle: "Ok",
-//                secondButtonAction: {
-//                    print("Alert was closed")
-//                })
-//        }
+        //                self.navigationController?.pushViewController(next, animated: true)
+        //            }
+        //        } catch {
+        //            LNAlertHelper.shared.show(
+        //                for: self,
+        //                title: "Error",
+        //                message: error.localizedDescription,
+        //                secondButtonTitle: "Ok",
+        //                secondButtonAction: {
+        //                    print("Alert was closed")
+        //                })
+        //        }
     }
 }

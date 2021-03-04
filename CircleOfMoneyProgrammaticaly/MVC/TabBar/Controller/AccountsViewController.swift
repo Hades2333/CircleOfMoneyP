@@ -9,6 +9,9 @@ import UIKit
 
 class AccountsViewController: UIViewController {
 
+    //MARK: - Variables
+    var delegate: GetRootNavDelegate?
+
     //MARK: - GUI Variables
     lazy var tableView: UITableView = {
         let table = UITableView()
@@ -64,9 +67,9 @@ class AccountsViewController: UIViewController {
     }
 
     @objc func backButtonPressed() {
-    //self.navigationController?.popToViewController(previous ?? self, animated: false)
-//        guard let existingRootView = TabBar().firstStackViewController else { return }
-//        navigationController?.popToViewController(existingRootView, animated: false)
+        guard let firstStack = delegate?.getRootNav() else { return }
+        let root = firstStack.viewControllers[0]
+        firstStack.popToViewController(root, animated: false)
     }
 }
 

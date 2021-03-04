@@ -10,6 +10,9 @@ import ASPCircleChart
 
 class HomeViewController: UIViewController {
 
+    //MARK: - Variables
+    var delegate: GetRootNavDelegate?
+    
     //MARK: - GUI Variables
     private lazy var chart: ASPCircleChart = {
         let chart = ASPCircleChart()
@@ -43,6 +46,12 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor(named: "mainBackgroundColor")
+
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "logOut")?.withTintColor(.red),
+                                                                style: .done,
+                                                                target: self,
+                                                                action: #selector(self.backButtonPressed))
+        
         self.edgesForExtendedLayout = []
 
         chart.reloadData()
@@ -80,6 +89,12 @@ class HomeViewController: UIViewController {
     }
 
     //MARK: - Methods
+    @objc func backButtonPressed() {
+        guard let firstStack = delegate?.getRootNav() else { return }
+        let root = firstStack.viewControllers[0]
+        firstStack.popToViewController(root, animated: false)
+    }
+    
     @objc func dataWasUpdated() {
         self.mainTable.reloadData()
         updateValueForChart()
