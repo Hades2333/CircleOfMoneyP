@@ -76,6 +76,7 @@ class AccountsViewController: UIViewController {
 
     @objc func sendDataWithObserver() {
         self.tableView.reloadData()
+        sendRequest()
     }
 
     @objc func backButtonPressed() {
@@ -112,6 +113,7 @@ extension AccountsViewController: UITableViewDelegate {
         if editingStyle == .delete {
             myAccounts.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
+            sendRequest()
         } else if editingStyle == .insert {
             return
         }
@@ -172,8 +174,7 @@ extension AccountsViewController {
             }
         }
         let money = allMoney.reduce(0, +).rounded(toPlaces: 2)
-        self.navigationItem.title = String("Total \(money) $")
-
+        self.navigationItem.title = String("Total on accounts: \(money) $")
     }
 
     private func handleError(error: COMPNetworkError) {

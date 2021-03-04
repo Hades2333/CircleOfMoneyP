@@ -188,6 +188,9 @@ class HomeDetailViewController: UIViewController {
                                                currency: myCategories[categoryTargetId ?? 0].currency,
                                                date: Date()))
 
+                NotificationCenter.default.post(name: .accountsDataWasUpdated,
+                                                object: nil,
+                                                userInfo: nil)
                 NotificationCenter.default.post(name: .accountsAndCategoriesWasUpdated,
                                                 object: nil,
                                                 userInfo: nil)
