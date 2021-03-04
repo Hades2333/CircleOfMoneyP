@@ -52,6 +52,9 @@ class HomeViewController: UIViewController {
                                                                 target: self,
                                                                 action: #selector(self.backButtonPressed))
         self.navigationItem.leftBarButtonItem?.tintColor = UIColor(named: "mainBackgroundColor")
+        self.navigationController?.navigationBar.barStyle = .default
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor(named: "mainBackgroundColor") ?? .black]
+        self.sendRequest()
 
         self.edgesForExtendedLayout = []
 
@@ -62,7 +65,6 @@ class HomeViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.isNavigationBarHidden = false
-
         view.addSubviews([self.chart,
                           self.mainTable])
 
@@ -150,6 +152,7 @@ class HomeViewController: UIViewController {
     }
 
     func updateValueForChart() {
+        self.sendRequest()
         do {
             try self.arrayOfMoney = countMoneyForChart()
         } catch {
@@ -237,3 +240,55 @@ extension HomeViewController: ASPCircleChartDataSource {
         arrayOfColors[index]
     }
 }
+
+extension HomeViewController {
+
+    private func sendRequest() {
+         COMPNetworking.shared.request(
+            url: COMPUrlPaths.usd,
+            currency: "/latest/USD",
+            successHandler: { [weak self] (model: ExchangeRates) in
+                self?.handleResponse(model: model)
+            },
+            errorHandler: { [weak self] (error: COMPNetworkError) in
+                self?.handleError(error: error)
+            })
+    }
+
+    private func handleResponse(model: ExchangeRates) {
+
+        var allMoney: [Double] = []
+
+        for account in myCategories {
+            if account.currency.rawValue == "USD" {
+                allMoney.append(account.amountOfMoney)
+                print(account.amountOfMoney)
+            } else {
+                let converted = account.amountOfMoney / (model.conversion_rates["\(account.currency)"] ?? 1.0)
+                allMoney.append(converted)
+            }
+        }
+        let money = allMoney.reduce(0, +).rounded(toPlaces: 2)
+        self.navigationItem.title = String("Total spent: \(money) $")
+    }
+
+    private func handleError(error: COMPNetworkError) {
+        let title: String = "Error"
+        var message: String = "Something went wrong!"
+        switch error {
+        case .incorrectUrl:
+            message = "Incorrect URL"
+        case .networkError(let error):
+            message = error.localizedDescription
+        default:
+            break
+        }
+
+        let alert = UIAlertController(
+            title: title,
+            message: message,
+            preferredStyle: .alert)
+        self.present(alert, animated: true)
+    }
+}
+

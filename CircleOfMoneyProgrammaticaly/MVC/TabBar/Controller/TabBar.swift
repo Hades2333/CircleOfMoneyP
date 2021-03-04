@@ -20,10 +20,6 @@ class TabBar: SHCircleBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor(named: "mainBackgroundColor")
-        //UITabBar.appearance().barTintColor = .systemBackground
-        //tabBar.tintColor = .label
-
-        //UITabBarButtonLabel
         setupVCs()
         self.selectedIndex = 0
     }
