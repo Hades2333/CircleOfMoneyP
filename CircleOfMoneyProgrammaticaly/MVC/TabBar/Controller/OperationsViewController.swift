@@ -11,7 +11,7 @@ class OperationsViewController: UIViewController {
 
     //MARK: - Variables
     var delegate: GetRootNavDelegate?
-    
+
     //MARK: - GUI Variables
     private lazy var operationTable: UITableView = {
         let table = UITableView()
@@ -25,6 +25,7 @@ class OperationsViewController: UIViewController {
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+
         view.backgroundColor = UIColor(named: "mainBackgroundColor")
 
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "logOut")?.withTintColor(.red),
@@ -70,6 +71,7 @@ class OperationsViewController: UIViewController {
     }
 
     @objc func updateOperations() {
+        checkOperations()
         self.operationTable.reloadData()
     }
 }
@@ -93,6 +95,14 @@ extension OperationsViewController: UITableViewDelegate {
 //MARK: - OperationsViewController
 extension OperationsViewController: UITableViewDataSource {
 
+    func numberOfSections(in tableView: UITableView) -> Int {
+        checkOperations().count
+    }
+
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        "lol"
+    }
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         myOperations.count
     }
@@ -107,5 +117,32 @@ extension OperationsViewController: UITableViewDataSource {
         cell.configureOperations(myOperations[indexPath.row])
         return cell
     }
+}
 
+extension OperationsViewController {
+    func checkOperations() -> [[Int]] {
+        let calendar = Calendar.current
+        var comparableDate = myOperations[0].date
+
+        var arrayOfArrays: [[Int]] = [[0]]
+        var numberOfRows: Int = 0
+        var numberOfSections: Int = 0
+
+        for operation in myOperations {
+            let firstCalendar = calendar.dateComponents([.day], from: comparableDate)
+            let secondCalendar = calendar.dateComponents([.day], from: operation.date)
+
+            if firstCalendar == secondCalendar {
+                numberOfRows += 1
+                arrayOfArrays[numberOfSections] = [numberOfRows]
+            } else {
+                comparableDate = operation.date
+                numberOfSections += 1
+                arrayOfArrays.append([1])
+                numberOfRows = 1
+            }
+        }
+        print(arrayOfArrays)
+        return arrayOfArrays
+    }
 }
