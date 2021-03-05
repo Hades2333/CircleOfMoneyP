@@ -95,19 +95,35 @@ extension OperationsViewController: UITableViewDelegate {
 //MARK: - OperationsViewController
 extension OperationsViewController: UITableViewDataSource {
 
-    func numberOfSections(in tableView: UITableView) -> Int {
-        checkOperations().count
-    }
+//    func numberOfSections(in tableView: UITableView) -> Int {
+//        checkOperations().count
+//    }
 
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        "lol"
-    }
+//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//        "lol"
+//    }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         myOperations.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
+//        guard let cell = tableView.dequeueReusableCell(
+//                withIdentifier: OperationTableViewCell.identifier,
+//                for: indexPath ) as? OperationTableViewCell else {
+//            fatalError("Misconfigured cell type for cell!")
+//        }
+//
+//        for section in 0..<checkOperations().count {
+//
+//            for row in 0..<checkOperations()[section][0] {
+//
+//                cell.configureOperations(myOperations[row])
+//                return cell
+//            }
+//        }
+//        return cell
 
         guard let cell = tableView.dequeueReusableCell(
                 withIdentifier: OperationTableViewCell.identifier,

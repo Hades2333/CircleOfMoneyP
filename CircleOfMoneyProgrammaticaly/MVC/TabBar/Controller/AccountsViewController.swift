@@ -179,7 +179,7 @@ extension AccountsViewController {
 
     private func handleError(error: COMPNetworkError) {
         let title: String = "Error"
-        var message: String = "Something went wrong!"
+        var message: String = "Request quota exhausted!"
         switch error {
         case .incorrectUrl:
             message = "Incorrect URL"
@@ -194,5 +194,8 @@ extension AccountsViewController {
             message: message,
             preferredStyle: .alert)
         self.present(alert, animated: true)
+        alert.addAction(UIAlertAction(title: "OK",
+                                      style: .default,
+                                      handler: nil))
     }
 }

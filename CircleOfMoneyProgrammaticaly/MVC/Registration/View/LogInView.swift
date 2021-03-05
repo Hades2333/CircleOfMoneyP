@@ -49,6 +49,7 @@ class LogInView: UIView {
 
     lazy var passwordTextField: TextFieldWithLine = {
         let view = TextFieldWithLine()
+        view.textInput.isSecureTextEntry = true
         view.textInput.placeholder = "Enter password"
         return view
     }()
