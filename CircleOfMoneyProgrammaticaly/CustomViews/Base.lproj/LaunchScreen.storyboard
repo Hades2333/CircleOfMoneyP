@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="8C3-Rt-kwJ">
+                                <rect key="frame" x="138" y="344" width="138" height="138"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="8C3-Rt-kwJ" secondAttribute="height" multiplier="1:1" id="D5O-pO-hNT"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CIRCLE OF MONEY" translatesAutoresizingMaskIntoConstraints="NO" id="8cA-je-j5m">
+                                <rect key="frame" x="116.5" y="490" width="181" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="GXc-rh-jPc"/>
+                                    <constraint firstAttribute="width" constant="181" id="zYP-3l-AY5"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" name="mainBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8C3-Rt-kwJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="138" id="14o-F5-9rr"/>
+                            <constraint firstItem="8cA-je-j5m" firstAttribute="top" secondItem="8C3-Rt-kwJ" secondAttribute="bottom" constant="8" symbolic="YES" id="3RS-uV-Tuh"/>
+                            <constraint firstItem="8C3-Rt-kwJ" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="OtL-OI-0PA"/>
+                            <constraint firstItem="8C3-Rt-kwJ" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-35" id="XUm-lK-43E"/>
+                            <constraint firstItem="8cA-je-j5m" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="cdW-yp-cbi"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="CIRCLE OF MONEY" width="181" height="15"/>
+        <image name="logo" width="100" height="100"/>
+        <namedColor name="mainBackgroundColor">
+            <color red="0.9179999828338623" green="0.94499999284744263" blue="0.92500001192092896" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

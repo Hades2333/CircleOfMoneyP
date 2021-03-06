@@ -177,9 +177,6 @@
 				1415D45525EA1B6000F2F6FA /* Helpers */,
 				141024F225E9051D00CA951A /* Support */,
 				14105FD625EEA47E00E86DE5 /* MVC */,
-				1402131025DFC24500803C47 /* AppDelegate.swift */,
-				1402131925DFC24800803C47 /* Assets.xcassets */,
-				1402131B25DFC24800803C47 /* LaunchScreen.storyboard */,
 				14E400CA25EBB4CC00C6A628 /* Plists */,
 			);
 			path = CircleOfMoneyProgrammaticaly;
@@ -243,6 +240,7 @@
 		14105FD625EEA47E00E86DE5 /* MVC */ = {
 			isa = PBXGroup;
 			children = (
+				1402131025DFC24500803C47 /* AppDelegate.swift */,
 				14E400B625EB943000C6A628 /* Home */,
 				14E400B525EB942A00C6A628 /* Accounts */,
 				1496120C25EA897F00A59E20 /* TabBar */,
@@ -338,6 +336,8 @@
 		14E2E94D25EA376A00CDF2EF /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				1402131925DFC24800803C47 /* Assets.xcassets */,
+				1402131B25DFC24800803C47 /* LaunchScreen.storyboard */,
 				1479C3D325EF6CCF00033EE0 /* Bar */,
 				14E2E94F25EA37A400CDF2EF /* Controls */,
 				14E2E94E25EA379200CDF2EF /* Xibs */,

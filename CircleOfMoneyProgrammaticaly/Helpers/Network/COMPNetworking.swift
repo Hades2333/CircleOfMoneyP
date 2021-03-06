@@ -15,7 +15,7 @@ class COMPNetworking {
     // MARK: - Variables
     private let baseUrl: String = "https://v6.exchangerate-api.com/v6/"
 
-    private let apiKey: String = "b8cf407191ff9a2a81cde6e9"
+    private let apiKey: String = "059ab2356f6790cea3423ee4"
 
     private lazy var session = URLSession(configuration: .default)
 
